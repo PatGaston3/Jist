@@ -1,8 +1,15 @@
 package entities;
 
 import java.io.Serializable;
-import javax.persistence.*;
 import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 public class User implements Serializable {
@@ -26,7 +33,8 @@ public class User implements Serializable {
 	private String username;
 
 	//bi-directional many-to-one association to Job
-	@OneToMany(mappedBy="user")
+	@OneToMany(mappedBy="user", fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST,CascadeType.REMOVE})
+	@JsonManagedReference
 	private List<Job> jobs;
 
 
