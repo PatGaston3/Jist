@@ -3,6 +3,8 @@
 	<persistence-unit name="JistJPA">
 	<provider>org.hibernate.jpa.HibernatePersistenceProvider
       </provider>
+	<class>entities.Job</class>
+	<class>entities.User</class>
 		<properties>
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/Jist" />
 			<property name="javax.persistence.jdbc.user" value="JistUser" />
