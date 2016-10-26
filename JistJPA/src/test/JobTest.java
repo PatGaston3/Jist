@@ -26,9 +26,8 @@ public class JobTest {
 	@Test
 	public void test() throws Exception {
 		Job job = em.find(Job.class, 1);
-		
-		assertEquals("washington", job.getCity());
-		assertEquals("president", job.getJobTitle());
+		assertEquals("Seattle", job.getCity());
+		assertEquals("Vice President", job.getJobTitle());
 		assertEquals(1, job.getId());
 
 	}

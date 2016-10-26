@@ -27,8 +27,8 @@ public class UserTest {
 	public void test() throws Exception {
 		User user = em.find(User.class, 1);
 		
-		assertEquals("testy", user.getFname());
-		assertEquals("mctestface", user.getLname());
+		assertEquals("Testy", user.getFname());
+		assertEquals("McTestface", user.getLname());
 		assertEquals(1, user.getId());
 
 	}
