@@ -1,0 +1,15 @@
+2016-10-26 09:39:14,804 [Worker-14] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: JistJPA:JistJPA:0.0.1-SNAPSHOT @ /Users/stevezuber/SD/Java/jistGroup/JistJPA/pom.xml.
+2016-10-26 09:39:15,742 [Worker-14] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 09:39:15,823 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-10-26 09:39:16,175 [Worker-1] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: JistJPA:JistJPA:0.0.1-SNAPSHOT @ /Users/stevezuber/SD/Java/jistGroup/JistJPA/pom.xml.
+2016-10-26 09:39:16,175 [Worker-14] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 09:39:16,183 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/stevezuber/SD/Java/jistGroup/JistJPA/src/test/resources
+2016-10-26 09:39:16,496 [Worker-1] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: JistMVC:JistMVC:0.0.1-SNAPSHOT @ /Users/stevezuber/SD/Java/jistGroup/JistMVC/pom.xml.
+2016-10-26 09:39:19,431 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 09:39:19,452 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-10-26 09:39:19,455 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 09:39:19,455 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/stevezuber/SD/Java/jistGroup/JistJPA/src/test/resources
+2016-10-26 09:39:19,922 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 09:39:19,930 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/stevezuber/SD/Java/jistGroup/JistMVC/src/main/resources
+2016-10-26 09:39:19,932 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 09:39:19,933 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/stevezuber/SD/Java/jistGroup/JistMVC/src/test/resources
