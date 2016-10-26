@@ -4,7 +4,6 @@ import java.io.Serializable;
 import javax.persistence.*;
 import java.util.Date;
 
-
 @Entity
 public class Job implements Serializable {
 	private static final long serialVersionUID = 1L;
