@@ -51,10 +51,8 @@ public class JobsDAO {
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
-		if(user != null) {
-			return user.getJobs();
-		}
-		return null;
+
+		return user.getJobs();
 	}
 	
 	public void createJob(int id, Job job) {
@@ -71,15 +69,21 @@ public class JobsDAO {
 		em.flush();
 		return user;	
 	}
+	
 	public User authenticateUser (User loginData) throws Exception {
-		User user = em.createQuery("select u from User u where u.username = :username", User.class)
-					.setParameter("username", loginData.getUsername())
-					.getSingleResult();
+		System.out.println(loginData);
+		User user = em.find(User.class, loginData.getId());
+
+		System.out.println("in auth user");
+		System.out.println(user);
 		if(passwordEncoder.matches(loginData.getPassword(), user.getPassword())) {
-			return null;
+			System.out.println("authenticate User If");
+			System.out.println(user);
+			return user;
 		}
 		return null;
 	}
+	
 	
 	public User update(int id, User user) {
 		User updatedUser = em.find(User.class, id);

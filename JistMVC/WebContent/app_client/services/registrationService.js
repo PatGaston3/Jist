@@ -8,7 +8,7 @@ app.factory('registrationService', function($http){
 	  registrationService.createUser = function(user) {
 		  return $http({
 			  method : 'POST',
-			  url :'api/users',
+			  url :'api/user',
 			  headers : {
 				    'Content-Type' : 'application/json'
 				  },

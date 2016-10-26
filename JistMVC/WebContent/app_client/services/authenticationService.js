@@ -2,7 +2,7 @@
 
 var app = angular.module('ngJist');
 
-app.factory('authenticationService', function($http, authenticationService) {
+app.factory('authenticationService', function($http) {
 	// Place JWT into local storage
 	var saveToken = function(Token) {
 		$window.localStorage['job-token'] = token;
@@ -14,7 +14,9 @@ app.factory('authenticationService', function($http, authenticationService) {
 	};
 	
 	// Contact the server, authenticate user credentials
-	var login = function(user) {
+	var loginNewUser = function(user) {
+		console.log("In auth service");
+		console.log(user);
 		return $http({
 			method : 'POST',
 			url : 'api/auth/login',
@@ -24,8 +26,11 @@ app.factory('authenticationService', function($http, authenticationService) {
             data : user
 		})
 		.then(function(response){
-            console.log(response);
-          });
+            saveToken(response.data.jwt);
+          })
+          .catch(function(error){
+        	  console.log(error);
+          })
 	};
 	
 	 // Remove JWT from local storage
@@ -62,11 +67,12 @@ app.factory('authenticationService', function($http, authenticationService) {
     };
 
     return {
-      login : login,
+      loginNewUser : loginNewUser,
       logout : logout,
       isLoggedIn : isLoggedIn,
       currentUser : currentUser,
-      getToken : getToken
+      getToken : getToken,
+      saveToken : saveToken
     }
 	
 })

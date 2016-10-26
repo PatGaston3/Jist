@@ -2,7 +2,7 @@
 
 var app = angular.module('ngJist');
 
-app.controller("registrationController", function($scope) {
+app.controller("registrationController", function($scope, registrationService, $location) {
 	
 	// Create New User
 	$scope.genUser = function(user){

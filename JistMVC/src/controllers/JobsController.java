@@ -43,12 +43,12 @@ public class JobsController {
 		return jobsDAO.showUser(id);
 	}
 
-	@RequestMapping(path = "user/{id}/jobs", method = RequestMethod.GET)
+	@RequestMapping(path = "user/{id}/joblist", method = RequestMethod.GET)
 	public Collection<Job> showJobs(@PathVariable int id) {
 		return jobsDAO.showJobs(id);
 	}
 
-	@RequestMapping(path = "user/{id}/jobs/{jId}", method = RequestMethod.GET)
+	@RequestMapping(path = "user/{id}/joblist/{jId}", method = RequestMethod.GET)
 	public Job showJob(@PathVariable int id, @PathVariable int jId) {
 		return jobsDAO.showJob(jId);
 	}
@@ -65,7 +65,7 @@ public class JobsController {
 		jobsDAO.update(id, user);
 	}
 
-	@RequestMapping(path = "user/{id}/jobs/{id}", method = RequestMethod.PUT)
+	@RequestMapping(path = "user/{id}/joblist/{id}", method = RequestMethod.PUT)
 	public void updateJobs(@PathVariable int id, @RequestBody String jobJSON) {
 		ObjectMapper mapper = new ObjectMapper();
 		Job job = null;
@@ -90,7 +90,7 @@ public class JobsController {
 		jobsDAO.create(user);
 	}
 
-	@RequestMapping(path = "user/{id}/jobs", method = RequestMethod.POST)
+	@RequestMapping(path = "user/{id}/joblist", method = RequestMethod.POST)
 	public void createJob(@PathVariable int id, @RequestBody String userJSON) {
 		ObjectMapper mapper = new ObjectMapper();
 		Job job = null;
@@ -107,7 +107,7 @@ public class JobsController {
 		jobsDAO.destroyUser(id);
 	}
 	
-	@RequestMapping(path = "user/{id}/jobs/{jId}", method = RequestMethod.DELETE) 
+	@RequestMapping(path = "user/{id}/joblist/{jId}", method = RequestMethod.DELETE) 
 	public void destroytJob(@PathVariable int id, @PathVariable int jId) {
 		jobsDAO.destroyJob(id,  jId);
 	}
