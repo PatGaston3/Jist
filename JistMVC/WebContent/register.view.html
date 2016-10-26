@@ -1,0 +1,37 @@
+<header ng-include="'partials/register-nav.html'"></header>  
+    <div class="container">
+
+	<div>
+  <ul>
+    <li ng-show={{"registration.email.$invalid"}}>
+      Email must be valid
+    </li>
+    <li ng-show={{"registration.username.$invalid"}}>
+      Username must be valid (between 4 and 12 characters)
+    </li>
+    <li ng-show={{"registration.password.$invalid"}}>
+      Password must be valid (between 6 and 12 characters)
+    </li>
+  </ul>
+</div>
+
+      <form name="registration" ng-action="genUser(user)" class="form-signin" novalidate>
+        <h2 class="form-signin-heading">Register for To Do</h2>
+        
+        <label for="inputUsername" class="sr-only">Username</label>
+        <input ng-model="user.username" name="username" type="text" id="inputUsername" class="form-control" placeholder="Username" required autofocus
+        ng-minlength="4" ng-maxlength="12">
+        
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input ng-model="user.email" name="email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input ng-model="user.password" name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required
+        ng-minlength="6" ng-maxlength="12">
+		<br>
+        <button ng-click="genUser(user)" class="btn btn-lg btn-primary btn-block" type="submit" ng-disabled={{"registration.$invalid"}}>Sign in</button>
+      </form>
+      
+      <p>{{registration.$invalid}}</p>
+
+    </div> <!-- /container -->

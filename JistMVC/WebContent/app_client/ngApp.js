@@ -19,6 +19,10 @@ var app = angular.module('ngJist', ['ngRoute'])
 		templateUrl: 'details.view.html',
 		controller: 'detailController'
 	})
+	.when('/register',{
+		templateUrl: 'register.view.html',
+		controller: 'registrationController'
+	})
 	.otherwise({
 	      redirectTo: '/'
 	    });
