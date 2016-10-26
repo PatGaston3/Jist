@@ -1,8 +1,17 @@
 package entities;
 
 import java.io.Serializable;
-import javax.persistence.*;
 import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 @Entity
 public class Job implements Serializable {
@@ -61,6 +70,8 @@ public class Job implements Serializable {
 
 	//bi-directional many-to-one association to User
 	@ManyToOne
+	@JoinColumn(name="user_id",referencedColumnName="id") 
+	@JsonBackReference
 	private User user;
 
 	// Constructors
