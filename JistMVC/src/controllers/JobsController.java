@@ -44,8 +44,13 @@ public class JobsController {
 	}
 
 	@RequestMapping(path = "user/{id}/jobs", method = RequestMethod.GET)
-	public Collection<Job> showJob(@PathVariable int id) {
-		return jobsDAO.showJob(id);
+	public Collection<Job> showJobs(@PathVariable int id) {
+		return jobsDAO.showJobs(id);
+	}
+
+	@RequestMapping(path = "user/{id}/jobs/{jId}", method = RequestMethod.GET)
+	public Job showJob(@PathVariable int id, @PathVariable int jId) {
+		return jobsDAO.showJob(jId);
 	}
 
 	@RequestMapping(path = "user/{id}", method = RequestMethod.PUT)
@@ -102,7 +107,7 @@ public class JobsController {
 		jobsDAO.destroyUser(id);
 	}
 	
-	@RequestMapping(path = "user/{id}/jobs/{jID}", method = RequestMethod.DELETE) 
+	@RequestMapping(path = "user/{id}/jobs/{jId}", method = RequestMethod.DELETE) 
 	public void destroytJob(@PathVariable int id, @PathVariable int jId) {
 		jobsDAO.destroyJob(id,  jId);
 	}

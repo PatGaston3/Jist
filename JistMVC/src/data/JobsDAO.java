@@ -37,7 +37,14 @@ public class JobsDAO {
 		return em.find(User.class, id);
 	} 
 	
-	public Collection<Job> showJob(int id) {
+	public Job showJob(int id) {		
+		Job job = em.find(Job.class, id);
+		
+		return job;
+		
+	} 
+	
+	public Collection<Job> showJobs(int id) {
 		User user = null;
 		try{
 			user = em.find(User.class, id);
