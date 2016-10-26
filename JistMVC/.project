@@ -3,6 +3,7 @@
 	<name>JistMVC</name>
 	<comment></comment>
 	<projects>
+		<project>JistJPA</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
