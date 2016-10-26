@@ -2,9 +2,9 @@
 
 var app = angular.module('ngJist');
 
-app.factory('authenticationService', function($http) {
+app.factory('authenticationService', function($http, $window) {
 	// Place JWT into local storage
-	var saveToken = function(Token) {
+	var saveToken = function(token) {
 		$window.localStorage['job-token'] = token;
 	};
 	
@@ -27,6 +27,7 @@ app.factory('authenticationService', function($http) {
 		})
 		.then(function(response){
             saveToken(response.data.jwt);
+            return response;
           })
           .catch(function(error){
         	  console.log(error);

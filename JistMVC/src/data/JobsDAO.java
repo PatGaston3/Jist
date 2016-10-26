@@ -70,20 +70,39 @@ public class JobsDAO {
 		return user;	
 	}
 	
-	public User authenticateUser (User loginData) throws Exception {
-		System.out.println(loginData);
-		User user = em.find(User.class, loginData.getId());
+//	public User authenticateUser (User loginData) throws Exception {
+//		System.out.println(loginData);
+//		User user = em.find(User.class, loginData.getId());
+//
+//		System.out.println("in auth user");
+//		System.out.println(user);
+//		if(passwordEncoder.matches(loginData.getPassword(), user.getPassword())) {
+//			System.out.println("authenticate User If");
+//			System.out.println(user);
+//			return user;
+//		}
+//		return null;
+//	}
+	public User authenticateUser(User loginData) {
+    User user = null;
+    
+    List<User> accessList = indexUsers();
+    for(User data: accessList){
+        if(data.getUsername().equals(loginData.getUsername())){
+            user = em.find(User.class, data.getId());
+        }
+    }
+    
+    if (user != null){
+        String rawPassword = loginData.getPassword();
+        String encodedPassword = user.getPassword();
+        if(passwordEncoder.matches(rawPassword,encodedPassword)){
+            return user;
+        }
+    }	
+    return user;
 
-		System.out.println("in auth user");
-		System.out.println(user);
-		if(passwordEncoder.matches(loginData.getPassword(), user.getPassword())) {
-			System.out.println("authenticate User If");
-			System.out.println(user);
-			return user;
-		}
-		return null;
-	}
-	
+}
 	
 	public User update(int id, User user) {
 		User updatedUser = em.find(User.class, id);
