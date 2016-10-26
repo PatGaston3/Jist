@@ -6,3 +6,5 @@ Servers
 build
 .metadata
 .recommenders
+/JistJPA/
+/JistMVC/
