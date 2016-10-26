@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;JobSearchJPA&apos; to &apos;JistJPA&apos;" description="Rename resource &apos;JobSearchJPA&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/JobSearchJPA" name="JistJPA" stamp="1477493962994" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;JobSeachMVC&apos; to &apos;JistMVC&apos;" description="Rename resource &apos;JobSeachMVC&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/JobSeachMVC" name="JistMVC" stamp="1477493985455" updateReferences="true"/>
+</session>

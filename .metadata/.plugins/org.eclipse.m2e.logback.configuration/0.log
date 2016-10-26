@@ -1,0 +1,158 @@
+2016-10-26 08:44:17,038 [Worker-0] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: JobSeachMVC:JobSeachMVC:0.0.1-SNAPSHOT @ /Users/anniefisher/SD/Java/JobSearch/JobSeachMVC/pom.xml.
+2016-10-26 08:44:18,829 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:44:18,840 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JobSeachMVC/src/main/resources
+2016-10-26 08:44:18,843 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:44:18,844 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JobSeachMVC/src/test/resources
+2016-10-26 08:44:18,872 [Worker-0] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /JobSeachMVC/src
+2016-10-26 08:44:18,875 [Worker-0] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Not adding source folder /JobSeachMVC/src/test/java because it overlaps with /JobSeachMVC/src
+2016-10-26 08:44:19,488 [Worker-0] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2016-10-26 08:44:19,915 [Worker-0] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: JobSeachMVC:JobSeachMVC:0.0.1-SNAPSHOT @ /Users/anniefisher/SD/Java/JobSearch/JobSeachMVC/pom.xml.
+2016-10-26 08:44:21,094 [Worker-13] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:44:21,095 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JobSeachMVC/src/main/resources
+2016-10-26 08:44:21,098 [Worker-13] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:44:21,099 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JobSeachMVC/src/test/resources
+2016-10-26 08:44:21,100 [Worker-13] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of JobSeachMVC
+2016-10-26 08:44:21,101 [Worker-13] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for JobSeachMVC
+2016-10-26 08:44:21,107 [Worker-13] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.apache.maven.plugins:maven-clean-plugin:jar:2.5 is missing, no dependency information available
+2016-10-26 08:44:21,116 [Worker-13] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:44:21,145 [Worker-0] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /JobSeachMVC/src
+2016-10-26 08:44:21,146 [Worker-0] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Not adding source folder /JobSeachMVC/src/test/java because it overlaps with /JobSeachMVC/src
+2016-10-26 08:44:21,579 [Worker-0] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for JobSeachMVC
+2016-10-26 08:44:21,611 [Worker-0] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 2 sec
+2016-10-26 08:44:22,147 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:44:22,147 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JobSeachMVC/src/main/resources
+2016-10-26 08:44:22,149 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:44:22,150 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JobSeachMVC/src/test/resources
+2016-10-26 08:44:22,150 [Worker-12] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of JobSeachMVC
+2016-10-26 08:44:22,150 [Worker-12] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for JobSeachMVC
+2016-10-26 08:44:22,155 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:45:16,110 [Worker-12] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: JobSeachMVC:JobSeachMVC:0.0.1-SNAPSHOT @ /Users/anniefisher/SD/Java/JobSearch/JobSeachMVC/pom.xml.
+2016-10-26 08:45:17,272 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:45:17,273 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JobSeachMVC/src/main/resources
+2016-10-26 08:45:17,276 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:45:17,276 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JobSeachMVC/src/test/resources
+2016-10-26 08:45:17,286 [Worker-12] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of JobSeachMVC
+2016-10-26 08:45:17,287 [Worker-12] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for JobSeachMVC
+2016-10-26 08:45:17,293 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:45:53,374 [Worker-17] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:45:53,375 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JobSeachMVC/src/main/resources
+2016-10-26 08:45:53,376 [Worker-17] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:45:53,377 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JobSeachMVC/src/test/resources
+2016-10-26 08:46:27,697 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:46:27,697 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JobSeachMVC/src/main/resources
+2016-10-26 08:46:27,699 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:46:27,702 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JobSeachMVC/src/test/resources
+2016-10-26 08:46:41,205 [Worker-17] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:46:41,206 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JobSeachMVC/src/main/resources
+2016-10-26 08:46:41,207 [Worker-17] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:46:41,207 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JobSeachMVC/src/test/resources
+2016-10-26 08:47:04,223 [Worker-17] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:47:04,223 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JobSeachMVC/src/main/resources
+2016-10-26 08:47:04,225 [Worker-17] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:47:04,225 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JobSeachMVC/src/test/resources
+2016-10-26 08:48:28,774 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:48:28,774 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JobSeachMVC/src/main/resources
+2016-10-26 08:48:28,776 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:48:28,777 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JobSeachMVC/src/test/resources
+2016-10-26 08:48:51,465 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:48:51,468 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JobSeachMVC/src/main/resources
+2016-10-26 08:48:51,469 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:48:51,470 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JobSeachMVC/src/test/resources
+2016-10-26 08:49:11,224 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:49:11,225 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JobSeachMVC/src/main/resources
+2016-10-26 08:49:11,227 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:49:11,228 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JobSeachMVC/src/test/resources
+2016-10-26 08:49:23,300 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:49:23,301 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JobSeachMVC/src/main/resources
+2016-10-26 08:49:23,307 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:49:23,308 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JobSeachMVC/src/test/resources
+2016-10-26 08:49:34,474 [Worker-15] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:49:34,475 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JobSeachMVC/src/main/resources
+2016-10-26 08:49:34,477 [Worker-15] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:49:34,478 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JobSeachMVC/src/test/resources
+2016-10-26 08:52:27,024 [Worker-7] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: JobSearchJPA:JobSearchJPA:0.0.1-SNAPSHOT @ /Users/anniefisher/SD/Java/JobSearch/JobSearchJPA/pom.xml.
+2016-10-26 08:52:27,524 [Worker-7] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /JobSearchJPA/src
+2016-10-26 08:52:27,525 [Worker-7] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Resources folder /JobSearchJPA/src overlaps with sources folder /JobSearchJPA/src
+2016-10-26 08:52:27,533 [Worker-7] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Not adding source folder /JobSearchJPA/src/test/java because it overlaps with /JobSearchJPA/src
+2016-10-26 08:52:27,591 [Worker-7] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2016-10-26 08:52:27,639 [Worker-7] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: JobSearchJPA:JobSearchJPA:0.0.1-SNAPSHOT @ /Users/anniefisher/SD/Java/JobSearch/JobSearchJPA/pom.xml.
+2016-10-26 08:52:27,736 [Worker-7] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /JobSearchJPA/src
+2016-10-26 08:52:27,737 [Worker-7] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Resources folder /JobSearchJPA/src overlaps with sources folder /JobSearchJPA/src
+2016-10-26 08:52:27,748 [Worker-7] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Not adding source folder /JobSearchJPA/src/test/java because it overlaps with /JobSearchJPA/src
+2016-10-26 08:52:27,804 [Worker-7] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 0 sec
+2016-10-26 08:52:27,932 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:52:27,940 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-10-26 08:52:27,955 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:52:27,956 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JobSearchJPA/src/test/resources
+2016-10-26 08:52:57,380 [Worker-19] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: JobSearchJPA:JobSearchJPA:0.0.1-SNAPSHOT @ /Users/anniefisher/SD/Java/JobSearch/JobSearchJPA/pom.xml.
+2016-10-26 08:52:57,727 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:52:57,732 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-10-26 08:52:57,735 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:52:57,736 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JobSearchJPA/src/test/resources
+2016-10-26 08:52:59,018 [Worker-21] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:52:59,021 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-10-26 08:52:59,034 [Worker-21] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:52:59,034 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JobSearchJPA/src/test/resources
+2016-10-26 08:54:11,767 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:54:11,770 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-10-26 08:54:11,771 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:54:11,772 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JobSearchJPA/src/test/resources
+2016-10-26 08:54:47,468 [Worker-21] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:54:47,469 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-10-26 08:54:47,471 [Worker-21] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:54:47,472 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JobSearchJPA/src/test/resources
+2016-10-26 08:57:33,223 [Worker-22] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:57:33,224 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-10-26 08:57:33,227 [Worker-22] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:57:33,228 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JobSearchJPA/src/test/resources
+2016-10-26 08:58:04,185 [Worker-8] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: JistJPA:JistJPA:0.0.1-SNAPSHOT @ /Users/anniefisher/SD/Java/JobSearch/JobSearchJPA/pom.xml.
+2016-10-26 08:58:04,519 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:58:04,521 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-10-26 08:58:04,524 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:58:04,524 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JobSearchJPA/src/test/resources
+2016-10-26 08:59:02,077 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:59:02,078 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-10-26 08:59:02,079 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:59:02,080 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JobSearchJPA/src/test/resources
+2016-10-26 08:59:23,419 [Worker-8] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: JistJPA:JistJPA:0.0.1-SNAPSHOT @ /Users/anniefisher/SD/Java/JobSearch/JistJPA/pom.xml.
+2016-10-26 08:59:23,524 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:59:23,526 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-10-26 08:59:23,539 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:59:23,540 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JistJPA/src/test/resources
+2016-10-26 08:59:23,770 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:59:23,771 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-10-26 08:59:23,773 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:59:23,774 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JistJPA/src/test/resources
+2016-10-26 08:59:45,904 [Worker-8] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: JobSeachMVC:JobSeachMVC:0.0.1-SNAPSHOT @ /Users/anniefisher/SD/Java/JobSearch/JistMVC/pom.xml.
+2016-10-26 08:59:46,587 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:59:46,588 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JistMVC/src/main/resources
+2016-10-26 08:59:46,589 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:59:46,590 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JistMVC/src/test/resources
+2016-10-26 08:59:48,671 [Worker-21] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:59:48,672 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JistMVC/src/main/resources
+2016-10-26 08:59:48,673 [Worker-21] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 08:59:48,674 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JistMVC/src/test/resources
+2016-10-26 09:00:14,267 [Worker-19] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: JistMVC:JistMVC:0.0.1-SNAPSHOT @ /Users/anniefisher/SD/Java/JobSearch/JistMVC/pom.xml.
+2016-10-26 09:00:15,105 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 09:00:15,107 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JistMVC/src/main/resources
+2016-10-26 09:00:15,109 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 09:00:15,109 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JistMVC/src/test/resources
+2016-10-26 09:00:15,110 [Worker-19] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of JistMVC
+2016-10-26 09:00:15,110 [Worker-19] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for JistMVC
+2016-10-26 09:00:15,115 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 09:00:30,819 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 09:00:30,819 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JistMVC/src/main/resources
+2016-10-26 09:00:30,822 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 09:00:30,823 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JistMVC/src/test/resources
+2016-10-26 09:01:06,213 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 09:01:06,214 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JistMVC/src/main/resources
+2016-10-26 09:01:06,215 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 09:01:06,216 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JistMVC/src/test/resources
+2016-10-26 09:01:45,189 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 09:01:45,189 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JistMVC/src/main/resources
+2016-10-26 09:01:45,191 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 09:01:45,191 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JistMVC/src/test/resources
+2016-10-26 09:01:58,245 [Worker-23] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 09:01:58,246 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JistMVC/src/main/resources
+2016-10-26 09:01:58,247 [Worker-23] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-26 09:01:58,248 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JistMVC/src/test/resources
