@@ -3,12 +3,9 @@
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-<<<<<<< HEAD
-=======
         <dependent-module archiveName="JistJPA.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/JistJPA/JistJPA">
             <dependency-type>uses</dependency-type>
         </dependent-module>
->>>>>>> 8d8dbbc7c35d3cba1848387b2ce13a3737efd5ce
         <property name="java-output-path" value="/JobSeachMVC/build/classes"/>
         <property name="context-root" value="JistMVC"/>
     </wb-module>
