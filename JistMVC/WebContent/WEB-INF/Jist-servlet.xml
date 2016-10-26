@@ -19,8 +19,7 @@
 	<!-- bcrypt bean -->
 	<bean id="bCryptPasswordEncoder"
 		class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" />
-	<bean id="jistdao" class="data.JistDAO" />
-	<bean id="usersdao" class="data.UsersDAO" />
+	<bean id="jobsdao" class="data.JobsDAO" />
 	<bean id="secretKeyGenerator" class="security.SecretKeyGenerator" />
 	<bean id="jsonWebTokenGenerator" class="security.JsonWebTokenGenerator" />
 	<bean id="myEntityManagerFactory"
