@@ -14,7 +14,7 @@ public class Job implements Serializable {
 	@Id
 	private int id;
 
-	@Temporal(TemporalType.TIMESTAMP)
+	@Temporal(TemporalType.DATE)
 	@Column(name="app_date")
 	private Date appDate;
 
@@ -54,7 +54,7 @@ public class Job implements Serializable {
 	@Column(name="sal_type")
 	private String salType;
 
-	@Temporal(TemporalType.TIMESTAMP)
+	@Temporal(TemporalType.DATE)
 	@Column(name="start_date")
 	private Date startDate;
 
