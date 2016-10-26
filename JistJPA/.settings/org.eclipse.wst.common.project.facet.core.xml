@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <faceted-project>
-<<<<<<< HEAD
   <fixed facet="jpt.jpa"/>
   <fixed facet="java"/>
   <installed facet="java" version="1.8"/>
-  <installed facet="jpt.jpa" version="2.1"/>
-=======
-  <fixed facet="jst.utility"/>
-  <installed facet="java" version="1.8"/>
-  <installed facet="jpt.jpa" version="2.1"/>
-  <installed facet="jst.utility" version="1.0"/>
->>>>>>> 8d8dbbc7c35d3cba1848387b2ce13a3737efd5ce
 </faceted-project>
