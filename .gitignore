@@ -1,3 +1,4 @@
+# Files / directories to ignore
 .DS_Store
 bin
 target
