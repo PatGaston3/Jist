@@ -13,7 +13,6 @@ import javax.persistence.TemporalType;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
-
 @Entity
 public class Job implements Serializable {
 	private static final long serialVersionUID = 1L;
