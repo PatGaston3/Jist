@@ -3,10 +3,7 @@
 	<name>JistMVC</name>
 	<comment></comment>
 	<projects>
-<<<<<<< HEAD
-=======
 		<project>JistJPA</project>
->>>>>>> 8d8dbbc7c35d3cba1848387b2ce13a3737efd5ce
 	</projects>
 	<buildSpec>
 		<buildCommand>
