@@ -3,7 +3,9 @@
 var app = angular.module('ngJist');
 
 app.controller("loginController", function($scope, authenticationService, $location) {
+
 	$scope.displayError = false;
+
 
 	// Login User
 	$scope.loginUser = function(user){
@@ -21,3 +23,4 @@ app.controller("loginController", function($scope, authenticationService, $locat
 	
 	
 });
+

@@ -7,12 +7,12 @@ app.factory('authenticationService', function($http, $window, $location) {
 	var saveToken = function(token) {
 		$window.localStorage['job-token'] = token;
 	};
-	
+
 	// Retrieve JWT from local storage
 	var getToken = function() {
 		return $window.localStorage['job-token'];
 	};
-	
+
 	// Contact the server, authenticate user credentials
 	var loginNewUser = function(user) {
 		return $http({
@@ -39,21 +39,25 @@ app.factory('authenticationService', function($http, $window, $location) {
         return false;
       }
     };
-    
+
  // Get current user from JWT
     var currentUser = function() {
       if (isLoggedIn()) {
         var token = getToken();
         var payload = JSON.parse($window.atob(token.split('.')[1]));
 
+        console.log(payload)
         return {
           username : payload.username,
-          id : payload.id
+          id : payload.id,
+          firstname : payload.firstname,
+          lastname : payload.lastname,
+          location : payload.location
         };
       }
     };
-    
-    
+
+
     // End Session for Current User
     var logout = function () {
         console.log("in logout");
@@ -71,6 +75,5 @@ app.factory('authenticationService', function($http, $window, $location) {
       getToken : getToken,
       saveToken : saveToken
     }
-	
-})
 
+})
