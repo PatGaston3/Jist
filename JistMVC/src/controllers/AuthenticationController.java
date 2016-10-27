@@ -44,12 +44,18 @@ public class AuthenticationController {
 			e.printStackTrace();
 			user = null;
 		}
-		String jws = jwtGen.generateUserJwt(user);
 		Map<String, String> responseJson = new HashMap<>();
+		if(user != null){
+		String jws = jwtGen.generateUserJwt(user);
 		responseJson.put("jwt", jws);
 		return responseJson;	
-	}
+		}else {
+			res.setStatus(400);
+			responseJson.put("error", "Incorrect Password");
+			return responseJson;
+		}
 	
+	}
 	@RequestMapping(value = "/signup", method = RequestMethod.POST)
 	public Map<String, String> signup(HttpServletRequest req, HttpServletResponse res, @RequestBody String userJson) {
 		ObjectMapper mapper = new ObjectMapper();
