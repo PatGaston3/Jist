@@ -5,6 +5,7 @@ var app = angular.module('ngJist');
 app.factory('authenticationService', function($http, $window, $location) {
 	// Place JWT into local storage
 	var saveToken = function(token) {
+		console.log(token)
 		$window.localStorage['job-token'] = token;
 	};
 	

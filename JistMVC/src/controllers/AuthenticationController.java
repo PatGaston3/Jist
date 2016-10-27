@@ -54,16 +54,24 @@ public class AuthenticationController {
 	@RequestMapping(value = "/signup", method = RequestMethod.POST)
 	public Map<String, String> signup(HttpServletRequest req, HttpServletResponse res, @RequestBody String userJson) {
 		ObjectMapper mapper = new ObjectMapper();
+		System.out.println("*********Before parse requestbody*********");
 		User user = null;
 		try{
 			user = mapper.readValue(userJson, User.class);
+			System.out.println("*********USER*********");
+			System.out.println(user);
 		}catch(IOException ie) {
+			System.out.println("*********ERROR*********");
 			ie.printStackTrace();
 		}
 		user = jobsDAO.create(user);
+		System.out.println("*********DAO USER*********");
+		System.out.println(user);
 		String jws = jwtGen.generateUserJwt(user);
 		Map<String, String> responseJson = new HashMap<>();
 		responseJson.put("jwt", jws);
+		System.out.println("*********JWT*********");
+		System.out.println(responseJson);
 		return responseJson;
 	}
 
