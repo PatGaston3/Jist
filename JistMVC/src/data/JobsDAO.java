@@ -84,8 +84,9 @@ public class JobsDAO {
     if (user != null){
         String rawPassword = loginData.getPassword();
         String encodedPassword = user.getPassword();
+        System.out.println(encodedPassword);
         if(passwordEncoder.matches(rawPassword,encodedPassword)){
-            return user;
+        	return user;
         }
     }	
     return user;
