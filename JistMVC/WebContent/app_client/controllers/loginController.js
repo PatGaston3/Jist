@@ -8,12 +8,9 @@ app.controller("loginController", function($scope, authenticationService, $locat
 	$scope.loginUser = function(user){
 		authenticationService.loginNewUser(user)
 		.then(function(response) {
-			console.log(response);
 			if (response.status < 400) {
-				console.log('in the loginController loginUser method');
 				$location.url('/home');
 			}
-			console.log('response in loginController: ' + response);
 		})
 	}
 });

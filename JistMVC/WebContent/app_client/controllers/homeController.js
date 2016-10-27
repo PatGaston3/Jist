@@ -2,11 +2,10 @@
 
 var app = angular.module('ngJist');
 
-app.controller("homeController", function($scope, jobService) {
+app.controller("homeController", function($scope, authenticationService) {
 	
-	
-	$scope.getUser = function() {
-		return jobService.getUser();
+	$scope.logOut = function(){
+		authenticationService.logout();
 	}
 	
 	

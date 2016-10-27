@@ -74,18 +74,12 @@ app.factory('jobService', function($http, authenticationService) {
 			data : job
 		})
 	};
-	
-	// GET USER
-	var getUser = function() {
-		return authenticationService.currentUser();
-	}
-	
+
 	return {
 		getJobs : getJobs,
 		createJob : createJob,
 		deleteJob : deleteJob,
-		updateJob : updateJob,
-		getUser : getUser
+		updateJob : updateJob
 	};
 	
 	return jobService;
