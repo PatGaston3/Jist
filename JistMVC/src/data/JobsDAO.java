@@ -38,9 +38,7 @@ public class JobsDAO {
 
 	public Job showJob(int id) {
 		Job job = em.find(Job.class, id);
-
 		return job;
-
 	}
 
 	public Collection<Job> showJobs(int id) {
@@ -50,7 +48,6 @@ public class JobsDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
 		return user.getJobs();
 	}
 
@@ -73,7 +70,7 @@ public class JobsDAO {
 	public User authenticateUser(User loginData) {
 		User user = null;
 		user = em.createQuery("select u from User u where u.username = :username", User.class)
-				.setParameter("username",  loginData.getUsername()).getSingleResult();
+				.setParameter("username", loginData.getUsername()).getSingleResult();
 
 		if (user != null) {
 			String rawPassword = loginData.getPassword();
@@ -89,7 +86,6 @@ public class JobsDAO {
 		return user;
 	}
 
-	
 	public User update(int id, User user) {
 		User updatedUser = em.find(User.class, id);
 		updatedUser.setUsername(user.getUsername());

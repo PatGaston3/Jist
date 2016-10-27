@@ -23,13 +23,6 @@ app.factory('authenticationService', function($http, $window, $location) {
               },
             data : user
 		})
-		.then(function(response){
-            saveToken(response.data.jwt);
-            return response;
-          })
-          .catch(function(error){
-        	  console.log(error);
-          })
 	};
 
     // Check that a user's login is valid (present AND not expired)

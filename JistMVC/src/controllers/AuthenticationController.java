@@ -33,21 +33,35 @@ public class AuthenticationController {
 	public Map<String, String> login(HttpServletRequest req, HttpServletResponse res, @RequestBody String userJsonString) {
 		ObjectMapper mapper = new ObjectMapper();
 		User user = null;
+		User returnUser = null;
+		
 		try{
 			user = mapper.readValue(userJsonString, User.class);
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
+		
 		try{
-			user = jobsDAO.authenticateUser(user);
+			returnUser = jobsDAO.authenticateUser(user);
 		}catch(Exception e) {
 			e.printStackTrace();
-			user = null;
+			System.out.println("in the authentication controller login catch");
 		}
-		String jws = jwtGen.generateUserJwt(user);
-		Map<String, String> responseJson = new HashMap<>();
-		responseJson.put("jwt", jws);
-		return responseJson;	
+		
+		System.out.println(user);
+		
+		if(returnUser != null){
+			String jws = jwtGen.generateUserJwt(user);
+			Map<String, String> responseJson = new HashMap<>();
+			responseJson.put("jwt", jws);
+			return responseJson;	
+		}
+		else{
+			Map<String, String> errorJson = new HashMap<>();
+			errorJson.put("error", "Invalid Login Attempt!");
+			res.setStatus(401);
+			return errorJson;
+		}
 	}
 	
 	@RequestMapping(value = "/signup", method = RequestMethod.POST)
