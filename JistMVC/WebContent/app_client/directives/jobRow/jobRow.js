@@ -9,16 +9,16 @@ app.directive('jobDirective', function($compile, jobService){
 	<div class="container">	
 	<div class="row">
 	<div class="col-md-2">
-	job.companyName
+	{{data.companyName}}
 	</div>
 	<div class="col-md-2">
-	job.jobTitle
+	{{data.jobTitle}}
 	</div>
 	<div class="col-md-2">
-	job.city + job.state
+	{{data.city}}, {{data.state}}
 	</div>
 	<div class="col-md-2">
-	job.appDate
+	{{data.appDate}}
 	</div>
 	<div class="col-md-2">
 	Edit Button
@@ -30,7 +30,7 @@ app.directive('jobDirective', function($compile, jobService){
 	</div>
 	`,
 	scope : {
-		todo : '=',
+		data : '=',
 		'delete' : '=',
 		edit : '='
 	},

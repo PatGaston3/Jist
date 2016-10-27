@@ -9,7 +9,7 @@ app.controller("registrationController", function($scope, registrationService, $
 		registrationService.createUser(user)
 		.then(function(response) {
 			if (response.status === 201) {
-				$location.url('/');
+				$location.url('/home');
 			}
 		})
 	}

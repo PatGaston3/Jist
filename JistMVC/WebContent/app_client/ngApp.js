@@ -4,12 +4,12 @@ var app = angular.module('ngJist', ['ngRoute'])
 .config(function($routeProvider){
 	$routeProvider
 	.when('/',{
-		templateUrl: 'home.view.html',
-		controller: 'homeController'
-	})
-	.when('/login',{
 		templateUrl: 'login.view.html',
 		controller: 'loginController'
+	})
+	.when('/home',{
+		templateUrl: 'home.view.html',
+		controller: 'homeController'
 	})
 	.when('/jobs',{
 		templateUrl: 'jobs.view.html',

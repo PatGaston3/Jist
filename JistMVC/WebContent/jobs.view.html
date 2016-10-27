@@ -1,8 +1,26 @@
 <header ng-include="'partials/job-nav.html'"></header>
 <div class="container">
-	
-	<h1>List of Jobs</h1>
-	
-	
+    <div class="top-bar">
+  <h1> {{"Jobs"}} <small><small>Total Count: {{totalCount()}}</small></small></h1>
+  </div>
 
+  <hr>
+
+    <!--  <div class = "container">
+     <div class="row">
+       <form ng-action="submit(task)">
+  <input id="added" class="form-control col-sm-9" type="text" placeholder="New Task" ng-model="task" />
+  <button type="submit" class="btn btn-primary btn-circle col-sm-1" ng-click="submit(task)"><i class="fa fa-plus" aria-hidden="true"></i></button>
+</form>
+  <h5 class="col-sm-3">
+       Show completed Tasks <input type="checkbox" ng-model="showComplete" />
+     </h5>
 </div>
+</div> -->
+
+	<div ng-repeat="job in jobs" job-directive data="job" delete="destroy" edit="edit" >
+	</div>
+
+
+  </div>
+

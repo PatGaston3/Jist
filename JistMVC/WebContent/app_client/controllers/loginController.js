@@ -11,7 +11,7 @@ app.controller("loginController", function($scope, authenticationService, $locat
 			console.log(response);
 			if (response.status < 400) {
 				console.log('in the loginController loginUser method');
-				$location.url('/');
+				$location.url('/home');
 			}
 			console.log('response in loginController: ' + response);
 		})

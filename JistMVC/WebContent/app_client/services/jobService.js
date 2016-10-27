@@ -13,12 +13,12 @@ app.factory('jobService', function($http, authenticationService) {
 	// GET JOBS
 	var getJobs = function() {
 		var userId = null;
-		if (authenticationService,isLoggedIn()) {
+		if (authenticationService.isLoggedIn()) {
 			userId = authenticationService.currentUser().id;
 		}
 		return $http({
 			method : 'GET',
-			url: 'api/user/' + userId + '/jobs',
+			url: 'api/user/' + userId + '/joblist',
 			headers : {
 				'x-access-token' : authenticationService.getToken()
 			}
@@ -34,7 +34,7 @@ app.factory('jobService', function($http, authenticationService) {
 		}
 		return $http({
 			method : 'POST',
-			url : 'api/user/' + userId + '/jobs',
+			url : 'api/user/' + userId + '/joblist',
 			headers : {
 				'Content-Type' : 'application/json',
 				'x-access-token' : authenticationService.getToken()
@@ -51,7 +51,7 @@ app.factory('jobService', function($http, authenticationService) {
 		}
 		return $http({
 			method : 'DELETE',
-			url : 'api/user/' + userId + '/jobs/' + jobId,
+			url : 'api/user/' + userId + '/joblist/' + jobId,
 			headers : {
 				'x-access-token' : authenticationService.getToken()
 			}
@@ -66,7 +66,7 @@ app.factory('jobService', function($http, authenticationService) {
 		}
 		return $http({
 			method : 'PUT',
-			url : 'api/user/' + userId + '/jobs/' + jobId,
+			url : 'api/user/' + userId + '/joblist/' + jobId,
 			headers : {
 				'Content-Type' : 'application/json',
 				'x-access-token' : authenticationService.getToken()
@@ -75,12 +75,17 @@ app.factory('jobService', function($http, authenticationService) {
 		})
 	};
 	
+	// GET USER
+	var getUser = function() {
+		return authenticationService.currentUser();
+	}
 	
 	return {
 		getJobs : getJobs,
 		createJob : createJob,
 		deleteJob : deleteJob,
-		updateJob : updateJob
+		updateJob : updateJob,
+		getUser : getUser
 	};
 	
 	return jobService;
