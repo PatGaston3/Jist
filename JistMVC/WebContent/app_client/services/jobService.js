@@ -51,7 +51,7 @@ app.factory('jobService', function($http, authenticationService) {
 		}
 		return $http({
 			method : 'DELETE',
-			url : 'api/user/' + userId + '/joblist/' + jobId,
+			url : 'api/user/' + userId + '/joblist/' + job.id,
 			headers : {
 				'x-access-token' : authenticationService.getToken()
 			}

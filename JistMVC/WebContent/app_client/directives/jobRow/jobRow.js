@@ -21,10 +21,10 @@ app.directive('jobDirective', function($compile, jobService){
 	{{data.appDate}}
 	</div>
 	<div class="col-md-2">
-	<button class="btn btn-primary btn-xs" ng-click="update(job)">Edit <i class="fa fa-pencil" aria-hidden="true"></i></button>
+	<button class="btn btn-primary btn-xs" ng-click="update(data)">Edit <i class="fa fa-pencil" aria-hidden="true"></i></button>
 	</div>
 	<div class="col-md-2">
-	<button class="btn btn-danger btn-xs">Delete <i class="fa fa-trash" aria-hidden="true"></i></button>
+	<button type="button" ng-click="delete(data)" class="btn btn-danger btn-xs">Delete <i class="fa fa-trash" aria-hidden="true"></i></button>
 	</div>
 	</div>
 	</div>
