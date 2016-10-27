@@ -11,10 +11,10 @@
     	<!--  Left Side -->
         <div class="col-lg-6">
             <ul>
-		<li>{{user()}}</li>	
-		<li>User First Name</li>	
-		<li>User Last Name</li>	
-		<li>User Location</li>	
+		<li>{{loadUser().username}}</li>	
+		<li>{{loadUser().firstname}}</li>	
+		<li>{{loadUser().lastname}}</li>	
+		<li>{{loadUser().location}}</li>	
 	</ul>
 	<button class="btn btn-default" ng-click="addJobRedirect()">Add Job</button>
 	<a href="#/jobs"><button class="btn btn-primary">View Jobs</button></a>
