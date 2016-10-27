@@ -48,10 +48,9 @@ public class AuthenticationController {
 			System.out.println("in the authentication controller login catch");
 		}
 		
-		System.out.println(user);
-		
 		if(returnUser != null){
-			String jws = jwtGen.generateUserJwt(user);
+			System.out.println("in the authentication not null if " + returnUser.getId());
+			String jws = jwtGen.generateUserJwt(returnUser);
 			Map<String, String> responseJson = new HashMap<>();
 			responseJson.put("jwt", jws);
 			return responseJson;	

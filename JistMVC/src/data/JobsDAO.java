@@ -71,7 +71,8 @@ public class JobsDAO {
 		User user = null;
 		user = em.createQuery("select u from User u where u.username = :username", User.class)
 				.setParameter("username", loginData.getUsername()).getSingleResult();
-
+		
+		System.out.println(user.getId());
 		if (user != null) {
 			String rawPassword = loginData.getPassword();
 			String encodedPassword = user.getPassword();

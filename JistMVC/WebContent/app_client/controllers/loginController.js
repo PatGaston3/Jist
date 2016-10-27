@@ -9,6 +9,7 @@ app.controller("loginController", function($scope, authenticationService, $locat
 
 	// Login User
 	$scope.loginUser = function(user){
+		console.log(user);
 		authenticationService.loginNewUser(user)
 		.then(function(response) {
 			authenticationService.saveToken(response.data.jwt);

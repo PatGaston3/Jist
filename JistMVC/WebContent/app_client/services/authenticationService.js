@@ -12,6 +12,8 @@ app.factory('authenticationService', function($http, $window, $location) {
 	var getToken = function() {
 		return $window.localStorage['job-token'];
 	};
+	
+	// TODO: THE ABOVE FUNCTIONS MAY BE CAUSING LOGIN ISSUES, INVESTIGATE TOMORROW
 
 	// Contact the server, authenticate user credentials
 	var loginNewUser = function(user) {
