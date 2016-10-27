@@ -96,7 +96,7 @@ app.directive('jobDirective', function($compile, jobService){
 
 		$scope.cancel = function() {
 			if(editJob !=null) {
-				editJob.deleteJob(editJob);
+				editJob.remove(editJob);
 				editJob =  null;
 			}
 		}
