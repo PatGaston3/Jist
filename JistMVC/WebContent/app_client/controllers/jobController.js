@@ -41,15 +41,12 @@ app.controller("jobController", function($scope, jobService) {
 		})
 	}
 
-//	$scope.incompleteJobs = function() {
-//		var incomplete = 0;
-//		$scope.jobs.forEach(function(job) {
-//			if (!job.completed) {
-//				++incomplete;
-//			}
-//		});
-//		return incomplete;
-//	}
+	
+	  $scope.warnUser = function(){
+		  return ($scope.totalCount() > 0)
+		  ? "warnMe"
+				  : "label-success";
+	  }
 
 	$scope.totalCount = function() {
 		return $scope.jobs.length;
