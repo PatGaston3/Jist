@@ -3,13 +3,29 @@
 	
 	<h1>User Dashboard</h1>
 	
-	<ul>
-		<li>{{getUser().username}}</li>	
+	
+	<div class="container-fluid">
+    <div class="row">
+    
+    
+    	<!--  Left Side -->
+        <div class="col-lg-6">
+            <ul>
+		<li>{{user()}}</li>	
 		<li>User First Name</li>	
 		<li>User Last Name</li>	
 		<li>User Location</li>	
 	</ul>
-	
 	<button class="btn btn-default">Add Job</button>
 	<a href="#/jobs"><button class="btn btn-primary">View Jobs</button></a>
+        </div>
+        
+        
+        <!--  Right Side -->
+        <div class="col-lg-6">
+            Circle Chart
+        </div>
+    </div>
+    </div>
+	
 </div>

@@ -70,19 +70,7 @@ public class JobsDAO {
 		return user;	
 	}
 	
-//	public User authenticateUser (User loginData) throws Exception {
-//		System.out.println(loginData);
-//		User user = em.find(User.class, loginData.getId());
-//
-//		System.out.println("in auth user");
-//		System.out.println(user);
-//		if(passwordEncoder.matches(loginData.getPassword(), user.getPassword())) {
-//			System.out.println("authenticate User If");
-//			System.out.println(user);
-//			return user;
-//		}
-//		return null;
-//	}
+
 	public User authenticateUser(User loginData) {
     User user = null;
     

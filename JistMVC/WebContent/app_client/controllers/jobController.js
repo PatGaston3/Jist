@@ -2,7 +2,7 @@
 
 var app = angular.module('ngJist');
 
-app.controller("jobController", function($scope, jobService) {
+app.controller("jobController", function($scope, jobService, authenticationService) {
 
 	$scope.jobs = [];
 
@@ -27,8 +27,10 @@ app.controller("jobController", function($scope, jobService) {
 	// }
 
 	// Delete Job
-	$scope.destroy = function(job) {
-		jobService.deleteJob(job).then(function(response) {
+	$scope.delete = function(job) {
+		console.log("in destroy cont")
+		jobService.deleteJob(job)
+		.then(function(response) {
 			$scope.loadJobs();
 		})
 	}
@@ -50,6 +52,12 @@ app.controller("jobController", function($scope, jobService) {
 
 	$scope.totalCount = function() {
 		return $scope.jobs.length;
+	}
+	
+	
+	// Logout User
+	$scope.logOut = function(){
+		authenticationService.logout();
 	}
 
 });
