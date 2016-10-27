@@ -6,7 +6,7 @@ app.directive('jobDirective', function($compile, jobService){
 	return {
 		restrict: 'A',
 		template: `
-	<div class="container">	
+	<div class="container">
 	<div class="row">
 	<div class="col-md-2">
 	{{data.companyName}}
@@ -21,7 +21,7 @@ app.directive('jobDirective', function($compile, jobService){
 	{{data.appDate}}
 	</div>
 	<div class="col-md-2">
-	<button class="btn btn-primary btn-xs" ng-click="update(data)">Edit <i class="fa fa-pencil" aria-hidden="true"></i></button>
+	<button class="btn btn-primary btn-xs" ng-click="edit(data)">Edit <i class="fa fa-pencil" aria-hidden="true"></i></button>
 	</div>
 	<div class="col-md-2">
 	<button type="button" ng-click="delete(data)" class="btn btn-danger btn-xs">Delete <i class="fa fa-trash" aria-hidden="true"></i></button>
@@ -37,7 +37,7 @@ app.directive('jobDirective', function($compile, jobService){
 	link : function($scope, $element, $attr){
 		$scope.jobCopy = {};
 		var editJob = null;
-		
+
 		$scope.update = function(job) {
 			if (editJob === null) {
 				$scope.jobCopy = angular.copy(job);
@@ -53,13 +53,13 @@ app.directive('jobDirective', function($compile, jobService){
 					'<input type="text"  ng-model="jobCopy.appDate" />' +
 					'<div class="col-md-2>' +
 					'<button class="btn btn-primary" >Save</button>'
-					
+
 					var compiledRow = $compile($inputRow) ($scope);
 					editJob = compiledRow;
 					$element.after(compiledRow);
 			}
 		}
-		
+
 		$scope.save = function(job){
 	          $scope.edit(job); // jobService.updateJob(job);
 	          editJob.remove();

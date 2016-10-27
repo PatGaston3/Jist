@@ -21,7 +21,6 @@ public class JsonWebTokenGenerator {
 		Map<String, Object> userJson = new HashMap<>();
 		userJson.put("id", user.getId());
 		userJson.put("username", user.getUsername());
-		System.out.println("in generateUserJwt" + userJson);
 		
 		String jwt = "";
 		try{
