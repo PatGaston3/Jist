@@ -73,6 +73,7 @@ public class JobsDAO {
 	}
 
 	public User authenticateUser(User loginData) {
+
 		System.out.println("at the top of authenticateUser in DAO");
 		User user = null;
 		
@@ -94,58 +95,6 @@ public class JobsDAO {
 		return user;
 	}
 
-	// public User authenticateUser(User loginData) {
-	// User user = null;
-	//
-	// List<User> accessList = indexUsers();
-	// for(User data: accessList){
-	// if(data.getUsername().equals(loginData.getUsername())){
-	// user = em.find(User.class, data.getId());
-	// }
-	// }
-	//
-	// if (user != null){
-	// String rawPassword = loginData.getPassword();
-	// String encodedPassword = user.getPassword();
-	// if(passwordEncoder.matches(rawPassword,encodedPassword)){
-	// System.out.println("in the authenticateUser if, password matched");
-	// return user;
-	// }
-	// else {
-	// System.out.println("in the authenticateUser else, login rejected");
-	// return null;
-	// }
-	// }
-	// return user;
-
-	// }
-
-//    User user = null;
-//    // jbql Select where username = whatevs
-//    List<User> accessList = indexUsers();
-//    for(User data: accessList){
-//        if(data.getUsername().equals(loginData.getUsername())){
-//        		System.out.println("Username: " + loginData.getUsername());
-//        		System.out.println("Password: " + loginData.getPassword());
-//        		System.out.println("login data: " +loginData );
-//            user = em.find(User.class, data.getId());
-//            System.out.println("User: " + user);
-//        }
-//    }
-//    
-//    if (user != null){
-//        String rawPassword = loginData.getPassword();
-//        System.out.println("raw password: " + rawPassword);
-//        String encodedPassword = user.getPassword();
-//        System.out.println("encrypted password: " + encodedPassword);
-//        if(passwordEncoder.matches(rawPassword,encodedPassword)){
-//        	System.out.println("IN PASSWORD MATCH");
-//            return user;
-//        } 
-//    }	
-//    return null;
-//
-//}
 	
 	public User update(int id, User user) {
 		User updatedUser = em.find(User.class, id);
