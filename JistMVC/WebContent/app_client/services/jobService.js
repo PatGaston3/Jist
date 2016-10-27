@@ -2,14 +2,16 @@
 
 var app = angular.module('ngJist');
 
+
 app.factory('jobService', function($http, authenticationService, $location) {
+
 
 	var jobService = {};
 
 	// *******************************
 	//  JOBS
 	// *******************************
-
+	
 	// GET JOBS
 	var getJobs = function() {
 		var userId = null;
@@ -24,8 +26,8 @@ app.factory('jobService', function($http, authenticationService, $location) {
 			}
 		})
 	};
-
-
+	
+	
 	// CREATE JOB
 	var createJob = function(job) {
 		var userId = null;
@@ -45,7 +47,7 @@ app.factory('jobService', function($http, authenticationService, $location) {
 			$location.url('/jobs');
 		})
 	}
-
+	
 	// DELETE JOB
 	var deleteJob = function(job) {
 		var userId = null;
@@ -60,7 +62,7 @@ app.factory('jobService', function($http, authenticationService, $location) {
 			}
 		})
 	};
-
+	
 	// UPDATE JOB
 	var updateJob = function(job) {
 		var userId = null;
@@ -69,7 +71,7 @@ app.factory('jobService', function($http, authenticationService, $location) {
 		}
 		return $http({
 			method : 'PUT',
-			url : 'api/user/' + userId + '/joblist/' + job.id,
+			url : 'api/user/' + userId + '/joblist/' + jobId,
 			headers : {
 				'Content-Type' : 'application/json',
 				'x-access-token' : authenticationService.getToken()
@@ -84,7 +86,8 @@ app.factory('jobService', function($http, authenticationService, $location) {
 		deleteJob : deleteJob,
 		updateJob : updateJob
 	};
-
+	
 	return jobService;
-
+	
 })
+

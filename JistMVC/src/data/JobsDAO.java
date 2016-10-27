@@ -120,6 +120,33 @@ public class JobsDAO {
 
 	// }
 
+//    User user = null;
+//    // jbql Select where username = whatevs
+//    List<User> accessList = indexUsers();
+//    for(User data: accessList){
+//        if(data.getUsername().equals(loginData.getUsername())){
+//        		System.out.println("Username: " + loginData.getUsername());
+//        		System.out.println("Password: " + loginData.getPassword());
+//        		System.out.println("login data: " +loginData );
+//            user = em.find(User.class, data.getId());
+//            System.out.println("User: " + user);
+//        }
+//    }
+//    
+//    if (user != null){
+//        String rawPassword = loginData.getPassword();
+//        System.out.println("raw password: " + rawPassword);
+//        String encodedPassword = user.getPassword();
+//        System.out.println("encrypted password: " + encodedPassword);
+//        if(passwordEncoder.matches(rawPassword,encodedPassword)){
+//        	System.out.println("IN PASSWORD MATCH");
+//            return user;
+//        } 
+//    }	
+//    return null;
+//
+//}
+	
 	public User update(int id, User user) {
 		User updatedUser = em.find(User.class, id);
 		updatedUser.setUsername(user.getUsername());

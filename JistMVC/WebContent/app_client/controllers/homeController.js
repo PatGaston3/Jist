@@ -11,4 +11,5 @@ app.controller("homeController", function($scope, authenticationService, $locati
 	$scope.addJobRedirect = function() {
 		$location.url('/addlisting');
 	}
+
 });

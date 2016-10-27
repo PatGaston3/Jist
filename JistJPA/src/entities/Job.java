@@ -258,6 +258,6 @@ public class Job implements Serializable {
 				+ ", contactPhone=" + contactPhone + ", desiredSalary=" + desiredSalary + ", jobTitle=" + jobTitle
 				+ ", notes=" + notes + ", offer=" + offer + ", offeredSalary=" + offeredSalary + ", postingUrl="
 				+ postingUrl + ", salType=" + salType + ", startDate=" + startDate + ", state=" + state + ", user="
-				+ user + "]";
+				+ user.getId() + "]";
 	}
 }
