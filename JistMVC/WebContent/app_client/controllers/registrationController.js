@@ -6,10 +6,9 @@ app.controller("registrationController", function($scope, registrationService, $
 	
 	// Create New User
 	$scope.genUser = function(user){
-		console.log("IN GEN USER!!!")
 		registrationService.createUser(user)
 		.then(function(response) {
-			if (response.status === 200) {
+			if (response.status < 400) {
 				console.log(response);
 				authenticationService.saveToken(response.data.jwt);
 			}

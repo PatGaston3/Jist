@@ -8,11 +8,11 @@ app.controller("homeController", function($scope, authenticationService, $locati
 	
 	$scope.logOut = function(){
 		authenticationService.logout();
-	}
+	};
 	
 	$scope.addJobRedirect = function() {
 		$location.url('/addlisting');
-	}
+	};
 
 	$scope.loadUser= function(){
 		return authenticationService.currentUser()

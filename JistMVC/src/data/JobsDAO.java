@@ -67,28 +67,22 @@ public class JobsDAO {
 		user.setPassword(encodedPassword);
 		em.persist(user);
 		em.flush();
-		System.out.println("***************USER OBJECT IN CREATE*******************");
-		System.out.println(user);
 		return user;
 	}
 
 	public User authenticateUser(User loginData) {
-
-		System.out.println("at the top of authenticateUser in DAO");
 		User user = null;
-		
 		user = em.createQuery("select u from User u where u.username = :username", User.class)
 				.setParameter("username",  loginData.getUsername()).getSingleResult();
 
 		if (user != null) {
-			System.out.println("in the user is not null if in authenticateUser");
 			String rawPassword = loginData.getPassword();
 			String encodedPassword = user.getPassword();
 			if (passwordEncoder.matches(rawPassword, encodedPassword)) {
-				System.out.println("in the encoder matching if");
 				return user;
 			} else {
-				System.out.println("invalid password exception");
+				System.out.println("invalid password entered");
+				// TODO Error handling in the authenticateUser method here
 				return null;
 			}
 		}

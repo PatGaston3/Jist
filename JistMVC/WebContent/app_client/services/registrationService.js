@@ -6,8 +6,6 @@ app.factory('registrationService', function($http){
 	  
 	  // CREATE NEW USER
 	  registrationService.createUser = function(user) {
-		  console.log("IN REG SERVICE")
-		  console.log(user)
 		  return $http({
 			  method : 'POST',
 			  url :'api/auth/signup',
@@ -17,13 +15,11 @@ app.factory('registrationService', function($http){
 			  data : user
 		  })
 		  .then(function(res){
-			  console.log(res)
-			  return res
+			  return res;
 		  })
 		  .catch(function(err){
-			  console.log(err)
+			  console.log(err);
 		  })
 	  }
-		
 	  return registrationService;
 	});
