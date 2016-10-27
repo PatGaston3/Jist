@@ -47,8 +47,7 @@ public class AuthenticationController {
 		String jws = jwtGen.generateUserJwt(user);
 		Map<String, String> responseJson = new HashMap<>();
 		responseJson.put("jwt", jws);
-		return responseJson;
-				
+		return responseJson;	
 	}
 	
 	@RequestMapping(value = "/signup", method = RequestMethod.POST)
