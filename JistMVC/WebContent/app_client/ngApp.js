@@ -23,6 +23,10 @@ var app = angular.module('ngJist', ['ngRoute'])
 		templateUrl: 'register.view.html',
 		controller: 'registrationController'
 	})
+	.when('/addlisting', {
+		templateUrl: 'addjob.view.html',
+		controller: 'addJobController'
+	})
 	.otherwise({
 	      redirectTo: '/'
 	    });
