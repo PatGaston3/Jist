@@ -3,7 +3,7 @@
 var app = angular.module('ngJist');
 
 app.controller("loginController", function($scope, authenticationService, $location) {
-	
+
 	// Login User
 	$scope.loginUser = function(user){
 		authenticationService.loginNewUser(user)
