@@ -2,7 +2,7 @@
 
 var app = angular.module('ngJist');
 
-app.factory('authenticationService', function($http, $window) {
+app.factory('authenticationService', function($http, $window, $location) {
 	// Place JWT into local storage
 	var saveToken = function(token) {
 		$window.localStorage['job-token'] = token;
@@ -15,8 +15,6 @@ app.factory('authenticationService', function($http, $window) {
 	
 	// Contact the server, authenticate user credentials
 	var loginNewUser = function(user) {
-		console.log("In auth service");
-		console.log(user);
 		return $http({
 			method : 'POST',
 			url : 'api/auth/login',
@@ -33,11 +31,6 @@ app.factory('authenticationService', function($http, $window) {
         	  console.log(error);
           })
 	};
-	
-	 // Remove JWT from local storage
-    var logout = function() {
-      $window.localStorage.removeItem('job-token');
-    };
 
     // Check that a user's login is valid (present AND not expired)
     var isLoggedIn = function() {
@@ -66,6 +59,16 @@ app.factory('authenticationService', function($http, $window) {
         };
       }
     };
+    
+    
+    // End Session for Current User
+    var logout = function () {
+        console.log("in logout");
+        $window.localStorage.removeItem('job-token');
+        $location.url('/login');
+    };
+
+
 
     return {
       loginNewUser : loginNewUser,

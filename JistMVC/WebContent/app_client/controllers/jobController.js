@@ -2,7 +2,7 @@
 
 var app = angular.module('ngJist');
 
-app.controller("jobController", function($scope, jobService) {
+app.controller("jobController", function($scope, jobService, authenticationService) {
 
 	$scope.jobs = [];
 
@@ -50,6 +50,12 @@ app.controller("jobController", function($scope, jobService) {
 
 	$scope.totalCount = function() {
 		return $scope.jobs.length;
+	}
+	
+	
+	// Logout User
+	$scope.logOut = function(){
+		authenticationService.logout();
 	}
 
 });
