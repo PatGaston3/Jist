@@ -30,12 +30,17 @@
 	<bean id="myTransactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
 		<property name="entityManagerFactory" ref="myEntityManagerFactory" />
 	</bean>
+    <bean id="DataSecurityInterceptor" class="security.DataSecurityInterceptor" />
 
 
 	<mvc:interceptors>
 		<mvc:interceptor>
 			<mvc:mapping path="/user/*/jobs/**" />
-			<bean id="DataSecurityInterceptor" class="security.DataSecurityInterceptor" />
+			<ref bean="DataSecurityInterceptor" />
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/jobs" />
+			<ref bean="DataSecurityInterceptor" />
 		</mvc:interceptor>
 	</mvc:interceptors>
 
