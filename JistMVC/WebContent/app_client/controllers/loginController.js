@@ -11,7 +11,7 @@ app.controller("loginController", function($scope, authenticationService, $locat
 	$scope.loginUser = function(user){
 		authenticationService.loginNewUser(user)
 		.then(function(response) {
-			saveToken(response.data.jwt);
+			authenticationService.saveToken(response.data.jwt);
 			if (response.status < 400) {
 				console.log(response);
 				$location.url('/home');

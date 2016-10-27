@@ -9,7 +9,7 @@
         <input ng-model="user.password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
 		<br>
 		<div ng-show="displayError">
-      	<p id="loginError">You have entered an incorrect username/password.  Please try again.</p>
+      	<p class="loginError">You have entered an incorrect username/password.  Please try again.</p>
       </div>
 		<br><br>
         <button ng-click="loginUser(user)" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
