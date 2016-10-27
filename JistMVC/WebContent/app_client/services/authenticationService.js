@@ -31,6 +31,7 @@ app.factory('authenticationService', function($http, $window, $location) {
         	  $window.localStorage.removeItem('job-token');
         	  $location.url('/login');
         	  console.log(error);
+		  console.log("caught bad password");
           })
 	};
 
