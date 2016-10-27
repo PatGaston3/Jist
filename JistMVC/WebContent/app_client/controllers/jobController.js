@@ -27,8 +27,10 @@ app.controller("jobController", function($scope, jobService, authenticationServi
 	// }
 
 	// Delete Job
-	$scope.destroy = function(job) {
-		jobService.deleteJob(job).then(function(response) {
+	$scope.delete = function(job) {
+		console.log("in destroy cont")
+		jobService.deleteJob(job)
+		.then(function(response) {
 			$scope.loadJobs();
 		})
 	}
