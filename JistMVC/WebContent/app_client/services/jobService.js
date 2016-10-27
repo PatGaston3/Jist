@@ -2,8 +2,10 @@
 
 var app = angular.module('ngJist');
 
-app.factory('jobService', function($http, authenticationService) {
-	
+
+app.factory('jobService', function($http, authenticationService, $location) {
+
+
 	var jobService = {};
 
 	// *******************************
@@ -40,6 +42,9 @@ app.factory('jobService', function($http, authenticationService) {
 				'x-access-token' : authenticationService.getToken()
 			},
 			data : job
+		})
+		.then(function() {
+			$location.url('/jobs');
 		})
 	}
 	
