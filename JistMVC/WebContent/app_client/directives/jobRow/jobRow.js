@@ -60,6 +60,13 @@ app.directive('jobDirective', function($compile, jobService){
 			}
 		}
 		
+		$scope.cancel = function() {
+			if(editJob !=null) {
+				editJob.deleteJob(editJob);
+				editJob =  null;
+			}
+		}
+		
 		$scope.save = function(job){
 	          $scope.edit(job); // jobService.updateJob(job);
 	          editJob.remove();
