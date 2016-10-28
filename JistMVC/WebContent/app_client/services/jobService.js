@@ -74,6 +74,8 @@ app.factory('jobService', function($http, authenticationService) {
 			data : job
 		})
 	};
+	
+	
 
 	return {
 		getJobs : getJobs,

@@ -14,18 +14,6 @@ app.controller("jobController", function($scope, jobService, authenticationServi
 
 	$scope.loadJobs();
 
-	// Create new task on submit
-	// $scope.submit = function(job){
-	// if (job) {
-	// var newJob = {task: task, completed: false};
-	// jobService.createjob(newT)
-	// .then(function(reponse) {
-	// $scope.loadjobs();
-	// $scope.task = "";
-	// })
-	// }
-	// }
-
 	// Delete Job
 	$scope.delete = function(job) {
 		console.log("in destroy cont")

@@ -22,10 +22,13 @@
         
         
         <!--  Right Side -->
-        <div class="col-lg-6">
-            Circle Chart
+        <div class="col-lg-6" ng-controller="DoughnutCtrl">
+
+          <canvas id="doughnut" class="chart chart-doughnut"
+  			chart-data="data" chart-labels="labels" chart-options="options">
+		</canvas> 
+            
         </div>
     </div>
     </div>
-	
 </div>

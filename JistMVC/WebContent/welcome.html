@@ -11,6 +11,8 @@
 <!--  JS plugins  -->
 <script src="js/angular.min.js"></script>
 <script src="js/angular-route.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/angular-chart.min.js"></script>
 <script src="app_client/ngApp.js"></script>
 
 <!--  Controllers  -->
@@ -19,6 +21,7 @@
 <script src="app_client/controllers/jobController.js"></script>
 <script src="app_client/controllers/detailController.js"></script>
 <script src="app_client/controllers/registrationController.js"></script>
+<script src="app_client/controllers/doughnutCtrl.js"></script>
 
 <!--  Filters  -->
 
@@ -35,13 +38,29 @@
 	color: black;
 	font-size: 24px;
 }
+
+/* #myChart {
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+} */
+
+.chart-legend li span{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+}
 </style>
 
 
 </head>
 <body>
 	<div ng-view></div>
-
 
 </body>
 </html>

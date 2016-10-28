@@ -73,7 +73,7 @@ public class JobsDAO {
 
 	public User authenticateUser(User loginData) {
     User user = null;
-    
+    System.out.println(loginData);
     List<User> accessList = indexUsers();
     for(User data: accessList){
         if(data.getUsername().equals(loginData.getUsername())){
@@ -85,6 +85,7 @@ public class JobsDAO {
         String rawPassword = loginData.getPassword();
         String encodedPassword = user.getPassword();
         if(passwordEncoder.matches(rawPassword,encodedPassword)){
+        	System.out.println("in last if");
             return user;
         }
     }	

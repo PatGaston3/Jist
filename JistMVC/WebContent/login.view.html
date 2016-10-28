@@ -1,12 +1,13 @@
   <div class="container">
 	<h1>Login Page</h1>
 
-      <form ng-action="loginUser(user)" class="form-signin">
+      <form ng-action="loginUser(user)" class="form-signin" novalidate>
         <h2 class="form-signin-heading">Please Sign-in</h2>
         <label for="inputUsername" class="sr-only">Username</label>
         <input ng-model="user.username" type="text" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
-        <input ng-model="user.password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <input ng-model="user.password" type="password" id="inputPassword" class="form-control" placeholder="Password" required
+        ng-minlength="6" ng-maxlength="12">
 		<br><br><br>
         <button ng-click="loginUser(user)" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
       </form>

@@ -1,6 +1,6 @@
 // ngApp.js
 
-var app = angular.module('ngJist', ['ngRoute'])
+var app = angular.module('ngJist', ['ngRoute', 'chart.js'])
 .config(function($routeProvider){
 	$routeProvider
 	.when('/',{
