@@ -44,7 +44,34 @@ app.directive('jobDirective', function($compile, jobService){
 			}
 		}
 
-		
+		$scope.details = function(job) {
+			console.log("Details clicked");
+//			var $detailDisplay =
+//			`<h1>Testing</h1>`
+				
+						var $detailRow =
+						`<form class = "row">
+						<input type = "text"  value={{data.city}}>
+						<input type = "text" value={{data.contactInfo}}>
+						<input type = "text" ng-model = "jobCopy.city" />
+						<input type = "text" ng-model = "jobCopy.state" />
+						<input type = "text" ng-model = "jobCopy.appDate" />
+						<label for="jobStatus" class="sr-only">Job Status</label>
+						<select ng-model="job.offer" name="jobStatus" id="jobStatus" class="form-control" placeholder="JobStatus">
+						<option value = "In Progress"> In Progress </option>
+						<option value = "Awaiting Reply"> Awaiting Reply </option>
+						<option value = "Not Offered"> Not Offered </option>
+						</select>
+						<button class "btn btn-primary" ng-click="save(jobCopy)"> Save</button>
+						<button ng-click="cancel()" >Cancel</button>
+						<br><br><br>
+						</form>`
+
+
+						var compiledRow = $compile($detailRow) ($scope);
+						editJob = compiledRow;
+						$element.after(compiledRow);
+				}
 
 		$scope.cancel = function() {
 			if(editJob !=null) {
