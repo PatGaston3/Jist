@@ -2,9 +2,11 @@
 
 var app = angular.module('ngJist');
 
-app.controller("loginController", function($scope, authenticationService, $location) {
+app.controller("loginController", function($scope, authenticationService, $location, jobService, postService) {
 
 	$scope.displayError = false;
+	$scope.jobs = [];
+	console.log("Initialized empty $scope.jobs array");
 
 
 	// Login User
@@ -17,10 +19,13 @@ app.controller("loginController", function($scope, authenticationService, $locat
 				console.log(response);
 				$location.url('/home');
 			}
-		}).catch(function(e){
-			$scope.displayError = true;
-		});
+			return response;
+		})
+		
 	};
+	
+	
+
 	
 	
 });
