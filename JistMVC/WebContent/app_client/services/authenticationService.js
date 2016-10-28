@@ -63,7 +63,6 @@ app.factory('authenticationService', function($http, $window, $location) {
     var logout = function () {
         console.log("in logout");
         $window.localStorage.removeItem('job-token');
-        $location.url('/login');
     };
 
 
