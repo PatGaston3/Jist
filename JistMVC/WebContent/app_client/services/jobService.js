@@ -42,10 +42,10 @@ app.factory('jobService', function($http, authenticationService, $location) {
 				'x-access-token' : authenticationService.getToken()
 			},
 			data : job
-		})
-		.then(function() {
-			$location.url('/jobs');
-		})
+		});
+//		.then(function() {
+//			$location.url('/jobs');
+//		})
 	}
 
 	// DELETE JOB

@@ -49,7 +49,7 @@ public class AuthenticationController {
 		}
 		
 		if(returnUser != null){
-			System.out.println("in the authentication not null if " + returnUser.getId());
+			System.out.println("in the authentication if for userid: " + returnUser.getId());
 			String jws = jwtGen.generateUserJwt(returnUser);
 			Map<String, String> responseJson = new HashMap<>();
 			responseJson.put("jwt", jws);
@@ -57,7 +57,7 @@ public class AuthenticationController {
 		}
 		else{
 			Map<String, String> errorJson = new HashMap<>();
-			errorJson.put("error", "Invalid Login Attempt!");
+			errorJson.put("error", "invalid login attempt");
 			res.setStatus(401);
 			return errorJson;
 		}
