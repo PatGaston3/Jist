@@ -16,7 +16,7 @@ app.controller("jobController", function($scope, jobService, authenticationServi
 
 	// Delete Job
 	$scope.delete = function(job) {
-		console.log("in destroy cont")
+		console.log("in destroy")
 		jobService.deleteJob(job)
 		.then(function(response) {
 			$scope.loadJobs();
@@ -31,7 +31,7 @@ app.controller("jobController", function($scope, jobService, authenticationServi
 		})
 	}
 
-	
+
 	  $scope.warnUser = function(){
 		  return ($scope.totalCount() > 0)
 		  ? "warnMe"
@@ -41,8 +41,8 @@ app.controller("jobController", function($scope, jobService, authenticationServi
 	$scope.totalCount = function() {
 		return $scope.jobs.length;
 	}
-	
-	
+
+
 	// Logout User
 	$scope.logOut = function(){
 		authenticationService.logout();
