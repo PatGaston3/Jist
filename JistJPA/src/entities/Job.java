@@ -51,7 +51,7 @@ public class Job implements Serializable {
 
 	private String notes;
 
-	private boolean offer;
+	private String offer;
 
 	@Column(name="offered_salary")
 	private float offeredSalary;
@@ -80,7 +80,7 @@ public class Job implements Serializable {
 	}
 
 	public Job(int id, Date appDate, String city, String companyName, String contactEmail, String contactFname,
-			String contactLname, String contactPhone, float desiredSalary, String jobTitle, String notes, boolean offer,
+			String contactLname, String contactPhone, float desiredSalary, String jobTitle, String notes, String offer,
 			float offeredSalary, String postingUrl, String salType, Date startDate, String state, User user) {
 		super();
 		this.id = id;
@@ -193,11 +193,11 @@ public class Job implements Serializable {
 		this.notes = notes;
 	}
 
-	public boolean getOffer() {
+	public String getOffer() {
 		return this.offer;
 	}
 
-	public void setOffer(boolean offer) {
+	public void setOffer(String offer) {
 		this.offer = offer;
 	}
 
