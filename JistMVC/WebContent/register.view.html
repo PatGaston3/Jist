@@ -5,13 +5,13 @@
   <ul>
 
     <li ng-show={{"registration.username.$invalid"}}>
-      Username must be valid (between 4 and 12 characters)
+      Username must be valid (between 4 and 18 characters)
     </li>
     <li ng-show={{"registration.userfName.$invalid"}}>
-      First name must be valid (between 3 and 18 characters)
+      First name must be valid (between 1 and 18 characters)
     </li>
     <li ng-show={{"registration.userlName.$invalid"}}>
-      Last name must be valid (between 4 and 18 characters)
+      Last name must be valid (between 1 and 18 characters)
     </li>
     <li ng-show={{"registration.userlocation.$invalid"}}>
       Location must be valid (between 4 and 25 characters)
@@ -24,29 +24,29 @@
 
       <form name="registration" ng-action="genUser(user)" class="form-signin" novalidate>
         <h2 class="form-signin-heading">Begin Your Organized Job Search!</h2>
-        
+
         <label for="inputUsername" class="sr-only">Username</label>
         <input ng-model="user.username" name="username" type="text" id="inputUsername" class="form-control" placeholder="Username" required autofocus
-        ng-minlength="4" ng-maxlength="12">
-        
+        ng-minlength="4" ng-maxlength="18">
+
         <label for="userfName" class="sr-only">First Name</label>
         <input ng-model="user.fname" name="userfName" type="text" id="inputUsername" class="form-control" placeholder="First Name" required autofocus
-        ng-minlength="3" ng-maxlength="18">
-        
+        ng-minlength="1" ng-maxlength="18">
+
         <label for="userlName" class="sr-only">Last Name</label>
-        <input ng-model="user.lname" name="username" type="text" id="inputUsername" class="form-control" placeholder="Last Name" required autofocus
-        ng-minlength="4" ng-maxlength="18">
-        
+        <input ng-model="user.lname" name="userlname" type="text" id="inputUsername" class="form-control" placeholder="Last Name" required autofocus
+        ng-minlength="1" ng-maxlength="18">
+
         <label for="userlocation" class="sr-only">Location</label>
-        <input ng-model="user.location" name="userlocation" type="text" id="inputUsername" class="form-control" placeholder="location" required autofocus
+        <input ng-model="user.location" name="userlocation" type="text" id="inputUsername" class="form-control" placeholder="Location" required autofocus
         ng-minlength="3" ng-maxlength="25">
-        
+
         <label for="inputPassword" class="sr-only">Password</label>
         <input ng-model="user.password" name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required
         ng-minlength="6" ng-maxlength="12">
 		<br>
         <button ng-click="genUser(user)" class="btn btn-lg btn-primary btn-block" type="submit" ng-disabled={{"registration.$invalid"}}>Sign in</button>
       </form>
-      
+
 
     </div> <!-- /container -->

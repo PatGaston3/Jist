@@ -33,36 +33,58 @@ public class AuthenticationController {
 	public Map<String, String> login(HttpServletRequest req, HttpServletResponse res, @RequestBody String userJsonString) {
 		ObjectMapper mapper = new ObjectMapper();
 		User user = null;
+		User returnUser = null;
+		
 		try{
 			user = mapper.readValue(userJsonString, User.class);
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
+		
 		try{
-			user = jobsDAO.authenticateUser(user);
+			returnUser = jobsDAO.authenticateUser(user);
 		}catch(Exception e) {
 			e.printStackTrace();
-			user = null;
+			System.out.println("in the authentication controller login catch");
 		}
-		String jws = jwtGen.generateUserJwt(user);
-		Map<String, String> responseJson = new HashMap<>();
-		responseJson.put("jwt", jws);
-		return responseJson;
+		
+		if(returnUser != null){
+			System.out.println("in the authentication not null if " + returnUser.getId());
+			String jws = jwtGen.generateUserJwt(returnUser);
+			Map<String, String> responseJson = new HashMap<>();
+			responseJson.put("jwt", jws);
+			return responseJson;	
+		}
+		else{
+			Map<String, String> errorJson = new HashMap<>();
+			errorJson.put("error", "Invalid Login Attempt!");
+			res.setStatus(401);
+			return errorJson;
+		}
+
 	}
 	
 	@RequestMapping(value = "/signup", method = RequestMethod.POST)
 	public Map<String, String> signup(HttpServletRequest req, HttpServletResponse res, @RequestBody String userJson) {
 		ObjectMapper mapper = new ObjectMapper();
+		System.out.println("*********Before parse requestbody*********");
 		User user = null;
 		try{
 			user = mapper.readValue(userJson, User.class);
+			System.out.println("*********USER*********");
+			System.out.println(user);
 		}catch(IOException ie) {
+			System.out.println("*********ERROR*********");
 			ie.printStackTrace();
 		}
 		user = jobsDAO.create(user);
+		System.out.println("*********DAO USER*********");
+		System.out.println(user);
 		String jws = jwtGen.generateUserJwt(user);
 		Map<String, String> responseJson = new HashMap<>();
 		responseJson.put("jwt", jws);
+		System.out.println("*********JWT*********");
+		System.out.println(responseJson);
 		return responseJson;
 	}
 

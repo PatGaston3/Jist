@@ -7,12 +7,14 @@ app.factory('authenticationService', function($http, $window, $location) {
 	var saveToken = function(token) {
 		$window.localStorage['job-token'] = token;
 	};
-	
+
 	// Retrieve JWT from local storage
 	var getToken = function() {
 		return $window.localStorage['job-token'];
 	};
 	
+	// TODO: THE ABOVE FUNCTIONS MAY BE CAUSING LOGIN ISSUES, INVESTIGATE TOMORROW
+
 	// Contact the server, authenticate user credentials
 	var loginNewUser = function(user) {
 		return $http({
@@ -23,13 +25,6 @@ app.factory('authenticationService', function($http, $window, $location) {
               },
             data : user
 		})
-		.then(function(response){
-            saveToken(response.data.jwt);
-            return response;
-          })
-          .catch(function(error){
-        	  console.log(error);
-          })
 	};
 
     // Check that a user's login is valid (present AND not expired)
@@ -46,7 +41,7 @@ app.factory('authenticationService', function($http, $window, $location) {
         return false;
       }
     };
-    
+
  // Get current user from JWT
     var currentUser = function() {
       if (isLoggedIn()) {
@@ -55,12 +50,15 @@ app.factory('authenticationService', function($http, $window, $location) {
 
         return {
           username : payload.username,
-          id : payload.id
+          id : payload.id,
+          firstname : payload.firstname,
+          lastname : payload.lastname,
+          location : payload.location
         };
       }
     };
-    
-    
+
+
     // End Session for Current User
     var logout = function () {
         console.log("in logout");
@@ -78,6 +76,5 @@ app.factory('authenticationService', function($http, $window, $location) {
       getToken : getToken,
       saveToken : saveToken
     }
-	
-})
 
+})

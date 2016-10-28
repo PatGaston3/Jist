@@ -8,13 +8,18 @@ app.factory('registrationService', function($http){
 	  registrationService.createUser = function(user) {
 		  return $http({
 			  method : 'POST',
-			  url :'api/user',
+			  url :'api/auth/signup',
 			  headers : {
 				    'Content-Type' : 'application/json'
 				  },
 			  data : user
 		  })
+		  .then(function(res){
+			  return res;
+		  })
+		  .catch(function(err){
+			  console.log(err);
+		  })
 	  }
-		
 	  return registrationService;
 	});
