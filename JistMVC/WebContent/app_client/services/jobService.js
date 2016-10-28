@@ -11,7 +11,7 @@ app.factory('jobService', function($http, authenticationService, $location) {
 	// *******************************
 	//  JOBS
 	// *******************************
-	
+
 	// GET JOBS
 	var getJobs = function() {
 		var userId = null;
@@ -26,8 +26,8 @@ app.factory('jobService', function($http, authenticationService, $location) {
 			}
 		})
 	};
-	
-	
+
+
 	// CREATE JOB
 	var createJob = function(job) {
 		var userId = null;
@@ -47,7 +47,7 @@ app.factory('jobService', function($http, authenticationService, $location) {
 			$location.url('/jobs');
 		})
 	}
-	
+
 	// DELETE JOB
 	var deleteJob = function(job) {
 		var userId = null;
@@ -62,7 +62,7 @@ app.factory('jobService', function($http, authenticationService, $location) {
 			}
 		})
 	};
-	
+
 	// UPDATE JOB
 	var updateJob = function(job) {
 		var userId = null;
@@ -71,7 +71,7 @@ app.factory('jobService', function($http, authenticationService, $location) {
 		}
 		return $http({
 			method : 'PUT',
-			url : 'api/user/' + userId + '/joblist/' + jobId,
+			url : 'api/user/' + userId + '/joblist/' + job.id,
 			headers : {
 				'Content-Type' : 'application/json',
 				'x-access-token' : authenticationService.getToken()
@@ -86,8 +86,7 @@ app.factory('jobService', function($http, authenticationService, $location) {
 		deleteJob : deleteJob,
 		updateJob : updateJob
 	};
-	
-	return jobService;
-	
-})
 
+	return jobService;
+
+})
