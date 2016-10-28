@@ -27,7 +27,7 @@ app.directive('jobDirective', function($compile, jobService){
 					<input type = "text" ng-model = "jobCopy.state" />
 					<input type = "text" ng-model = "jobCopy.appDate" />
 					<label for="jobStatus" class="sr-only">Job Status</label>
-					<select ng-model="job.offer" name="jobStatus" id="jobStatus" class="form-control" placeholder="JobStatus">
+					<select size="1" ng-model="job.offer" name="jobStatus" id="jobStatus" class="form-control" placeholder="JobStatus">
 					<option value = "In Progress"> In Progress </option>
 					<option value = "Awaiting Reply"> Awaiting Reply </option>
 					<option value = "Not Offered"> Not Offered </option>
