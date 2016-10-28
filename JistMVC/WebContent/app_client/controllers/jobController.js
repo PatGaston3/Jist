@@ -16,7 +16,6 @@ app.controller("jobController", function($scope, jobService, authenticationServi
 
 	// Delete Job
 	$scope.delete = function(job) {
-		console.log("in destroy")
 		jobService.deleteJob(job)
 		.then(function(response) {
 			$scope.loadJobs();
@@ -25,7 +24,6 @@ app.controller("jobController", function($scope, jobService, authenticationServi
 
 	// Update Job
 	$scope.edit = function(job) {
-		console.log("in edit");
 		jobService.updateJob(job).then(function(response) {
 			$scope.loadJobs();
 		})
