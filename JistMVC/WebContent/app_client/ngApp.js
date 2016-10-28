@@ -28,6 +28,6 @@ var app = angular.module('ngJist', ['ngRoute', 'chart.js'])
 		controller: 'addJobController'
 	})
 	.otherwise({
-	      redirectTo: '/'
+	      redirectTo: '/home'
 	    });
 });

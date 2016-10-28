@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+              <div class="row">
+                <div class="col-md-2">
+                  {{data.companyName}}
+                </div>
+                <div class="col-md-2">
+                  {{data.jobTitle}}
+                  </div>
+                <div class="col-md-2">
+                  {{data.city}}, {{data.state}}
+                </div>
+                <div class="col-md-2">
+                  {{data.appDate}}
+                </div>
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+
+                  <button class="btn btn-primary btn-xs" >Details <i class="fa fa-pencil" aria-hidden="true"></i></button>
+
+            </a>
+            <div class="col-md-2">
+              <button class="btn btn-primary btn-xs" ng-click="update(data)">Edit <i class="fa fa-pencil" aria-hidden="true"></i></button>
+            </div>
+            <div class="col-md-2">
+              <button type="button" ng-click="delete(data)" class="btn btn-danger btn-xs">Delete <i class="fa fa-trash" aria-hidden="true"></i></button>
+            </div>
+          </h4>
+          <div id="collapse1" class="panel-collapse collapse">
+            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+            </div>
+          </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
