@@ -24,3 +24,29 @@
     height: 12px;
     margin-right: 5px;
 }
+
+.add-job-subject-header {
+	font-size: 16px;
+	font-weight: bold;
+  	font-style: italic;
+}
+
+.createJobBtns {
+  padding-top: 120px;
+}
+
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
+#inputJob, inputDesiredSalary {
+  margin-bottom: 10px;
+}

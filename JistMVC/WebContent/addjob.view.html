@@ -4,10 +4,10 @@
 		<h2 class="form-signin-heading">Create a Position Listing</h2>
 		<hr>
 		<div class="row">
-			<div class="add-job-subject-header">
-				Position Information
-			</div>
 			<div class="col-md-6">
+				<div class="add-job-subject-header">
+					Position Information
+				</div>
 
 				<label for="inputCompanyName" class="sr-only">Company Name</label>
 				<input ng-model="job.companyName" name="companyname" type="text" id="inputJob" class="form-control" placeholder="Company Name"
@@ -87,9 +87,42 @@
 				<input ng-model="job.appDate" name="jobAppDate" type="date" id="inputJob" class="form-control" placeholder="Applied Date"
 					required autofocus>
 
+				<label for="inputJobUrl" class="sr-only">Input Job Posting Url</label>
+				<input ng-model="job.postingUrl" name="jobPostingUrl" type="url" id="inputJob" class="form-control" placeholder="Paste job posting link here"
+					ng-maxlength="40">
+				<hr>
+				<div class="add-job-subject-header">
+					Position Notes
+				</div>
+			<div class="row">
+				<div class="col-md-4">
+					<label for="inputDesiredSalary" class="sr-only">Desired Salary</label>
+					<input ng-model="job.desiredSalary" name="jobDesiredSalary" type="number" id="inputDesiredSalary" class="form-control" placeholder="Your Desired Salary (ex: 75000)"
+						ng-maxlength="40" min="0" max="500000" step="500">
+				</div>
+				<div class="col-md-4">
+					<label for="inputSalaryType" class="sr-only">Wage Type</label>
+					<select ng-model="job.salType" name="jobSalType" id="inputJob" class="form-control">
+						<option value="" disabled selected hidden>Wage Type</option>
+						<option value="Year">Year</option>
+						<option value="Hour">Hour</option>
+						<option value="Contract">Contract</option>
+					</select>
+				</div>
+			</div>
+
+				<label for="inputNotes" class="sr-only">Input Notes</label>
+				<textarea rows="4" cols="40" form="addJob" ng-model="job.notes" name="jobNotes" id="inputJob" class="form-control" placeholder="Notes"
+					maxlength="250">
+				</textarea>
+				<br>
+
 			</div>
 
 			<div class="col-md-6">
+				<div class="add-job-subject-header">
+					Contact Information
+				</div>
 
 				<label for="inputContactFName" class="sr-only">Contact First Name</label>
 				<input ng-model="job.contactFname" name="jobContactFName" type="text" id="inputJob" class="form-control" placeholder="Contact First Name"
@@ -107,34 +140,17 @@
 				<input ng-model="job.contactEmail" name="jobContactEmail" type="email" id="inputJob" class="form-control" placeholder="Contact Email"
 					ng-maxlength="40">
 
+				
+					<div class="col-xs-4 col-centered">
+				<div class="row row-centered">
+						<div class="createJobBtns">
+							<button ng-click="createJob(job)" class="btn btn-lg btn-primary btn-block" type="submit">Add Job</button><br>
+							<button class="btn btn-lg btn-primary btn-block" type="reset">Reset</button>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-
-
-		<label for="inputDesiredSalary" class="sr-only">Desired Salary</label>
-		<input ng-model="job.desiredSalary" name="jobDesiredSalary" type="number" id="inputDesiredSalary" class="form-control" placeholder="Your Desired Salary"
-			ng-maxlength="40" min="0" max="500000" step="500">
-
-		<label for="inputSalaryType" class="sr-only">Wage Type</label>
-		<select ng-model="job.salType" name="jobSalType" id="inputJob" class="form-control">
-			<option value="" disabled selected hidden>Wage Type</option>
-			<option value="Year">Year</option>
-			<option value="Hour">Hour</option>
-			<option value="Contract">Contract</option>
-		</select>
-
-		<label for="inputJobUrl" class="sr-only">Input Job Posting Url</label>
-		<input ng-model="job.postingUrl" name="jobPostingUrl" type="url" id="inputJob" class="form-control" placeholder="Paste job posting link here"
-			ng-maxlength="40">
-
-		<label for="inputNotes" class="sr-only">Input Notes</label>
-		<textarea rows="4" cols="40" form="addJob" ng-model="job.notes" name="jobNotes" id="inputJob" class="form-control" placeholder="Notes"
-			maxlength="250">
-		</textarea>
-			<hr><br>
-			
-		<button ng-click="createJob(job)" class="btn btn-lg btn-primary btn-block" type="submit">Add Job</button><br>
-		<button class="btn btn-lg btn-primary btn-block" type="reset">Reset</button>
 	</form>
 
 </div>
