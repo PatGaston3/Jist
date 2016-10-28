@@ -44,7 +44,11 @@ app.directive('jobDirective', function($compile, jobService){
 			}
 		}
 
-		
+		$scope.details = function(job) {
+			console.log("Details clicked");
+			var $detailDisplay =
+			`<h1>Testing</h1>`
+		}
 
 		$scope.cancel = function() {
 			if(editJob !=null) {
