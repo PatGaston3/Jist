@@ -85,7 +85,7 @@ app.factory('jobService', function($http, authenticationService, $location) {
 
 		return $http({
 			method : 'GET',
-			url: '',
+			url: 'http://api.glassdoor.com/api/api.htm?',
 
 			headers : {
 				'x-access-token' : authenticationService.getToken()
