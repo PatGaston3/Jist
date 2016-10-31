@@ -24,7 +24,8 @@ app.controller("jobController", function($scope, jobService, authenticationServi
 
 	// Update Job
 	$scope.edit = function(job) {
-		jobService.updateJob(job).then(function(response) {
+		jobService.updateJob(job)
+		.then(function(response) {
 			$scope.loadJobs();
 		})
 	}
