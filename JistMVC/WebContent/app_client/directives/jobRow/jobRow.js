@@ -144,6 +144,7 @@ app.directive('jobDirective', function($compile, jobService){
 	var compiledRow = $compile($inputRow) ($scope);
 	editJob = compiledRow;
 	$element.after(compiledRow);
+						}
 				}
 
 			$scope.cancel = function() {
@@ -161,7 +162,6 @@ app.directive('jobDirective', function($compile, jobService){
 		        }
 			}
 
-		}
+		
 	  }
   });
-
