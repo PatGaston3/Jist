@@ -18,25 +18,34 @@ app.controller("DoughnutCtrl", function ($scope, jobService) {
 	$scope.labels = [];
 	$scope.data = [];
 	$scope.options = {};
-	$scope.inProgess = {};
-	$scope.Awaiting = {};
-	$scope.NotOffered = {};
-	
+	$scope.inProgress = [];
+	$scope.Awaiting = [];
+	$scope.NotOffered = [];
+	var offer ={};
 	
 	
 	jobService.getJobs()
 	.then(function(response) {
+			$scope.jobs = response.data; //keep for job.length
 			
-			$scope.jobs = response.data;
-			console.log(response.data[0].offer)
-			if(response.data[0].offer == "inProgress") {
-				
+			response.data.forEach(function(val,index, array){
+			if(response.data[index].offer==="InProgress") {
+				$scope.inProgress.push(response.data[0].offer)
 			}
+			if (response.data[index].offer==="Awaiting") {
+				$scope.Awaiting.push(response.data[0].offer)
+			}
+			if (response.data[index].offer==="NotOffered") {
+				$scope.NotOffered.push(response.data[0].offer)
+			}
+			})
 		})
 	.then(function(){
+	
       $scope.labels = ["In progress", "Awaiting Reply", "Not Offered"];
-      
-	  $scope.data = [5, 10, 5]; // [$scope.inProgress, $scope.Awaiting, $scope.NotOffered];
+
+	  $scope.data = [$scope.inProgress.length, $scope.Awaiting.length, $scope.NotOffered.length];
+
 	  $scope.options = {
 				  title: {
 				    	  display: true,

@@ -2,7 +2,7 @@
 
 var app = angular.module('ngJist');
 
-app.controller("homeController", function($scope, authenticationService, $location) {
+app.controller("homeController", function($scope, authenticationService, jobService, $location) {
 	
 	$scope.user = {};
 	
@@ -19,4 +19,11 @@ app.controller("homeController", function($scope, authenticationService, $locati
 	      console.log(authenticationService.currentUser());
 	    }
 
+	$scope.alertUser = function() {
+		jobService.getJobs().then(function(response) {
+			console.log(response)
+		});
+	}
+
+	
 });
