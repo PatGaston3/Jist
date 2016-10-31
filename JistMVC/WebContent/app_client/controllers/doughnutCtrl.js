@@ -23,11 +23,7 @@ app.controller("DoughnutCtrl", function ($scope, jobService) {
 	$scope.Awaiting = [];
 	$scope.NotOffered = [];
 	
-	jobService.displayJobOffer()
-	.then(function(response){
-		console.log(response)
-		console.log(response.data)
-	})
+	
 	
 	jobService.getJobs()
 	.then(function(response) {

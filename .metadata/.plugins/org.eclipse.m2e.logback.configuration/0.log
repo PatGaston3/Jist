@@ -190,3 +190,11 @@
 2016-10-31 11:59:13,583 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JistMVC/src/main/resources
 2016-10-31 11:59:13,586 [Worker-46] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
 2016-10-31 11:59:13,587 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JistMVC/src/test/resources
+2016-10-31 12:09:54,352 [Worker-52] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-31 12:09:54,352 [Worker-52] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JistMVC/src/main/resources
+2016-10-31 12:09:54,353 [Worker-52] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-31 12:09:54,354 [Worker-52] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JistMVC/src/test/resources
+2016-10-31 12:10:27,884 [Worker-53] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-31 12:10:27,886 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JistMVC/src/main/resources
+2016-10-31 12:10:27,889 [Worker-53] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-31 12:10:27,889 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/anniefisher/SD/Java/JobSearch/JistMVC/src/test/resources
