@@ -25,6 +25,7 @@ app.factory('jobService', function($http, authenticationService, $location) {
 				'x-access-token' : authenticationService.getToken()
 			}
 		})
+	
 	};
 
 
@@ -47,6 +48,7 @@ app.factory('jobService', function($http, authenticationService, $location) {
 //			$location.url('/jobs');
 //		})
 	}
+	
 
 	// DELETE JOB
 	var deleteJob = function(job) {
