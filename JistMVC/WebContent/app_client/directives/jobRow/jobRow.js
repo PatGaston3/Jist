@@ -22,6 +22,7 @@ app.directive('jobDirective', function($compile, jobService){
 
  					var $inputRow =
  					`<form class = "row">
+<<<<<<< HEAD
  					<input type = "text" ng-model ="jobCopy.companyName" />
  					<input type = "text" ng-model = "jobCopy.jobTitle" />
  					<input type = "text" ng-model = "jobCopy.city" />
@@ -32,9 +33,28 @@ app.directive('jobDirective', function($compile, jobService){
  					<option value = "InProgress"> In Progress </option>
  					<option value = "Awaiting"> Awaiting Reply </option>
  					<option value = "NotOffered"> Not Offered </option>
+=======
+ 					Company Name: <input type = "text" ng-model ="jobCopy.companyName" />
+ 					Position: <input type = "text" ng-model = "jobCopy.jobTitle" />
+ 					City: <input type = "text" ng-model = "jobCopy.city" />
+ 					Contact First Name: <input type = "text" ng-model = "jobCopy.contactFname" />
+					Contact Last Name: <input type = "text" ng-model = "jobCopy.contactLname" />
+					Contact Phone: <input type = "text" ng-model = "jobCopy.contactPhone" />
+					Contact Email: <input type = "text" ng-model = "jobCopy.contactEmail" />
+ 					Application Date: <input type = "text" ng-model = "jobCopy.appDate" />
+					Posting Url: <input type = "text" ng-model = "jobCopy.postingUrl" />
+					Desired Salary: <input type = "text" ng-model = "jobCopy.desiredSalary" />
+					Posting Url: <input type = "text" ng-model = "jobCopy.postingUrl" />
+ 					Job Status: <label for="jobStatus" ></label>
+ 					<select size="1" ng-model="job.offer" name="jobStatus" class="col-md-1" id="jobStatus" placeholder="JobStatus">
+ 					<option value = "In Progress"> In Progress </option>
+ 					<option value = "Awaiting Reply"> Awaiting Reply </option>
+ 					<option value = "Not Offered"> Not Offered </option>
+					Notes: <input type = "text" ng-model = "jobCopy.notes" />
+>>>>>>> 2f62ce15aa88e1e06891d1f6a46dcf1ebd70c9f8
  					</select>
- 					<button class "btn btn-primary" ng-click="save(jobCopy)"> Save</button>
- 					<button ng-click="cancel()" >Cancel</button>
+ 					<button class "btn btn-primary" ng-click="save(jobCopy)"> Save </button>
+ 					<button ng-click="cancel()" > Cancel </button>
  					<br><br><br>
  					</form>`
 
@@ -92,9 +112,9 @@ app.directive('jobDirective', function($compile, jobService){
 //									<div class="col-md-2">
 //										<label for="jobStatus" class="sr-only">Job Status</label>
 //											<select ng-model="job.offer" name="jobStatus" id="jobStatus" placeholder="JobStatus">
-//												<option value = "inProgress"> In Progress </option>
-//												<option value = "Awaiting"> Awaiting Reply </option>
-//												<option value = "NotOffered"> Not Offered </option>
+//												<option value = "In Progress"> In Progress </option>
+//												<option value = "Awaiting Reply"> Awaiting Reply </option>
+//												<option value = "Not Offered"> Not Offered </option>
 //											</select>
 //									</div>
 //								<div class="col-md-2">
@@ -122,13 +142,12 @@ app.directive('jobDirective', function($compile, jobService){
 			}
 
 			$scope.save = function(job){
-		          $scope.edit(job); // jobService.updateJob(job);
+		          $scope.edit(job);
 		          editJob.remove();
 		          editJob = null;
 		          $scope.jobCopy = {};
 		        }
 			}
 
-		
 	  }
   });

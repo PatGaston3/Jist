@@ -24,7 +24,7 @@
   </div>
   <br>
 </div> -->
- 
+
  <div class="container">
 	<div class="row">
 
@@ -48,21 +48,25 @@
 								<div class="col-md-3"><b>Location: </b>{{data.city}},
 									{{data.state}}</div>
 								<div class="col-md-3"><b>Application Date: </b>{{data.appDate}}</div>
-								
-								<div class="col-md-4"><b>Contact Name: </b>{{data.contactFname}}
+
+								<div class="col-md-3"><b>Contact Name: </b>{{data.contactFname}}
 									{{data.contactLname}}</div>
-								<div class="col-md-4"><b>Contact Number:
+								<div class="col-md-3"><b>Contact Number:
 									</b>{{data.contactPhone}}</div>
-								<div class="col-md-4"><b>Contact Email: </b>{{data.contactEmail}}</div>
-							</div>
-							<br>
-						</button>
+              </div>
+              <div class="row">
+                <div class="col-md-3"><b>Contact Email: </b>{{data.contactEmail}}</div>
+							  <div class="col-md-3"><b>Contact Phone: </b>{{data.contactPhone}}</div>
+                <div class="col-md-3"><b>Job Posting Url: </b>{{data.postingUrl}}</div>
+                <div class="col-md-3"><b>Desired Salary: </b>"$"{{data.desiredSalary}}</div>
+                <div class="col-md-3"><b>Desired Salary: </b>"$"{{data.offer}}</div>
+                <div class="col-md-3"><b>Notes: </b>{{data.notes}}</div>
 							<br><br>
 						</div>
 					</div>
 
 				</div>
-				
+
 			</div>
 		</div>
 		<div class="col-md-2">{{data.companyName}}</div>
