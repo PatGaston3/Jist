@@ -22,6 +22,7 @@ app.directive('jobDirective', function($compile, jobService){
 
  					var $inputRow =
  					`<form class = "row">
+<<<<<<< HEAD
  					Company Name: <input type = "text" ng-model ="jobCopy.companyName" />
  					Position: <input type = "text" ng-model = "jobCopy.jobTitle" />
  					City: <input type = "text" ng-model = "jobCopy.city" />
@@ -42,11 +43,26 @@ app.directive('jobDirective', function($compile, jobService){
  					</select>
  					<button class "btn btn-primary" ng-click="save(jobCopy)"> Save </button>
  					<button ng-click="cancel()" > Cancel </button>
+=======
+ 					<input type = "text" ng-model ="jobCopy.companyName" />
+ 					<input type = "text" ng-model = "jobCopy.jobTitle" />
+ 					<input type = "text" ng-model = "jobCopy.city" />
+ 					<input type = "text" ng-model = "jobCopy.state" />
+ 					<input type = "text" ng-model = "jobCopy.appDate" />
+ 					<label for="jobStatus" class="sr-only">Job Status</label>
+ 					<select size="1" ng-model="job.offer" name="jobStatus" id="jobStatus" class="form-control" placeholder="JobStatus">
+ 					<option value = "In Progress"> In Progress </option>
+ 					<option value = "Awaiting Reply"> Awaiting Reply </option>
+ 					<option value = "Not Offered"> Not Offered </option>
+ 					</select>
+ 					<button class "btn btn-primary" ng-click="save(jobCopy)"> Save</button>
+ 					<button ng-click="cancel()" >Cancel</button>
+>>>>>>> cf7acb16af2519a1bef2aaed087b30e31a1b63c1
  					<br><br><br>
  					</form>`
 
 
-//
+
 //		$scope.update = function(job) {
 //			if (editJob === null) {
 //				$scope.jobCopy = angular.copy(job);

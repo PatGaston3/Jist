@@ -1,0 +1,8 @@
+# Files / directories to ignore
+.DS_Store
+bin
+target
+Servers
+build
+.metadata
+.recommenders

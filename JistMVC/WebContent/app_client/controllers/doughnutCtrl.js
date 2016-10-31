@@ -18,14 +18,20 @@ app.controller("DoughnutCtrl", function ($scope, jobService) {
 	$scope.labels = [];
 	$scope.data = [];
 	$scope.options = {};
-//	$scope.inProgess = 0;
-//	$scope.Awaiting = 0;
-//	$scope.NotOffered = 0;
+	$scope.inProgess = {};
+	$scope.Awaiting = {};
+	$scope.NotOffered = {};
+	
+	
 	
 	jobService.getJobs()
 	.then(function(response) {
-			console.log("Added jobs to $scope array");
+			
 			$scope.jobs = response.data;
+			console.log(response.data[0].offer)
+			if(response.data[0].offer == "inProgress") {
+				
+			}
 		})
 	.then(function(){
       $scope.labels = ["In progress", "Awaiting Reply", "Not Offered"];
