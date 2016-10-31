@@ -25,6 +25,7 @@ app.factory('jobService', function($http, authenticationService, $location) {
 				'x-access-token' : authenticationService.getToken()
 			}
 		})
+	
 	};
 
 
