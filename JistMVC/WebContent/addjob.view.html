@@ -139,7 +139,14 @@
 				<label for="inputContactEmail" class="sr-only">Contact Email</label>
 				<input ng-model="job.contactEmail" name="jobContactEmail" type="email" id="inputJob" class="form-control" placeholder="Contact Email"
 					ng-maxlength="40">
-
+					
+				<label for="inputOffer" class="sr-only">Job Offer</label>
+				<select ng-model="job.offer" name="jobOffer" id="inputJob" class="form-control">
+				<option value="" disabled selected>Offer Status</option>
+				<option value="InProgress">In Progress</option>
+				<option value="Awaiting">Awaiting</option>
+				<option value="NotOffered">No Offer</option>
+				</select>
 				
 					<div class="col-xs-4 col-centered">
 				<div class="row row-centered">
