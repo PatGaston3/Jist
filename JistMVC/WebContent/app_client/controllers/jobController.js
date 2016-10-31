@@ -2,7 +2,7 @@
 
 var app = angular.module('ngJist');
 
-app.controller("jobController", function($scope, jobService, authenticationService) {
+app.controller("jobController", function($scope, jobService, authenticationService, $location) {
 
 	$scope.jobs = [];
 
@@ -44,6 +44,7 @@ app.controller("jobController", function($scope, jobService, authenticationServi
 	// Logout User
 	$scope.logOut = function(){
 		authenticationService.logout();
+		$location.url('/login');
 	}
 
 });

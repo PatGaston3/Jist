@@ -2,7 +2,7 @@
 
 var app = angular.module('ngJist');
 
-app.controller("loginController", function($scope, authenticationService, $location, jobService, postService) {
+app.controller("loginController", function($scope, authenticationService, $location, jobService) {
 
 	$scope.displayError = false;
 	$scope.jobs = [];

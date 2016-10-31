@@ -2,7 +2,7 @@
 
 var app = angular.module('ngJist');
 
-app.controller('addJobController', function($scope, jobService, $location) {
+app.controller('addJobController', function($scope, jobService, $location, authenticationService) {
 	
 	$scope.addJob = {};
 	
@@ -12,5 +12,11 @@ app.controller('addJobController', function($scope, jobService, $location) {
 			$scope.addJob = response.data;
 			$location.url('/jobs');
 		});
+	};
+	
+	$scope.logOut = function(){
+		console.log("in addJobController logout");
+		authenticationService.logout();
+		$location.url('/login');
 	};
 });
