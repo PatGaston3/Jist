@@ -1,0 +1,23 @@
+  <div class="container">
+	<h1>Login Page</h1>
+
+      <form ng-action="loginUser(user)" class="form-signin" novalidate>
+        <h2 class="form-signin-heading">Please Sign-in</h2>
+        <label for="inputUsername" class="sr-only">Username</label>
+        <input ng-model="user.username" type="text" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input ng-model="user.password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+		<br>
+		<div ng-show="displayError">
+      	<p class="loginError">You have entered an incorrect username/password.  Please try again.</p>
+      </div>
+		<br><br>
+        <button ng-click="loginUser(user)" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form><br>
+      
+			
+
+	<br><br><br><br><br><br><br>
+	<h3>New User?</h3>
+	<a href="#/register"><button class="btn btn-primary">Register Now</button></a>
+  </div>

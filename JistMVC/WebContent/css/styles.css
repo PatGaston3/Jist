@@ -1,0 +1,52 @@
+.loginError {
+	color: red;
+	font-size: 20px;
+}
+
+.warnMe {
+	color: black;
+	font-size: 24px;
+}
+
+/* #myChart {
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+} */
+
+.chart-legend li span{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+}
+
+.add-job-subject-header {
+	font-size: 16px;
+	font-weight: bold;
+  	font-style: italic;
+}
+
+.createJobBtns {
+  padding-top: 120px;
+}
+
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
+#inputJob, inputDesiredSalary {
+  margin-bottom: 10px;
+}

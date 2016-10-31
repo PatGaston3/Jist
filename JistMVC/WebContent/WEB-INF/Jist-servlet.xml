@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+    http://www.springframework.org/schema/mvc
+    http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-4.3.xsd
+    http://www.springframework.org/schema/tx
+    http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+
+	<mvc:annotation-driven />
+
+	<context:component-scan base-package="controllers" />
+
+	<!-- bcrypt bean -->
+	<bean id="bCryptPasswordEncoder"
+		class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" />
+	<bean id="jobsdao" class="data.JobsDAO" />
+	<bean id="secretKeyGenerator" class="security.SecretKeyGenerator" />
+	<bean id="jsonWebTokenGenerator" class="security.JsonWebTokenGenerator" />
+	<bean id="myEntityManagerFactory"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="persistenceUnitName" value="JistJPA" />
+	</bean>
+
+	<bean id="myTransactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="myEntityManagerFactory" />
+	</bean>
+    <bean id="DataSecurityInterceptor" class="security.DataSecurityInterceptor" />
+
+
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/user/*/jobs/**" />
+			<ref bean="DataSecurityInterceptor" />
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/jobs" />
+			<ref bean="DataSecurityInterceptor" />
+		</mvc:interceptor>
+	</mvc:interceptors>
+
+	<tx:annotation-driven transaction-manager="myTransactionManager" />
+</beans>
