@@ -47,6 +47,7 @@ app.factory('jobService', function($http, authenticationService, $location) {
 //			$location.url('/jobs');
 //		})
 	}
+	
 
 	// DELETE JOB
 	var deleteJob = function(job) {

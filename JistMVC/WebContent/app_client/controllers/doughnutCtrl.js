@@ -18,9 +18,16 @@ app.controller("DoughnutCtrl", function ($scope, jobService) {
 	$scope.labels = [];
 	$scope.data = [];
 	$scope.options = {};
-//	$scope.inProgess = 0;
-//	$scope.Awaiting = 0;
-//	$scope.NotOffered = 0;
+	$scope.jobs.offer = [];
+	$scope.inProgess = [];
+	$scope.Awaiting = [];
+	$scope.NotOffered = [];
+	
+	jobService.displayJobOffer()
+	.then(function(response){
+		console.log(response)
+		console.log(response.data)
+	})
 	
 	jobService.getJobs()
 	.then(function(response) {
