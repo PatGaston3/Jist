@@ -80,7 +80,18 @@ app.factory('jobService', function($http, authenticationService, $location) {
 		})
 	};
 	
-	
+	var glassDoor = function() {
+		var company = job.companyName;
+
+		return $http({
+			method : 'GET',
+			url: 'http://api.glassdoor.com/api/api.htm?',
+
+			headers : {
+				'x-access-token' : authenticationService.getToken()
+			}
+		})
+	};
 
 	return {
 		getJobs : getJobs,

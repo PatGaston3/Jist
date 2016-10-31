@@ -14,42 +14,69 @@ app.directive('jobDirective', function($compile, jobService){
 	link : function($scope, $element, $attr){
 		$scope.jobCopy = {};
 		var editJob = null;
-		var displayJob = null;
-
-		// $scope.update = function(job) {
-		// 	if (editJob === null) {
-		// 		$scope.jobCopy = angular.copy(job);
-		//
-		// 			var $inputRow =
-		// 			`<form class = "row">
-		// 			<input type = "text" ng-model ="jobCopy.companyName" />
-		// 			<input type = "text" ng-model = "jobCopy.jobTitle" />
-		// 			<input type = "text" ng-model = "jobCopy.city" />
-		// 			<input type = "text" ng-model = "jobCopy.state" />
-		// 			<input type = "text" ng-model = "jobCopy.appDate" />
-		// 			<label for="jobStatus" class="sr-only">Job Status</label>
-		// 			<select ng-model="job.offer" name="jobStatus" id="jobStatus" class="col-md-1" placeholder="JobStatus">
-		// 			<option value = "In Progress"> In Progress </option>
-		// 			<option value = "Awaiting Reply"> Awaiting Reply </option>
-		// 			<option value = "Not Offered"> Not Offered </option>
-		// 			</select>
-		// 			<button class "btn btn-primary" ng-click="save(jobCopy)"> Save</button>
-		// 			<button ng-click="cancel()" >Cancel</button>
-		// 			<br><br><br>
-		// 			</form>`
-		//
-		//
-		// 			var compiledRow = $compile($inputRow) ($scope);
-		// 			editJob = compiledRow;
-		// 			$element.after(compiledRow);
-		// 	}
-		// }
+// <<<<<<< HEAD
+// =======
+// 		var displayJob = null;
+//
+//
+// 		$scope.update = function(job) {
+// 			if (editJob === null) {
+// 				$scope.jobCopy = angular.copy(job);
+//
+// 					var $inputRow =
+// 					`<form class = "row">
+// 					<input type = "text" ng-model ="jobCopy.companyName" />
+// 					<input type = "text" ng-model = "jobCopy.jobTitle" />
+// 					<input type = "text" ng-model = "jobCopy.city" />
+// 					<input type = "text" ng-model = "jobCopy.state" />
+// 					<input type = "text" ng-model = "jobCopy.appDate" />
+// 					<label for="jobStatus" class="sr-only">Job Status</label>
+// 					<select size="1" ng-model="job.offer" name="jobStatus" id="jobStatus" class="form-control" placeholder="JobStatus">
+// 					<option value = "In Progress"> In Progress </option>
+// 					<option value = "Awaiting Reply"> Awaiting Reply </option>
+// 					<option value = "Not Offered"> Not Offered </option>
+// 					</select>
+// 					<button class "btn btn-primary" ng-click="save(jobCopy)"> Save</button>
+// 					<button ng-click="cancel()" >Cancel</button>
+// 					<br><br><br>
+// 					</form>`
+//
+// 		// $scope.update = function(job) {
+// 		// 	if (editJob === null) {
+// 		// 		$scope.jobCopy = angular.copy(job);
+// 		//
+// 		// 			var $inputRow =
+// 		// 			`<form class = "row">
+// 		// 			<input type = "text" ng-model ="jobCopy.companyName" />
+// 		// 			<input type = "text" ng-model = "jobCopy.jobTitle" />
+// 		// 			<input type = "text" ng-model = "jobCopy.city" />
+// 		// 			<input type = "text" ng-model = "jobCopy.state" />
+// 		// 			<input type = "text" ng-model = "jobCopy.appDate" />
+// 		// 			<label for="jobStatus" class="sr-only">Job Status</label>
+// 		// 			<select ng-model="job.offer" name="jobStatus" id="jobStatus" class="col-md-1" placeholder="JobStatus">
+// 		// 			<option value = "In Progress"> In Progress </option>
+// 		// 			<option value = "Awaiting Reply"> Awaiting Reply </option>
+// 		// 			<option value = "Not Offered"> Not Offered </option>
+// 		// 			</select>
+// 		// 			<button class "btn btn-primary" ng-click="save(jobCopy)"> Save</button>
+// 		// 			<button ng-click="cancel()" >Cancel</button>
+// 		// 			<br><br><br>
+// 		// 			</form>`
+// 		//
+// 		//
+// 		// 			var compiledRow = $compile($inputRow) ($scope);
+// 		// 			editJob = compiledRow;
+// 		// 			$element.after(compiledRow);
+// 		// 	}
+// 		// }
+// >>>>>>> c390af3637f45e0f97baa77400a7e72cde7c8ca2
+//
 
 		$scope.update = function(job) {
-			console.log("Details clicked");
+			if (editJob === null) {
+				$scope.jobCopy = angular.copy(job);
 
-
-						var $detailRow =
+					var $inputRow =
 						`<div class="container">
 							<form>
 								<div class ="row">
@@ -114,24 +141,27 @@ app.directive('jobDirective', function($compile, jobService){
 							</form>
 						</div>`
 
-						var compiledRow = $compile($detailRow) ($scope);
-						editJob = compiledRow;
-						$element.after(compiledRow);
+	var compiledRow = $compile($inputRow) ($scope);
+	editJob = compiledRow;
+	$element.after(compiledRow);
+						}
 				}
 
-		$scope.cancel = function() {
-			if(editJob !=null) {
-				editJob.remove(editJob);
-				editJob =  null;
+			$scope.cancel = function() {
+				if(editJob !=null) {
+					editJob.remove(editJob);
+					editJob =  null;
+				}
 			}
-		}
 
-		$scope.save = function(job){
-	          $scope.edit(job); // jobService.updateJob(job);
-	          editJob.remove();
-	          editJob = null;
-	          $scope.jobCopy = {};
-	        }
-		}
-	}
-});
+			$scope.save = function(job){
+		          $scope.edit(job); // jobService.updateJob(job);
+		          editJob.remove();
+		          editJob = null;
+		          $scope.jobCopy = {};
+		        }
+			}
+
+		
+	  }
+  });
