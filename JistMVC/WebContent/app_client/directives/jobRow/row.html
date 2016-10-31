@@ -27,14 +27,10 @@
 
  <div class="container">
 	<div class="row">
-
-		<div class="col-md-1">
 			<div ng-app>
-				<div class="accordion__container"
-					ng-controller="accordionController">
-					<div class="accordion__tab">
-						<button class="btn btn-success btn-xs"
-							ng-click="openTab('tab one')">
+				<div class="accordion__container"	ng-controller="accordionController">
+					<div class="accordion__tab col-md-1">
+						<button class="btn btn-success btn-xs" ng-click="openTab('tab one')">
 							Details <i class="fa fa-credit-card" aria-hidden="true"></i>
 						</button>
 					</div>
@@ -45,16 +41,11 @@
 							<br><br>
 								<div class="col-md-3"><b>Company Name: </b>{{data.companyName}}</div>
 								<div class="col-md-3"><b>Job Title: </b>{{data.jobTitle}}</div>
-								<div class="col-md-3"><b>Location: </b>{{data.city}},
-									{{data.state}}</div>
+								<div class="col-md-3"><b>Location: </b>{{data.city}}, {{data.state}}</div>
 								<div class="col-md-3"><b>Application Date: </b>{{data.appDate}}</div>
-
-								<div class="col-md-3"><b>Contact Name: </b>{{data.contactFname}}
-									{{data.contactLname}}</div>
+								<div class="col-md-3"><b>Contact Name: </b>{{data.contactFname}} {{data.contactLname}}</div>
 								<div class="col-md-3"><b>Contact Number:
 									</b>{{data.contactPhone}}</div>
-              </div>
-              <div class="row">
                 <div class="col-md-3"><b>Contact Email: </b>{{data.contactEmail}}</div>
 							  <div class="col-md-3"><b>Contact Phone: </b>{{data.contactPhone}}</div>
                 <div class="col-md-3"><b>Job Posting Url: </b>{{data.postingUrl}}</div>
@@ -64,15 +55,12 @@
 							<br><br>
 						</div>
 					</div>
-
-				</div>
-
 			</div>
 		</div>
 		<div class="col-md-2">{{data.companyName}}</div>
 		<div class="col-md-2">{{data.jobTitle}}</div>
 		<div class="col-md-2">{{data.city}}, {{data.state}}</div>
-		<div class="col-md-2">{{data.appDate}}</div>
+		<div class="col-md-1">{{data.appDate}}</div>
 
 		<div class="col-md-1">
 			<button class="btn btn-primary btn-xs" ng-click="update(data)">
@@ -86,4 +74,5 @@
 		</div>
 	</div>
 	<br>
+</div>
 </div>
