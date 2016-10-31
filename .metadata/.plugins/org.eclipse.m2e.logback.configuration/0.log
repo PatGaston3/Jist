@@ -1,0 +1,4 @@
+2016-10-31 10:48:17,717 [Thread-9] ERROR org.eclipse.jgit.util.FS - xcode-select: note: no developer tools were found at '/Applications/Xcode.app', requesting install. Choose an option in the dialog to download the command line developer tools.
+
+2016-10-31 10:48:17,766 [Thread-10] ERROR org.eclipse.jgit.util.FS - xcode-select: note: no developer tools were found at '/Applications/Xcode.app', requesting install. Choose an option in the dialog to download the command line developer tools.
+
