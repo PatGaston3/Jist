@@ -147,9 +147,20 @@
     </div>
     </div>
     
+    Awaiting Reply Inactive Filter:
+    <ul>
+    <li ng-repeat="job in jobs | inactiveFilter">{{job.companyName}}</li>
+    </ul>
     
-    <tr
-				ng-repeat="todo in todos | orderBy: 'task' | completedFilter: showComplete"
+    Jobs Older Than 90 Days Filter:
+    <ul>
+    <li ng-repeat="job in jobs | ninetyDaysFilter">{{job.companyName}}</li>
+    </ul>
+    
+    <!-- <tr
+
+    
+    <tr ng-repeat="todo in todos | orderBy: 'task' | completedFilter: showComplete"
 				todo-directive data="todo" remove="remove" update="edit"
 				completed="{{todo.completed}}">
     
