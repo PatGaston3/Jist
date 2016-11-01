@@ -4,7 +4,8 @@ var app = angular.module('ngJist', ['ngRoute', 'chart.js'])
 .config(function($routeProvider){
 	$routeProvider
 	.when('/',{
-		templateUrl: 'landing.view.html'
+		templateUrl: 'landing.view.html',
+		controller: 'landingController'
 	})
 	.when('/login',{
 		templateUrl: 'login.view.html',

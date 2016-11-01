@@ -45,7 +45,7 @@ app.controller("jobController", function($scope, jobService, authenticationServi
 	// Logout User
 	$scope.logOut = function(){
 		authenticationService.logout();
-		$location.url('/login');
+		$location.url('/');
 	}
 	
 

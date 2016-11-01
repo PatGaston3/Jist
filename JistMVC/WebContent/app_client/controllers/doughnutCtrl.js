@@ -56,8 +56,10 @@ app.controller("DoughnutCtrl", function ($scope, jobService) {
 				  },
 				  legend: {
 					  display: true,
-					  fontColor: "#ffffff",
-					  fontSize: 14
+					  labels : {
+						  fontColor: "#ffffff",
+						  fontSize: 14
+					  }
 				  }
 			  }
 	})
