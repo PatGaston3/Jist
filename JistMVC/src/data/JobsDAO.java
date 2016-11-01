@@ -1,5 +1,7 @@
 package data;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
@@ -103,14 +105,21 @@ public class JobsDAO {
 		return updatedUser;
 	}
 
-	public Job update(int id, Job job) {
+	public Job update(int id, Job job) throws ParseException {
 		User managedUser = em.find(User.class, id);
 		job.setUser(managedUser);
 		Job managedJob = em.find(Job.class, id);
-		managedJob.setAppDate(job.getAppDate());
-		System.out.println("App Date: " + job.getAppDate());
-		System.out.println("App Date Instant: " + job.getAppDate().toInstant());
-		managedJob.setCity(job.getCity());
+		SimpleDateFormat s = new SimpleDateFormat("yyyy-MM-dd");
+		String d = s.format(job.getAppDate());
+		String day = Integer.parseInt(d.charAt(d.length()-2)+""+ d.charAt(d.length()-1))+1 + "";
+		System.out.println("first " + day);
+		d = d.substring(0, d.length()-2) + day;
+		Date date = s.parse(d);
+		System.out.println(date);
+		managedJob.setAppDate(date);
+//		managedJob.setAppDate(job.getAppDate());
+//		System.out.println("App Date: " + job.getAppDate());
+//		managedJob.setCity(job.getCity());
 		managedJob.setCompanyName(job.getCompanyName());
 		managedJob.setContactEmail(job.getContactEmail());
 		managedJob.setContactFname(job.getContactFname());
