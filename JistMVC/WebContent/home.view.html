@@ -32,8 +32,14 @@
     </div>
     </div>
     
+    Awaiting Reply Inactive Filter:
     <ul>
     <li ng-repeat="job in jobs | inactiveFilter">{{job.companyName}}</li>
+    </ul>
+    
+    Jobs Older Than 90 Days Filter:
+    <ul>
+    <li ng-repeat="job in jobs | ninetyDaysFilter">{{job.companyName}}</li>
     </ul>
     
     <!-- <tr

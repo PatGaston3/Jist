@@ -1,3 +1,5 @@
+// FILTER FOR JOBS AWAITING REPLY FOR MORE THAN 7 DAYS
+
 var app = angular.module('ngJist');
 app.filter('inactiveFilter' , function() {
 	return function(jobs) {
@@ -11,6 +13,7 @@ app.filter('inactiveFilter' , function() {
 					inactiveArr.push(job);
 				}
 			}
+			
 		});
 		return inactiveArr;
 	}
