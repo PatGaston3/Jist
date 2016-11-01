@@ -2,10 +2,13 @@
 
 var app = angular.module('ngJist');
 
-app.controller("homeController", function($scope, authenticationService, jobService, $location) {
+
+app.controller("homeController", function($scope, $http, authenticationService, $location, jobService) {
 	
 	$scope.user = {};
-	$scope.alert = {};
+	$scope.jobs = [];
+	$scope.inactiveJob = [];
+
 	
 	$scope.logOut = function(){
 		authenticationService.logout();
@@ -17,11 +20,16 @@ app.controller("homeController", function($scope, authenticationService, jobServ
 
 	$scope.loadUser= function(){
 		return authenticationService.currentUser()
-	    }
 
-	$scope.alertUser = function() {
-		return jobService.getJobs()
 	}
+	
+	$scope.alertInactive = function() {
+		jobService.getJobs().then(function(response) {
+			$scope.jobs = response.data;
+		});
+	}
+	
+	$scope.alertInactive();
 
 	
 });

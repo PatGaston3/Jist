@@ -29,18 +29,16 @@ app.controller("DoughnutCtrl", function ($scope, jobService) {
 			$scope.jobs = response.data; //keep for job.length
 			
 			response.data.forEach(function(val,index, array){
-				
-			if(response.data[index].offer==="InProgress") {
-				$scope.inProgress.push(response.data[0].offer)
-			}
-			if (response.data[index].offer==="Awaiting") {
-				$scope.Awaiting.push(response.data[0].offer)
-			}
-			if (response.data[index].offer==="NotOffered") {
-				$scope.NotOffered.push(response.data[0].offer)
-			}
-			
-			})
+				if (response.data[index].offer==="InProgress") {
+					$scope.inProgress.push(response.data[0].offer)
+				}
+				if (response.data[index].offer==="Awaiting") {
+					$scope.Awaiting.push(response.data[0].offer)
+				}
+				if (response.data[index].offer==="NotOffered") {
+					$scope.NotOffered.push(response.data[0].offer)
+				}
+			});
 		})
 	.then(function(){
 		
@@ -51,9 +49,15 @@ app.controller("DoughnutCtrl", function ($scope, jobService) {
 	  $scope.options = {
 				  title: {
 				    	  display: true,
-				    	  text: "# of Tracked Jobs: " + $scope.jobs.length,
-				    	  fontSize: 26,
-				    	  fontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"
+				    	  text: "Tracked Jobs: " + $scope.jobs.length,
+				    	  fontSize: 28,
+				    	  fontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+				    	  fontColor: "#ffffff"
+				  },
+				  legend: {
+					  display: true,
+					  fontColor: "#ffffff",
+					  fontSize: 14
 				  }
 			  }
 	})
