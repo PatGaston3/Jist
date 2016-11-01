@@ -54,6 +54,7 @@ public class JobsDAO {
 	public void createJob(int id, Job job) {
 		User user = em.find(User.class, id);
 		job.setUser(user);
+		System.out.println("In persist job in DAO: " + job);
 		em.persist(job);
 		em.flush();
 	}
