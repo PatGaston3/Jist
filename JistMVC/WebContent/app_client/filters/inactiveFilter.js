@@ -6,8 +6,10 @@ app.filter('inactiveFilter' , function() {
 
 			var testDate = new Date(new Date(job.appDate).setTime(new Date(job.appDate).getTime() + (7*86400000)));
 			var currentDate = new Date();
-			if (testDate <= currentDate){
-				inactiveArr.push(job);
+			if (job.offer === "Awaiting") {	
+				if (testDate <= currentDate){
+					inactiveArr.push(job);
+				}
 			}
 		});
 		return inactiveArr;
