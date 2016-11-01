@@ -87,9 +87,11 @@
 				<input ng-model="job.appDate" name="jobAppDate" type="date" id="inputJob" class="form-control" placeholder="Applied Date"
 					required autofocus>
 
-				<label for="inputJobUrl" class="sr-only">Input Job Posting Url</label>
-				<input ng-model="job.postingUrl" name="jobPostingUrl" type="url" id="inputJob" class="form-control" placeholder="Paste job posting link here"
-					ng-maxlength="40">
+
+				<label for="jobOfferedSalary" class="sr-only">Application Date</label>
+				<input ng-model="job.offeredSalary" name="jobOfferedSalary" type="number" id="inputOfferedSalary" class="form-control" placeholder="Posted Offer Salary" required autofocus>
+										
+
 				<hr>
 				<div class="add-job-subject-header">
 					Position Notes
@@ -139,7 +141,7 @@
 				<label for="inputContactEmail" class="sr-only">Contact Email</label>
 				<input ng-model="job.contactEmail" name="jobContactEmail" type="email" id="inputJob" class="form-control" placeholder="Contact Email"
 					ng-maxlength="40">
-					
+
 				<label for="inputOffer" class="sr-only">Job Offer</label>
 				<select ng-model="job.offer" name="jobOffer" id="inputJob" class="form-control" required>
 				<option value="" disabled selected>Offer Status</option>
@@ -147,7 +149,11 @@
 				<option value="Awaiting">Awaiting Reply</option>
 				<option value="NotOffered">No Offer</option>
 				</select>
-				
+
+				<label for="inputJobUrl" class="sr-only">Input Job Posting Url</label>
+				<input ng-model="job.postingUrl" name="jobPostingUrl" type="url" id="inputJob" class="form-control" placeholder="Paste job posting link here"
+					ng-maxlength="40">
+
 					<div class="col-xs-4 col-centered">
 				<div class="row row-centered">
 						<div class="createJobBtns">
