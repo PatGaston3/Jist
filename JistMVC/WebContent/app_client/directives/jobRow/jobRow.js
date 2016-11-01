@@ -21,7 +21,7 @@ app.directive('jobDirective', function($compile, jobService){
  				$scope.jobCopy = angular.copy(job);
 
  					var $inputRow =
- 					
+
  					`<div class="container">
  					<form name="editJob" ng-action="save(jobCopy)" class="form-signin" novalidate>
  						<h2 class="form-signin-heading">Edit Job Posting</h2>
@@ -51,7 +51,7 @@ app.directive('jobDirective', function($compile, jobService){
  								<option value="Awaiting">Awaiting Reply</option>
  								<option value="NotOffered">No Offer</option>
  								</select>
- 								
+
  								<hr>
  								<div class="add-job-subject-header">
  									Position Notes
@@ -101,8 +101,8 @@ app.directive('jobDirective', function($compile, jobService){
  								<label for="inputContactEmail" class="sr-only">Contact Email</label>
  								<input ng-model="jobCopy.contactEmail" name="jobContactEmail" type="email" id="inputJob" class="form-control" placeholder="Contact Email"
  									ng-maxlength="40">
- 									
- 								
+
+
  									<div class="col-xs-4 col-centered">
  								<div class="row row-centered">
  										<div class="createJobBtns">
@@ -116,18 +116,18 @@ app.directive('jobDirective', function($compile, jobService){
  					</form>
 
  				</div>`
- 						
- 						
- 						
- 						
- 						
- 						
- 						
- 						
- 						
- 						
- 						
-// 						
+
+
+
+
+
+
+
+
+
+
+
+//
 // 					`<form class = "row">
 // 					Company Name: <input type = "text" ng-model ="jobCopy.companyName" />
 // 					Position: <input type = "text" ng-model = "jobCopy.jobTitle" />
@@ -236,10 +236,14 @@ app.directive('jobDirective', function($compile, jobService){
 			}
 
 			$scope.save = function(job){
+							console.log(job.appDate);
 		          $scope.edit(job);
+							console.log(job.appDate);
 		          editJob.remove();
+							console.log(job.appDate);
 		          editJob = null;
 		          $scope.jobCopy = {};
+							console.log(job.appDate);
 		        }
 			}
 
