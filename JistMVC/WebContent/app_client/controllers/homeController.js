@@ -12,6 +12,7 @@ app.controller("homeController", function($scope, $http, authenticationService, 
 	
 	$scope.logOut = function(){
 		authenticationService.logout();
+		$location.url('/');
 	};
 	
 	$scope.addJobRedirect = function() {

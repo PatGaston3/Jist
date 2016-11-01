@@ -1,45 +1,162 @@
-<div style="background-image: url('css/img/home-bg.jpg')" class="main">
+<link href="css/home-page.css" rel="stylesheet">
+
+<div style="background-image: url('css/img/bg1.jpg')" class="main">
 <div class="overlay"></div>
-<div class="container">
-	
-	<a href="#/"><h1 class="main-text">Jist</h1></a>
-	<h2 class="sub-text">Your Personal Job Search Tracker Dashboard<h2>
-	
-<!-- 	<h5>{{alertUser().appDate}}</h5> -->
-	
-    <div class="row">
-    
-    
-    	<!--  Left Side -->
-        <div class="col-lg-6">
-        <h2>{{loadUser().firstname}} {{loadUser().lastname}}<small> {{loadUser().location}}</small></h2>
+  <!-- Navigation -->
+    <nav class="navbar transparent-nav"" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand sub-text" href="">Jist</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#/home">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="#/jobs">Jobs</a>
+                    </li>
+                </ul>
+                
+                <ul class="nav navbar-nav navbar-right">
+                	<li>
+                		<a href="">Info</a>
+                	</li>
+                	<li ng-click="logOut()">
+                		<a href="">Logout</a>
+                	</li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
-        
-        <p>Alerts:</p>
-        
-        <!--  Right Side -->
-        <div class="col-md-6" ng-controller="DoughnutCtrl">
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Portfolio Item Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Job Dashboard
+                    <small>{{loadUser().firstname}} {{loadUser().lastname}}, {{loadUser().location}} </small>
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Portfolio Item Row -->
+        <div class="row">
+
+            <div class="col-md-9">
+                 <div ng-controller="DoughnutCtrl">
 
           <canvas id="doughnut" class="chart chart-doughnut"
   			chart-data="data" chart-labels="labels" chart-options="options">
 		</canvas> 
 		
-            <div class="row">
-		<button width="50%" class="btn btn-default col-md-6" ng-click="addJobRedirect()">Add Job</button>
-		<a href="#/jobs"><button  width="50%" class="btn btn-primary col-md-6">View Jobs</button></a>
+        </div>
             </div>
+
+            <div class="col-md-3">
+                <h3><font color="white">Project Description</font></h3>
+                <p><font color="white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, 
+                adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis 
+                placerat, felis enim.</font></p>
+                <h3><font color="white">Project Details</font></h3>
+                <!-- <ul>
+                    <li>Lorem Ipsum</li>
+                    <li>Dolor Sit Amet</li>
+                    <li>Consectetur</li>
+                    <li>Adipiscing Elit</li>
+                </ul> -->
+                <div class="central-buttons">
+		<button id="addJob" class="btn btn-default" ng-click="addJobRedirect()">Add Job</button>
+		<a href="#/jobs"><button id="viewJobs" class="btn btn-primary">View Jobs</button></a>
+		</div>
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+        <!-- Related Projects Row -->
+        <div class="row">
+
+            <div class="col-lg-12">
+                <h3 class="page-header"><font color="white">Alerts</font></h3>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Your Website 2014</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+    </div>
+    <!-- /.container -->
+
+
+<!-- 
+
+<div style="background-image: url('css/img/home-bg.jpg')" class="main">
+<div class="overlay"></div>
+<div class="container">
+	
+	<h2 class="sub-text">Your Personal Job Search Tracker Dashboard<h2>
+	
+	<h5>{{alertUser().appDate}}</h5>
+	
+    
+    
+        <h2>{{loadUser().firstname}} {{loadUser().lastname}}<small> {{loadUser().location}}</small></h2>
+        <p>Alerts:</p>
+
+		 List Alerts
+		<ul>
+			<li ng-repeat="job in jobs | inactiveFilter">Contact {{job.companyName}}!</li>
+		</ul>
+
+		<div class="central-buttons">
+		<button width="50%" class="btn btn-default" ng-click="addJobRedirect()">Add Job</button>
+		<a href="#/jobs"><button  width="50%" class="btn btn-primary">View Jobs</button></a>
+		</div>
+        
+        
+
+        <div ng-controller="DoughnutCtrl">
+
+          <canvas id="doughnut" class="chart chart-doughnut"
+  			chart-data="data" chart-labels="labels" chart-options="options">
+		</canvas> 
+		
         </div>
     </div>
     </div>
     
-    <ul>
-    <li ng-repeat="job in jobs | inactiveFilter">{{job.companyName}}</li>
-    </ul>
     
-    <!-- <tr
+    <tr
 				ng-repeat="todo in todos | orderBy: 'task' | completedFilter: showComplete"
 				todo-directive data="todo" remove="remove" update="edit"
-				completed="{{todo.completed}}"> -->
+				completed="{{todo.completed}}">
     
 </div>
 </div>
+ -->
