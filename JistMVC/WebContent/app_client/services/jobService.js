@@ -28,7 +28,6 @@ app.factory('jobService', function($http, authenticationService, $location) {
 	
 	};
 
-
 	// CREATE JOB
 	var createJob = function(job) {
 		var userId = null;

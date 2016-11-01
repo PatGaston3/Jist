@@ -5,6 +5,7 @@
 	<a href="#/"><h1 class="main-text">Jist</h1></a>
 	<h2 class="sub-text">Your Personal Job Search Tracker Dashboard<h2>
 	
+<!-- 	<h5>{{alertUser().appDate}}</h5> -->
 	
     <div class="row">
     
@@ -17,7 +18,7 @@
         <p>Alerts:</p>
         
         <!--  Right Side -->
-        <div class="col-lg-6" ng-controller="DoughnutCtrl">
+        <div class="col-md-6" ng-controller="DoughnutCtrl">
 
           <canvas id="doughnut" class="chart chart-doughnut"
   			chart-data="data" chart-labels="labels" chart-options="options">
@@ -30,5 +31,15 @@
         </div>
     </div>
     </div>
+    
+    <ul>
+    <li ng-repeat="job in jobs | inactiveFilter">{{job.companyName}}</li>
+    </ul>
+    
+    <!-- <tr
+				ng-repeat="todo in todos | orderBy: 'task' | completedFilter: showComplete"
+				todo-directive data="todo" remove="remove" update="edit"
+				completed="{{todo.completed}}"> -->
+    
 </div>
 </div>
