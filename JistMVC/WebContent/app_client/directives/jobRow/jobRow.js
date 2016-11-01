@@ -127,7 +127,7 @@ app.directive('jobDirective', function($compile, jobService){
  						
  						
  						
- 						
+// 						
 // 					`<form class = "row">
 // 					Company Name: <input type = "text" ng-model ="jobCopy.companyName" />
 // 					Position: <input type = "text" ng-model = "jobCopy.jobTitle" />
