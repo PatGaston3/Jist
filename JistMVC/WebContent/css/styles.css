@@ -155,13 +155,14 @@
 ********************************/
 
 .central-buttons {
-	
+	font-size: 22px;
 }
 
 #addJob {
-	
+	background-color: #577D51;
 }
 
 #viewJobs {
-	
+	background-color: #9c3025;
+	color: white;
 }

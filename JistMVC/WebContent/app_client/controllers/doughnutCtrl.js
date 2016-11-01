@@ -8,7 +8,7 @@ app.config(['ChartJsProvider', function (ChartJsProvider) {
 	
     // Configure all charts
     ChartJsProvider.setOptions({
-      chartColors: ['#11aa00','#0439e8', '#e0021c'],
+      chartColors: ['#577D51','#336699', '#9c3025'],
       responsive: true
     });
 }]);
@@ -56,6 +56,7 @@ app.controller("DoughnutCtrl", function ($scope, jobService) {
 				  },
 				  legend: {
 					  display: true,
+					  position: 'left',
 					  labels : {
 						  fontColor: "#ffffff",
 						  fontSize: 14
