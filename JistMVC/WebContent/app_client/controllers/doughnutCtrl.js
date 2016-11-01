@@ -51,9 +51,15 @@ app.controller("DoughnutCtrl", function ($scope, jobService) {
 	  $scope.options = {
 				  title: {
 				    	  display: true,
-				    	  text: "# of Tracked Jobs: " + $scope.jobs.length,
-				    	  fontSize: 26,
-				    	  fontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"
+				    	  text: "Tracked Jobs: " + $scope.jobs.length,
+				    	  fontSize: 28,
+				    	  fontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+				    	  fontColor: "#ffffff"
+				  },
+				  legend: {
+					  display: true,
+					  fontColor: "#ffffff",
+					  fontSize: 14
 				  }
 			  }
 	})
