@@ -40,79 +40,18 @@ app.directive('jobDirective', function($compile, jobService){
  								<input ng-model="jobCopy.jobTitle" name="jobtitle" type="text" id="inputJob" class="form-control" placeholder="Position Title"
  									required autofocus ng-minlength="2" ng-maxlength="40">
 
- 								<label for="inputCity" class="sr-only">Job City</label>
- 								<input ng-model="jobCopy.city" name="jobCity" type="text" id="inputJob" class="form-control" placeholder="City" required autofocus
- 									ng-minlength="2" ng-maxlength="40">
-
- 								<label for="inputState" class="sr-only">Job State</label>
- 								<select ng-model="jobCopy.state" name="jobState" id="inputJob" class="form-control" placeholder="State">
- 									<option value="" disabled selected>State/Territory</option>
- 									<option value="NA">N/A</option>
- 									<option value="AL">AL</option>
- 									<option value="AK">AK</option>
- 									<option value="AS">American Samoa (AS)</option>
- 									<option value="AZ">AZ</option>
- 									<option value="AR">AR</option>
- 									<option value="CA">CA</option>
- 									<option value="CO">CO</option>
- 									<option value="CT">CT</option>
- 									<option value="DC">District of Columbia (DC)</option>
- 									<option value="DE">DE</option>
- 									<option value="DC">DC</option>
- 									<option value="FL">FL</option>
- 									<option value="GA">GA</option>
- 									<option value="GU">Guam</option>
- 									<option value="HI">HI</option>
- 									<option value="ID">ID</option>
- 									<option value="IL">IL</option>
- 									<option value="IN">IN</option>
- 									<option value="IA">IA</option>
- 									<option value="KS">KA</option>
- 									<option value="KY">KY</option>
- 									<option value="LA">LA</option>
- 									<option value="ME">ME</option>
- 									<option value="MD">MD</option>
- 									<option value="MA">MA</option>
- 									<option value="MI">MI</option>
- 									<option value="MN">MN</option>
- 									<option value="MS">MS</option>
- 									<option value="MO">MO</option>
- 									<option value="MT">MT</option>
- 									<option value="NE">NE</option>
- 									<option value="NV">NV</option>
- 									<option value="NH">NH</option>
- 									<option value="NJ">NJ</option>
- 									<option value="NM">NM</option>
- 									<option value="NY">NY</option>
- 									<option value="NC">NC</option>
- 									<option value="ND">ND</option>
- 									<option value="OH">OH</option>
- 									<option value="OK">OK</option>
- 									<option value="OR">OR</option>
- 									<option value="PA">PA</option>
- 									<option value="PR">Puerto Rico</option>
- 									<option value="RI">RI</option>
- 									<option value="SC">SC</option>
- 									<option value="SD">SD</option>
- 									<option value="TN">TN</option>
- 									<option value="TX">TX</option>
- 									<option value="UT">UT</option>
- 									<option value="VI">U.S. Virgin Islands</option>
- 									<option value="VT">VT</option>
- 									<option value="VA">VA</option>
- 									<option value="WA">WA</option>
- 									<option value="WV">WV</option>
- 									<option value="WI">WI</option>
- 									<option value="WY">WY</option>
- 								</select>
-
- 								<label for="jobAppDate" class="sr-only">Application Date</label>
- 								<input ng-model="jobCopy.appDate" name="jobAppDate" type="date" id="inputJob" class="form-control" placeholder="Applied Date"
+ 								<label for="offeredSalary" class="sr-only">Application Date</label>
+ 								<input ng-model="jobCopy.offeredSalary" name="offeredSalary" type="number" id="inputJob" class="form-control" placeholder="Offered Salary"
  									required autofocus>
 
- 								<label for="inputJobUrl" class="sr-only">Input Job Posting Url</label>
- 								<input ng-model="jobCopy.postingUrl" name="jobPostingUrl" type="url" id="inputJob" class="form-control" placeholder="Paste job posting link here"
- 									ng-maxlength="40">
+ 								<label for="inputOffer" class="sr-only">Job Offer</label>
+ 								<select ng-model="jobCopy.offer" name="jobOffer" id="inputJob" class="form-control" required>
+ 								<option value="" disabled selected>Offer Status</option>
+ 								<option value="InProgress">In Progress</option>
+ 								<option value="Awaiting">Awaiting Reply</option>
+ 								<option value="NotOffered">No Offer</option>
+ 								</select>
+ 								
  								<hr>
  								<div class="add-job-subject-header">
  									Position Notes
@@ -135,7 +74,7 @@ app.directive('jobDirective', function($compile, jobService){
  							</div>
 
  								<label for="inputNotes" class="sr-only">Input Notes</label>
- 								<textarea rows="4" cols="40" form="addJob" ng-model="job.notes" name="jobNotes" id="inputJob" class="form-control" placeholder="Notes"
+ 								<textarea rows="4" cols="40" form="addJob" ng-model="jobCopy.notes" name="jobNotes" id="inputJob" class="form-control" placeholder="Notes"
  									maxlength="250">
  								</textarea>
  								<br>
@@ -148,28 +87,21 @@ app.directive('jobDirective', function($compile, jobService){
  								</div>
 
  								<label for="inputContactFName" class="sr-only">Contact First Name</label>
- 								<input ng-model="job.contactFname" name="jobContactFName" type="text" id="inputJob" class="form-control" placeholder="Contact First Name"
+ 								<input ng-model="jobCopy.contactFname" name="jobContactFName" type="text" id="inputJob" class="form-control" placeholder="Contact First Name"
  									ng-maxlength="40">
 
  								<label for="inputContactLName" class="sr-only">Contact Last Name</label>
- 								<input ng-model="job.contactLname" name="jobContactLName" type="text" id="inputJob" class="form-control" placeholder="Contact Last Name"
+ 								<input ng-model="jobCopy.contactLname" name="jobContactLName" type="text" id="inputJob" class="form-control" placeholder="Contact Last Name"
  									ng-maxlength="40">
 
  								<label for="inputContactPhone" class="sr-only">Contact Phone</label>
- 								<input ng-model="job.contactPhone" name="jobContactPhone" type="text" id="inputJob" class="form-control" placeholder="Contact Phone #"
+ 								<input ng-model="jobCopy.contactPhone" name="jobContactPhone" type="text" id="inputJob" class="form-control" placeholder="Contact Phone #"
  									ng-maxlength="40">
 
  								<label for="inputContactEmail" class="sr-only">Contact Email</label>
- 								<input ng-model="job.contactEmail" name="jobContactEmail" type="email" id="inputJob" class="form-control" placeholder="Contact Email"
+ 								<input ng-model="jobCopy.contactEmail" name="jobContactEmail" type="email" id="inputJob" class="form-control" placeholder="Contact Email"
  									ng-maxlength="40">
  									
- 								<label for="inputOffer" class="sr-only">Job Offer</label>
- 								<select ng-model="job.offer" name="jobOffer" id="inputJob" class="form-control" required>
- 								<option value="" disabled selected>Offer Status</option>
- 								<option value="InProgress">In Progress</option>
- 								<option value="Awaiting">Awaiting</option>
- 								<option value="NotOffered">No Offer</option>
- 								</select>
  								
  									<div class="col-xs-4 col-centered">
  								<div class="row row-centered">
@@ -195,7 +127,7 @@ app.directive('jobDirective', function($compile, jobService){
  						
  						
  						
- 						
+// 						
 // 					`<form class = "row">
 // 					Company Name: <input type = "text" ng-model ="jobCopy.companyName" />
 // 					Position: <input type = "text" ng-model = "jobCopy.jobTitle" />
