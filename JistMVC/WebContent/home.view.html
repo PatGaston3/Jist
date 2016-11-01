@@ -3,6 +3,7 @@
 	
 	<h1>User Dashboard</h1>
 	
+<!-- 	<h5>{{alertUser().appDate}}</h5> -->
 	
 	<div class="container-fluid">
     <div class="row">
@@ -14,7 +15,8 @@
 		<li>{{loadUser().username}}</li>	
 		<li>{{loadUser().firstname}}</li>	
 		<li>{{loadUser().lastname}}</li>	
-		<li>{{loadUser().location}}</li>	
+		<li>{{loadUser().location}}</li>
+			
 	</ul>
 	<button class="btn btn-default" ng-click="addJobRedirect()">Add Job</button>
 	<a href="#/jobs"><button class="btn btn-primary">View Jobs</button></a>
