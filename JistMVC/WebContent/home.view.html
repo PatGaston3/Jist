@@ -1,26 +1,21 @@
-<header ng-include="'partials/nav.html'"></header>
+<div style="background-image: url('css/img/home-bg.jpg')" class="main">
+<div class="overlay"></div>
 <div class="container">
 	
-	<h1>User Dashboard</h1>
+	<a href="#/"><h1 class="main-text">Jist</h1></a>
+	<h2 class="sub-text">Your Personal Job Search Tracker Dashboard<h2>
 	
 <!-- 	<h5>{{alertUser().appDate}}</h5> -->
 	
-	<div class="container-fluid">
     <div class="row">
     
     
     	<!--  Left Side -->
-        <div class="col-md-6">
-            <ul>
-		<li>{{loadUser().username}}</li>	
-		<li>{{loadUser().firstname}}</li>	
-		<li>{{loadUser().lastname}}</li>	
-		<li>{{loadUser().location}}</li>
-			
-	</ul>
-	<button class="btn btn-default" ng-click="addJobRedirect()">Add Job</button>
-	<a href="#/jobs"><button class="btn btn-primary">View Jobs</button></a>
+        <div class="col-lg-6">
+        <h2>{{loadUser().firstname}} {{loadUser().lastname}}<small> {{loadUser().location}}</small></h2>
         </div>
+        
+        <p>Alerts:</p>
         
         <!--  Right Side -->
         <div class="col-md-6" ng-controller="DoughnutCtrl">
@@ -28,7 +23,11 @@
           <canvas id="doughnut" class="chart chart-doughnut"
   			chart-data="data" chart-labels="labels" chart-options="options">
 		</canvas> 
-            
+		
+            <div class="row">
+		<button width="50%" class="btn btn-default col-md-6" ng-click="addJobRedirect()">Add Job</button>
+		<a href="#/jobs"><button  width="50%" class="btn btn-primary col-md-6">View Jobs</button></a>
+            </div>
         </div>
     </div>
     </div>
@@ -42,4 +41,5 @@
 				todo-directive data="todo" remove="remove" update="edit"
 				completed="{{todo.completed}}"> -->
     
+</div>
 </div>

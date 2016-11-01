@@ -1,5 +1,6 @@
 package controllers;
 
+import java.text.ParseException;
 import java.util.Collection;
 import java.util.List;
 
@@ -66,11 +67,12 @@ public class JobsController {
 	}
 
 	@RequestMapping(path = "user/{id}/joblist/{id}", method = RequestMethod.PUT)
-	public void updateJobs(@PathVariable int id, @RequestBody String jobJSON) {
+	public void updateJobs(@PathVariable int id, @RequestBody String jobJSON) throws ParseException {
 		ObjectMapper mapper = new ObjectMapper();
 		Job job = null;
 		try {
 			job = mapper.readValue(jobJSON, Job.class);
+			System.out.println("In Jobs Controller " + job.getAppDate());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

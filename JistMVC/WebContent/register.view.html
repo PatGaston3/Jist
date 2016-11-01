@@ -1,29 +1,10 @@
- <header ng-include="'partials/register-nav.html'"></header>
-    <div class="container">
+<div style="background-image: url('css/img/bg1.jpg')" class="main">
+<div class="overlay"></div>
+<div class="container">
+<a href="#/"><h1 class="main-text">Jist</h1></a>
 
-	<div>
-  <ul>
-
-    <li ng-show={{"registration.username.$invalid"}}>
-      Username must be valid (between 4 and 18 characters)
-    </li>
-    <li ng-show={{"registration.userfName.$invalid"}}>
-      First name must be valid (between 1 and 18 characters)
-    </li>
-    <li ng-show={{"registration.userlName.$invalid"}}>
-      Last name must be valid (between 1 and 18 characters)
-    </li>
-    <li ng-show={{"registration.userlocation.$invalid"}}>
-      Location must be valid (between 4 and 25 characters)
-    </li>
-    <li ng-show={{"registration.password.$invalid"}}>
-      Password must be valid (between 6 and 12 characters)
-    </li>
-  </ul>
-</div>
-
-      <form name="registration" ng-action="genUser(user)" class="form-signin" novalidate>
-        <h2 class="form-signin-heading">Begin Your Organized Job Search!</h2>
+      <form name="registration" ng-action="genUser(user)" class="form-signin col-md-4 col-md-offset-4 vert-center" novalidate>
+        <h3 class="form-signin-heading colorMe">Organize your Job Search!</h3>
 
         <label for="inputUsername" class="sr-only">Username</label>
         <input ng-model="user.username" name="username" type="text" id="inputUsername" class="form-control" placeholder="Username" required autofocus
@@ -46,7 +27,27 @@
         ng-minlength="6" ng-maxlength="12">
 		<br>
         <button ng-click="genUser(user)" class="btn btn-lg btn-primary btn-block" type="submit" ng-disabled={{"registration.$invalid"}}>Sign in</button>
+  
+  <ul class="validation-notes">
+    <li ng-show={{"registration.username.$invalid"}}>
+      Username must be valid (between 4 and 18 characters)
+    </li>
+    <li ng-show={{"registration.userfName.$invalid"}}>
+      First name must be valid (between 1 and 18 characters)
+    </li>
+    <li ng-show={{"registration.userlName.$invalid"}}>
+      Last name must be valid (between 1 and 18 characters)
+    </li>
+    <li ng-show={{"registration.userlocation.$invalid"}}>
+      Location must be valid (between 4 and 25 characters)
+    </li>
+    <li ng-show={{"registration.password.$invalid"}}>
+      Password must be valid (between 6 and 12 characters)
+    </li>
+  </ul>
       </form>
+      
 
 
-    </div> <!-- /container -->
+</div> <!-- /container -->
+</div>

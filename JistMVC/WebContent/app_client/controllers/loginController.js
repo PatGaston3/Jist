@@ -6,8 +6,6 @@ app.controller("loginController", function($scope, authenticationService, $locat
 
 	$scope.displayError = false;
 	$scope.jobs = [];
-	console.log("Initialized empty $scope.jobs array");
-
 
 	// Login User
 	$scope.loginUser = function(user){
