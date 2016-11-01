@@ -1,6 +1,7 @@
 package data;
 
 import java.util.Collection;
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -107,6 +108,8 @@ public class JobsDAO {
 		job.setUser(managedUser);
 		Job managedJob = em.find(Job.class, id);
 		managedJob.setAppDate(job.getAppDate());
+		System.out.println("App Date: " + job.getAppDate());
+		System.out.println("App Date Instant: " + job.getAppDate().toInstant());
 		managedJob.setCity(job.getCity());
 		managedJob.setCompanyName(job.getCompanyName());
 		managedJob.setContactEmail(job.getContactEmail());
