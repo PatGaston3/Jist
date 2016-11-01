@@ -9,7 +9,7 @@
     
     
     	<!--  Left Side -->
-        <div class="col-lg-6">
+        <div class="col-md-6">
             <ul>
 		<li>{{loadUser().username}}</li>	
 		<li>{{loadUser().firstname}}</li>	
@@ -20,9 +20,8 @@
 	<a href="#/jobs"><button class="btn btn-primary">View Jobs</button></a>
         </div>
         
-        
         <!--  Right Side -->
-        <div class="col-lg-6" ng-controller="DoughnutCtrl">
+        <div class="col-md-6" ng-controller="DoughnutCtrl">
 
           <canvas id="doughnut" class="chart chart-doughnut"
   			chart-data="data" chart-labels="labels" chart-options="options">
@@ -31,4 +30,14 @@
         </div>
     </div>
     </div>
+    
+    <ul>
+    <li ng-repeat="job in jobs | inactiveFilter">{{job.companyName}}</li>
+    </ul>
+    
+    <!-- <tr
+				ng-repeat="todo in todos | orderBy: 'task' | completedFilter: showComplete"
+				todo-directive data="todo" remove="remove" update="edit"
+				completed="{{todo.completed}}"> -->
+    
 </div>
