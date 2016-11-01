@@ -911,3 +911,12 @@ a.list-group-item.active > .badge,
 .nav-pills > li > a > .badge {
   margin-left: 3px;
 }
+
+.buttonsize {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+#loginButton {
+	padding: 10px 35px 10px 35px;
+}
