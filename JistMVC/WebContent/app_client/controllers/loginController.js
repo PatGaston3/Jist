@@ -11,12 +11,10 @@ app.controller("loginController", function($scope, authenticationService, $locat
 
 	// Login User
 	$scope.loginUser = function(user){
-		console.log(user);
 		authenticationService.loginNewUser(user)
 		.then(function(response) {
 			authenticationService.saveToken(response.data.jwt);
 			if (response.status < 400) {
-				console.log(response);
 				$location.url('/home');
 			}
 			return response;
