@@ -57,7 +57,6 @@ public class JobsDAO {
 	public void createJob(int id, Job job) {
 		User user = em.find(User.class, id);
 		job.setUser(user);
-		System.out.println("In persist job in DAO: " + job);
 		em.persist(job);
 		em.flush();
 	}
@@ -74,17 +73,13 @@ public class JobsDAO {
 	public User authenticateUser(User loginData) {
 		User user = null;
 		user = em.createQuery("select u from User u where u.username = :username", User.class)
-				.setParameter("username", loginData.getUsername()).getSingleResult();
-		
-		System.out.println(user.getId());
+				.setParameter("username", loginData.getUsername()).getSingleResult();		
 		if (user != null) {
 			String rawPassword = loginData.getPassword();
 			String encodedPassword = user.getPassword();
 			if (passwordEncoder.matches(rawPassword, encodedPassword)) {
 				return user;
 			} else {
-				System.out.println("invalid password entered");
-				// TODO Error handling in the authenticateUser method here
 				return null;
 			}
 		}
@@ -112,14 +107,10 @@ public class JobsDAO {
 		SimpleDateFormat s = new SimpleDateFormat("yyyy-MM-dd");
 		String d = s.format(job.getAppDate());
 		String day = Integer.parseInt(d.charAt(d.length()-2)+""+ d.charAt(d.length()-1))+1 + "";
-		System.out.println("first " + day);
 		d = d.substring(0, d.length()-2) + day;
 		Date date = s.parse(d);
-		System.out.println(date);
 		managedJob.setAppDate(date);
 //		managedJob.setAppDate(job.getAppDate());
-//		System.out.println("App Date: " + job.getAppDate());
-//		managedJob.setCity(job.getCity());
 		managedJob.setCompanyName(job.getCompanyName());
 		managedJob.setContactEmail(job.getContactEmail());
 		managedJob.setContactFname(job.getContactFname());
