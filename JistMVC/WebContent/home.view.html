@@ -1,5 +1,22 @@
 <link href="css/home-page.css" rel="stylesheet">
 
+<script type="text/ng-template" id="group-template.html">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title" style="color:#fa39c3">
+          <a href tabindex="0" class="accordion-toggle" ng-click="toggleOpen()" uib-accordion-transclude="heading">
+            <span uib-accordion-header ng-class="{'text-muted': isDisabled}">
+              {{heading}}
+            </span>
+          </a>
+        </h4>
+      </div>
+      <div class="panel-collapse collapse" uib-collapse="!isOpen">
+        <div class="panel-body" style="text-align: right" ng-transclude></div>
+      </div>
+    </div>
+  </script>
+
 <div style="background-image: url('css/img/bg1.jpg')" class="main">
 <div class="overlay"></div>
   <!-- Navigation -->
@@ -90,15 +107,71 @@
             <div class="col-lg-12">
                 <h3 class="page-header"><font color="white">Alerts</font></h3>
                 
-                   Awaiting Reply Inactive Filter:
-    <ul>
-    <li ng-repeat="job in jobs | inactiveFilter">{{job.companyName}}</li>
-    </ul>
+   <!-- ALERT ACCORDION -->             
+  <div ng-controller="accordionController">       
+  	<uib-accordion close-others="oneAtATime">              
+   	 	<div uib-accordion-group class="panel-default" heading="Click here to see jobs awaiting reply older than 7 days">
+    		<div class="home-accordion-panels" ng-repeat="alert in inactiveNotifications">
+    			{{alert.companyName}}
+    		</div>
+    	</div>
+    	<div uib-accordion-group class="panel-default" heading="Click here to see your applications that may be expired">
+    		<div class="home-accordion-panels" ng-repeat="alert in ninetyDaysNotifications">
+    			{{alert.companyName}}
+    		</div>
+    	</div>
+  	</uib-accordion>
+  	
+  	<!-- <uib-accordion close-others="oneAtATime">              
+   	 	<div uib-accordion-group class="panel-default" heading="{{notifications.title}}" ng-repeat="notification in notifications">
+    	</div>
+  	</uib-accordion> -->
+  </div>
+             
+    <!-- <div class="panel-group" id="accordion">     
+    	
+    	<div class="panel panel-default">
+    		<div class="panel-heading">
+      			<h4 class="panel-title">
+        			<a data-toggle="collapse" data-parent="#accordion" target="_self" href="#collapse1">
+        			Awaiting Reply For 7 Days or More:</a>
+      			</h4>
+    		</div>
+    		<div id="collapse1" class="panel-collapse collapse in">
+      			<div class="panel-body" ng-repeat="job in jobs | inactiveFilter">
+      				{{job.companyName}}
+      				{{job.jobTitle}}
+      			</div>
+    		</div>
+  		</div>
+  		
+    	<div class="panel panel-default">
+    		<div class="panel-heading">
+      			<h4 class="panel-title">
+        			<a data-toggle="collapse" data-parent="#accordion" data-target="#collapse2">
+        			It's Been 90 Days Since You Applied:</a>
+      			</h4>
+    		</div>
+    		<div id="collapse1" class="panel-collapse collapse in">
+      			<div class="panel-body" ng-repeat="job in jobs | ninetyDaysFilter">
+      				{{job.companyName}}
+      				{{job.jobTitle}}
+      			</div>
+    		</div>
+  		</div>
+   </div> -->
     
-    Jobs Older Than 90 Days Filter:
+           
+                
+    <!-- Awaiting Reply Inactive Filter: -->
+    <!-- <ul>
+    <li ng-repeat="job in jobs | inactiveFilter">{{job.companyName}}</li>
+    </ul> -->
+    
+    <!-- Jobs Older Than 90 Days Filter:
     <ul>
     <li ng-repeat="job in jobs | ninetyDaysFilter">{{job.companyName}}</li>
-    </ul>
+    </ul> -->
             </div>
         </div>
         <!-- /.row -->

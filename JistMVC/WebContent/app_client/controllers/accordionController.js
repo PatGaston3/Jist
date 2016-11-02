@@ -1,10 +1,12 @@
 var app = angular.module('ngJist');
 
-app.controller('accordionController', function($scope, jobService, $location, authenticationService) {
+app.controller('accordionController', function($filter, $scope, jobService, $location, authenticationService) {
 	
 
     // initiate an array to hold all active tabs
     $scope.activeTabs = [];
+    
+    $scope.groups = [];
 
     // check if the tab is active
     $scope.isOpenTab = function (tab) {
@@ -29,4 +31,27 @@ app.controller('accordionController', function($scope, jobService, $location, au
             $scope.activeTabs.push(tab);
         }
     }
+    
+    // Accordion functionality on home view
+    
+    $scope.oneAtATime = true;
+    
+    $scope.inactiveNotifications = [];
+    $scope.ninetyDaysNotifications = [];
+                  
+    jobService.getJobs().then(function(response) {
+    	createNotifications(response.data);
+    });
+    
+    var createNotifications = function(jobs) {
+    	$scope.inactiveNotifications = $filter('inactiveFilter')(jobs);
+    	$scope.ninetyDaysNotifications = $filter('ninetyDaysFilter')(jobs);
+    };
+    
+    $scope.status = {
+    	    isCustomHeaderOpen: false,
+    	    isFirstOpen: true,
+    	    isFirstDisabled: false
+    	  };
+    
 });
