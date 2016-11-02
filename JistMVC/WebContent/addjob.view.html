@@ -131,7 +131,7 @@
 
 				<label for="jobOfferedSalary" class="sr-only">Application Date</label>
 				<input ng-model="job.offeredSalary" name="jobOfferedSalary" type="number" id="inputOfferedSalary" class="form-control" placeholder="Posted Offer Salary" required autofocus>
-										
+
 
 				<hr>
 				<div class="add-job-subject-header">
@@ -155,7 +155,7 @@
 			</div>
 
 				<label for="inputNotes" class="sr-only">Input Notes</label>
-				<textarea rows="4" cols="40" form="addJob" ng-model="job.notes" name="jobNotes" id="inputJob" class="form-control" placeholder="Notes"
+				<textarea rows="6" cols="40" form="addJob" ng-model="job.notes" name="jobNotes" id="inputJob" class="form-control" placeholder="Notes (max 250 characters)"
 					maxlength="250">
 				</textarea>
 				<br>
@@ -200,6 +200,7 @@
 				<label for="inputJobUrl" class="sr-only">Input Job Posting Url</label>
 				<input ng-model="job.postingUrl" name="jobPostingUrl" type="url" id="inputJob" class="form-control" placeholder="Paste job posting link here"
 					ng-maxlength="40">
+
 
 			</div>
 		</div>
