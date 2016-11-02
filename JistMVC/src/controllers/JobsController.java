@@ -72,7 +72,6 @@ public class JobsController {
 		Job job = null;
 		try {
 			job = mapper.readValue(jobJSON, Job.class);
-			System.out.println("In Jobs Controller " + job.getAppDate());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
