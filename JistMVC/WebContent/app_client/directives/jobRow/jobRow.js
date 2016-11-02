@@ -74,7 +74,7 @@ app.directive('jobDirective', function($compile, jobService){
  							</div>
 
  								<label for="inputNotes" class="sr-only">Input Notes</label>
- 								<textarea rows="4" cols="40" form="addJob" ng-model="jobCopy.notes" name="jobNotes" id="inputJob" class="form-control" placeholder="Notes"
+ 								<textarea rows="4" cols="40" form="addJob" ng-model="jobCopy.notes" name="jobNotes" id="inputJob" class="form-control" placeholder="Notes (How you heard about the position, people you know who work at the company, etc - max 250 characters)"
  									maxlength="250">
  								</textarea>
  								<br>
