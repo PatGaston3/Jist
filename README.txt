@@ -16,7 +16,7 @@ Git
 XML
 Javascript
 Angular
-Jquery
+JQuery
 Maven
 
 
@@ -38,8 +38,19 @@ How to use:
 
 Users begin by accessing the site through one of the websites below. The application exists on each of the developers personal websites.
 Users can then choose a login option. If they don't have an existing account, they can make one by providing a username and password, as
-well as optional fields of name and city. If the user is logged in with a username, they can add add jobs to the directory described above,
-as well as update any relevant field.
+well as optional fields of name and city. The password is stored in an encrypted form using BCryptEncoder. If the user is logged in with a
+username, they can add add jobs to the directory described above, as well as update any relevant field. The chart on the dashboard
+displays the current status of your applications.
+
+Obstacles/Challenges:
+
+We each had opportunities to practice working with Angular in ways that we hadn't used before. We utilized some of the plugins for Angular
+to build the chart on the dashboard and work with the accordion functions.
+
+Future Goals:
+
+One of the stretch goals that we were unable to implement in the timeframe we had was to automate calls to GlassDoor's REST API to
+automatically provide users with information about the position and company for each job they entered.
 
 
 Access on AWS
