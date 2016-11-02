@@ -20,14 +20,17 @@ app.controller("homeController", function($scope, $http, authenticationService, 
 	};
 
 	$scope.loadUser= function(){
-		return authenticationService.currentUser()
-
+		return authenticationService.currentUser();
 	}
 	
 	$scope.alertInactive = function() {
-		jobService.getJobs().then(function(response) {
+		jobService.getJobs()
+		.then(function(response) {
 			$scope.jobs = response.data;
-		});
+		})
+		.catch(function(error) {
+			$location.url('/');
+		})
 	}
 	
 	$scope.alertInactive();
