@@ -1,7 +1,7 @@
 <link href="css/home-page.css" rel="stylesheet">
 
 <div style="background-image: url('css/img/bg1.jpg')" class="main">
-<div class="overlay"></div>
+<div class="layover"></div>
   <!-- Navigation -->
     <nav class="navbar transparent-nav"" role="navigation">
         <div class="container">
@@ -28,7 +28,7 @@
                 
                 <ul class="nav navbar-nav navbar-right">
                 	<li>
-                		<a href="">Info</a>
+                		<a href="#/info">Info</a>
                 	</li>
                 	<li ng-click="logOut()">
                 		<a href="">Logout</a>
@@ -69,13 +69,13 @@
             <div class="col-md-3">
                 <h3>Using Your Dashboard:</h3>
                 <p><font size="4px">In your Dashboard, you have an array of features at your fingertips.
-                You have a graphical display (Doughnut Chart) tells you the total number
+                You have a graphical display (Doughnut Chart) that tells you the total number
                 of jobs you have applied to and the current state of each. </font></p>
                 
                 <p>From here, you can add new jobs you have applied to and view a list of
                 all your current jobs in a detailed view.</p>
                 
-                <h3>Project Details</h3>
+			<hr>
 
 		<button id="addJob" class="btn central-buttons" ng-click="addJobRedirect()">Add Job</button>
 		<a href="#/jobs"><button id="viewJobs" class="btn central-buttons">View Jobs</button></a>
@@ -105,15 +105,6 @@
 
         <hr>
 
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Patrick Gaston, Annie Fisher, Steve Nagle, Steven Zuber Copyright &copy; 2016</p>
-                </div>
-            </div>
-            <!-- /.row -->
-        </footer>
 
     </div>
     </div>
