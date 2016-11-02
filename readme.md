@@ -1,4 +1,5 @@
-# Jist <small>Job Information Search Tracker</small>
+# Jist 
+Job Information Search Tracker
 
 ### Collaborators 
 Patrick Gaston<br>
@@ -6,7 +7,7 @@ Annie Fisher (http://www.github.com/anniefisher)<br>
 Steve Nagle (http://www.github.com/stevenagle)<br>
 Steven Zuber (http://www.github.com/stevenzuber)
 
-## Introduction:
+## Overview/Introduction:
 At the end of week 15 of Skill Distillery we built a full stack web application in a group. The goals were to create a persistent back-end
 database connected to a dynamic front end, using Java technologies to connect them.
 We wanted to make an application that wasn't just functional, but useful. Our app gives users a streamlined way to
@@ -17,8 +18,6 @@ the date you applied. This date is used to remind the user to maintain contact w
 We began by discussing our proposal at length with each other before presenting the project to our instructors.
 Our next step was to build our database. We then made entity classes in the JPA portion of our workspace
 and then moved on to the MVC portion and spent the majority of the project time on the client-side of the application.
-
-## Overview
 
 ## Technologies Used
 <ul>
