@@ -42,7 +42,7 @@ app.controller("DoughnutCtrl", function ($scope, jobService) {
 		})
 	.then(function(){
 		
-      $scope.labels = ["In progress", "Awaiting Reply", "Not Offered"];
+      $scope.labels = ["Response Received", "Awaiting Reply", "Not Offered"];
 
 	  $scope.data = [$scope.inProgress.length, $scope.Awaiting.length, $scope.NotOffered.length];
 

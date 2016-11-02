@@ -86,7 +86,7 @@
             <div class="col-md-3">
                 <h3>Using Your Dashboard:</h3>
                 <p><font size="4px">In your Dashboard, you have an array of features at your fingertips.
-                You have a graphical display (Doughnut Chart) that tells you the total number
+                You have a graphical display that tells you the total number
                 of jobs you have applied to and the current state of each. </font></p>
                 
                 <p>From here, you can add new jobs you have applied to and view a list of
@@ -110,12 +110,12 @@
    <!-- ALERT ACCORDION -->             
   <div ng-controller="accordionController">       
   	<uib-accordion close-others="oneAtATime">              
-   	 	<div uib-accordion-group class="panel-default" heading="Click here to see jobs awaiting reply older than 7 days">
+   	 	<div uib-accordion-group class="panel-default panel-success" heading="Click here to see jobs awaiting reply older than 7 days">
     		<div class="home-accordion-panels" ng-repeat="alert in inactiveNotifications">
     			{{alert.companyName}}
     		</div>
     	</div>
-    	<div uib-accordion-group class="panel-default" heading="Click here to see your applications that may be expired">
+    	<div uib-accordion-group class="panel-default panel-danger" heading="Click here to see your applications that may be expired">
     		<div class="home-accordion-panels" ng-repeat="alert in ninetyDaysNotifications">
     			{{alert.companyName}}
     		</div>
