@@ -10,5 +10,17 @@ Steven Zuber (http://www.github.com/stevenzuber)
 ## Overview
 
 ## Technologies Used
+*Java
+*Spring MVC
+*JPA
+*MySQL
+*HTML 5/CSS 3
+*Bootstrap
+*Git
+*XML
+*Javascript
+*Angular
+*JQuery
+*Maven
 
 ## Challenges
