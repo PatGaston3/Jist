@@ -37,5 +37,5 @@ var app = angular.module('ngJist', ['ngRoute', 'chart.js', 'ui.bootstrap'])
 	})
 	.otherwise({
 	      redirectTo: '/'
-	    });
+	});
 });
