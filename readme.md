@@ -1,5 +1,4 @@
-# Jist
-Job Information Search Tracker
+# Jist <small>Job Information Search Tracker</small>
 
 ### Collaborators 
 Patrick Gaston<br>
