@@ -32,9 +32,9 @@ app.controller("jobController", function($scope, jobService, authenticationServi
 	}
 
 
-	  $scope.warnUser = function(){
+	  $scope.jobCounter = function(){
 		  return ($scope.totalCount() > 0)
-		  ? "warnMe"
+		  ? "jobCounter"
 				  : "label-success";
 	  }
 

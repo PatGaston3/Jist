@@ -31,6 +31,10 @@ var app = angular.module('ngJist', ['ngRoute', 'chart.js', 'ui.bootstrap'])
 		templateUrl: 'addjob.view.html',
 		controller: 'addJobController'
 	})
+	.when('/info', {
+		templateUrl: 'info.view.html',
+		controller: 'infoController'
+	})
 	.otherwise({
 	      redirectTo: '/'
 	    });

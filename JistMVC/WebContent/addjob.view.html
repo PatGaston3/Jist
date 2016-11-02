@@ -1,4 +1,45 @@
-<header ng-include="'partials/job-nav.html'"></header>
+<link href="css/home-page.css" rel="stylesheet">
+
+<div style="background-image: url('css/img/bg1.jpg')" class="main">
+<div class="layover"></div>
+  <!-- Navigation -->
+    <nav class="navbar transparent-nav"" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand sub-text" href="">Jist</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#/home">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="#/jobs">Jobs</a>
+                    </li>
+                </ul>
+                
+                <ul class="nav navbar-nav navbar-right">
+                	<li>
+                		<a href="">Info</a>
+                	</li>
+                	<li ng-click="logOut()">
+                		<a href="">Logout</a>
+                	</li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
 <div class="container">
 	<form name="addJob" ng-action="createJob(job)" class="form-signin" novalidate>
 		<h2 class="form-signin-heading">Create a Position Listing</h2>
@@ -90,7 +131,7 @@
 
 				<label for="jobOfferedSalary" class="sr-only">Application Date</label>
 				<input ng-model="job.offeredSalary" name="jobOfferedSalary" type="number" id="inputOfferedSalary" class="form-control" placeholder="Posted Offer Salary" required autofocus>
-										
+
 
 				<hr>
 				<div class="add-job-subject-header">
@@ -114,11 +155,17 @@
 			</div>
 
 				<label for="inputNotes" class="sr-only">Input Notes</label>
-				<textarea rows="4" cols="40" form="addJob" ng-model="job.notes" name="jobNotes" id="inputJob" class="form-control" placeholder="Notes"
+				<textarea rows="6" cols="40" form="addJob" ng-model="job.notes" name="jobNotes" id="inputJob" class="form-control" placeholder="Notes (max 250 characters)"
 					maxlength="250">
 				</textarea>
 				<br>
 
+				<div class="col-xs-4 col-centered">
+					<div class="row row-centered">
+						<button ng-click="createJob(job)" class="btn btn-lg btn-primary btn-block" type="submit">Add Job</button><br>
+						<button class="btn btn-lg btn-primary btn-block" type="reset">Reset</button>
+					</div>
+				</div>
 			</div>
 
 			<div class="col-md-6">
@@ -154,16 +201,10 @@
 				<input ng-model="job.postingUrl" name="jobPostingUrl" type="url" id="inputJob" class="form-control" placeholder="Paste job posting link here"
 					ng-maxlength="40">
 
-					<div class="col-xs-4 col-centered">
-				<div class="row row-centered">
-						<div class="createJobBtns">
-							<button ng-click="createJob(job)" class="btn btn-lg btn-primary btn-block" type="submit">Add Job</button><br>
-							<button class="btn btn-lg btn-primary btn-block" type="reset">Reset</button>
-						</div>
-					</div>
-				</div>
+
 			</div>
 		</div>
 	</form>
 
+</div>
 </div>
