@@ -46,7 +46,9 @@ app.controller('accordionController', function($filter, $scope, jobService, $loc
     var createNotifications = function(jobs) {
     	$scope.inactiveNotifications = $filter('inactiveFilter')(jobs);
     	$scope.ninetyDaysNotifications = $filter('ninetyDaysFilter')(jobs);
+    	jobService.setTotalAlerts($scope.inactiveNotifications.length, $scope.ninetyDaysNotifications.length);
     };
+    
     
     $scope.status = {
     	    isCustomHeaderOpen: false,

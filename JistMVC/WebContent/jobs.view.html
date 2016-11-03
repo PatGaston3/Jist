@@ -28,7 +28,7 @@
                 
                 <ul class="nav navbar-nav navbar-right">
                 	<li>
-                		<a href="#/info">Info</a>
+                		<a href="#/info">About</a>
                 	</li>
                 	<li ng-click="logOut()">
                 		<a href="">Logout</a>
@@ -63,7 +63,7 @@
 </div> -->
 
 	<div class="panel-group" id="accordion">
-	<div ng-repeat="job in jobs" job-directive data="job" delete="delete" edit="edit" >
+	<div class="sizedup" ng-repeat="job in jobs" job-directive data="job" delete="delete" edit="edit" >
 	</div>
 	</div>
 
