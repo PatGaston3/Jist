@@ -205,3 +205,28 @@ input[type='date'] {
 }
 
 
+/*******************************
+***         JOB PAGE         ***
+********************************/
+
+.jobInfo {
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 16px;
+}
+
+.noteBox {
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 18px;
+	pointer-events: none;
+	
+}
+
+hr.style-two {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), grey, rgba(0, 0, 0, 0.5));
+}
+
