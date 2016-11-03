@@ -93,12 +93,24 @@ app.factory('jobService', function($http, authenticationService, $location) {
 			}
 		})
 	};
+	
+	var totalNumber = 0;
+	
+	var setTotalAlerts = function(alertOne, alertTwo) {
+		totalNumber = alertOne + alertTwo;
+	}
+	
+	var getTotalAlerts = function() {
+		return totalNumber;
+	}
 
 	return {
 		getJobs : getJobs,
 		createJob : createJob,
 		deleteJob : deleteJob,
-		updateJob : updateJob
+		updateJob : updateJob,
+		setTotalAlerts : setTotalAlerts,
+		getTotalAlerts : getTotalAlerts
 	};
 
 	return jobService;

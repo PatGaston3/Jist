@@ -52,6 +52,10 @@ app.controller("homeController", function($scope, $http, authenticationService, 
 		})
 	}
 	
+	$scope.max = function(){
+		return jobService.getTotalAlerts();
+	}
+	
 	$scope.alertInactive();
 
 	
