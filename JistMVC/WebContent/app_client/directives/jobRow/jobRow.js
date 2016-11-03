@@ -103,13 +103,13 @@ app.directive('jobDirective', function($compile, jobService){
  									ng-maxlength="40">
 
 
- 									<div class="col-xs-4 col-centered">
- 								<div class="row row-centered">
- 										<div class="createJobBtns">
- 											<button ng-click="save(jobCopy)" class="btn btn-lg btn-primary btn-block" type="submit">Save Changes</button><br>
- 											<button class="btn btn-lg btn-primary btn-block" ng-click="cancel()" >Cancel</button>
- 										</div>
- 									</div>
+ 										<div class="createJobBtns row">
+ 											<div class="col-sm-6">
+ 												<button ng-click="save(jobCopy)" class="btn btn-lg btn-primary btn-block" type="submit">Save Changes</button><br>
+ 											</div>
+ 											<div class="col-sm-6">
+ 												<button class="btn btn-lg btn-primary btn-block" ng-click="cancel()" >Cancel</button>
+ 											</div>
  								</div>
  							</div>
  						</div>
