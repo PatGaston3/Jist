@@ -123,13 +123,17 @@
 					<option value="WI">WI</option>
 					<option value="WY">WY</option>
 				</select>
-
-				<label for="jobAppDate" class="sr-only">Application Date</label>
+		<div class="row">
+			<div class="col-md-3">
+				<p id="dateLabel">Application Date:</p> 
+			</div>
+			<div class="col-md-9">
 				<input ng-model="job.appDate" name="jobAppDate" type="date" id="inputJob" class="form-control" placeholder="Applied Date"
 					required autofocus>
+			</div>
+		</div>
 
-
-				<label for="jobOfferedSalary" class="sr-only">Application Date</label>
+				<label for="jobOfferedSalary" class="sr-only">Offered Salary</label>
 				<input ng-model="job.offeredSalary" name="jobOfferedSalary" type="number" id="inputOfferedSalary" class="form-control" placeholder="Posted Offer Salary" required autofocus>
 
 
