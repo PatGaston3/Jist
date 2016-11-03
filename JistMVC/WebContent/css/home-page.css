@@ -40,7 +40,7 @@ a {
     box-shadow: 0 0 10px 6px #000;
 }
 
-info {
+.img-responsive {
 height: 120px;
 width: auto;
 overflow: hidden; 
