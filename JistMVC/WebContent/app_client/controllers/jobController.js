@@ -38,7 +38,7 @@ app.controller("jobController", function($scope, jobService, authenticationServi
 	  $scope.jobCounter = function(){
 		  return ($scope.totalCount() > 0)
 		  ? "jobCounter"
-				  : "label-success";
+				  : "label-danger";
 	  }
 
 	$scope.totalCount = function() {

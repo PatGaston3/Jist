@@ -16,32 +16,34 @@
 						<br>
 						<div class="container" id = "details">
 							<div class="row">
-							<br><br>
-								<div class="col-sm-3"><b>Company Name: </b>{{data.companyName}}</div>
-								<div class="col-sm-3"><b>Job Title: </b>{{data.jobTitle}}</div>
-								<div class="col-sm-3"><b>Location: </b>{{data.city}},
+								<div class="col-sm-3"><span class="jobInfo">Company Name</span>: {{data.companyName}}</div>
+								<div class="col-sm-3"><span class="jobInfo">Job Title</span>: {{data.jobTitle}}</div>
+								<div class="col-sm-3"><span class="jobInfo">Location</span>: {{data.city}},
 									{{data.state}}</div>
-								<div class="col-sm-3"><b>Application Date: </b>{{data.appDate}}</div>
+								<div class="col-sm-3"><span class="jobInfo">Application Date</span>: {{data.appDate}}</div>
 							</div>
 							<div class="row">
-								<div class="col-sm-3"><b>Contact Name: </b>{{data.contactFname}}
+								<div class="col-sm-3"><span class="jobInfo">Contact Name</span>: {{data.contactFname}}
 									{{data.contactLname}}</div>
-								<div class="col-sm-3"><b>Contact Phone Number:
-									</b>{{data.contactPhone}}</div>
-								<div class="col-sm-3"><b>Contact Email: </b>{{data.contactEmail}}</div>
+								<div class="col-sm-3"><span class="jobInfo">Contact Phone Number</span>: {{data.contactPhone}}</div>
+								<div class="col-sm-3"><span class="jobInfo">Contact Email</span>: {{data.contactEmail}}</div>
 							</div>
 							<div class="row">
-								<div class="col-sm-3"><b>Potential Start Date: </b>{{data.startDate}}</div>
-								<div class="col-sm-3"><b>Desired Salary: </b>{{data.desiredSalary}}</div>
-								<div class="col-sm-3"><b>Pay Type: </b>{{data.salType}}</div>
-								<div class="col-sm-3"><b>Offered Salary: </b>{{data.offeredSalary}}</div>
+								<div class="col-sm-3"><span class="jobInfo">Potential Start Date</span>: {{data.startDate}}</div>
+								<div class="col-sm-3"><span class="jobInfo">Desired Salary</span>: {{data.desiredSalary}}</div>
+								<div class="col-sm-3"><span class="jobInfo">Pay Type</span>: {{data.salType}}</div>
+								<div class="col-sm-3"><span class="jobInfo">Offered Salary</span>: {{data.offeredSalary}}</div>
+							</div>
+							<br>
+							<div class="row">
+								<div class="col-sm-12"><span class="jobInfo">Notes</span>:</div>
 							</div>
 							<div class="row">
-								<div class="col-sm-12"><b>Notes: </b><i>{{data.notes}}</i></div>
+								<div class="col-sm-12"><textarea rows="4" class="form-control noteBox">{{data.notes}}</textarea></div>
 							</div>
 							<br>
 						</button>
-							<br><br>
+							<br>
 						</div>
 					</div>
 
