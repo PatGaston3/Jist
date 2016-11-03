@@ -12,8 +12,7 @@ app.factory('authenticationService', function($http, $window, $location) {
 	var getToken = function() {
 		return $window.localStorage['job-token'];
 	};
-	
-	// TODO: THE ABOVE FUNCTIONS MAY BE CAUSING LOGIN ISSUES, INVESTIGATE TOMORROW
+
 
 	// Contact the server, authenticate user credentials
 	var loginNewUser = function(user) {
@@ -61,7 +60,6 @@ app.factory('authenticationService', function($http, $window, $location) {
 
     // End Session for Current User
     var logout = function () {
-        console.log("in logout");
         $window.localStorage.removeItem('job-token');
     };
 

@@ -51,6 +51,6 @@ app.controller("jobController", function($scope, jobService, authenticationServi
 		authenticationService.logout();
 		$location.url('/');
 	}
-	
+
 
 });
