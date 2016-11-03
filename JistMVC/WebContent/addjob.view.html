@@ -51,12 +51,12 @@
 				</div>
 
 				<label for="inputCompanyName" class="sr-only">Company Name</label>
-				<input ng-model="job.companyName" name="companyname" type="text" id="inputJob" class="form-control" placeholder="Company Name"
-					required autofocus ng-minlength="2" ng-maxlength="40">
+				<input ng-model="job.companyName" name="companyname" type="text" id="inputJob" class="form-control" placeholder="Company Name (Can't be left blank)"
+					required autofocus ng-minlength="2" ng-maxlength="40" required>
 
 				<label for="inputJobTitle" class="sr-only">Job Title</label>
-				<input ng-model="job.jobTitle" name="jobtitle" type="text" id="inputJob" class="form-control" placeholder="Position Title"
-					required autofocus ng-minlength="2" ng-maxlength="40">
+				<input ng-model="job.jobTitle" name="jobtitle" type="text" id="inputJob" class="form-control" placeholder="Position Title (Can't be left blank)"
+					required autofocus ng-minlength="2" ng-maxlength="40" required>
 
 				<label for="inputCity" class="sr-only">Job City</label>
 				<input ng-model="job.city" name="jobCity" type="text" id="inputJob" class="form-control" placeholder="City" required autofocus
@@ -125,7 +125,7 @@
 				</select>
 
 				<label for="jobAppDate" class="sr-only">Application Date</label>
-				<input ng-model="job.appDate" name="jobAppDate" type="date" id="inputJob" class="form-control" placeholder="Applied Date"
+				<input ng-model="job.appDate" name="jobAppDate" type="date" id="inputJob" class="form-control" placeholder="Application Date"
 					required autofocus>
 
 
