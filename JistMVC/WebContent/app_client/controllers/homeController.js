@@ -52,6 +52,17 @@ app.controller("homeController", function($scope, $http, authenticationService, 
 		})
 	}
 	
+	
+	 $scope.jobCounter = function(){
+		  return ($scope.max() > -1)
+		  ? "jobCounter"
+				  : "label-success";
+	  }
+	
+	$scope.max = function(){
+		return jobService.getTotalAlerts();
+	}
+	
 	$scope.alertInactive();
 
 	
