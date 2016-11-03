@@ -45,7 +45,7 @@
                 
                 <ul class="nav navbar-nav navbar-right">
                 	<li>
-                		<a href="#/info">Info</a>
+                		<a href="#/info">About</a>
                 	</li>
                 	<li ng-click="logOut()">
                 		<a href="">Logout</a>
@@ -111,14 +111,22 @@
              
   <div ng-controller="accordionController">       
   	<uib-accordion close-others="oneAtATime">              
-   	 	<div uib-accordion-group class="panel-default panel-success" heading="Click here to see jobs awaiting reply older than 7 days">
+   	 	<div uib-accordion-group class="panel-default panel-success" heading="Click here to see jobs awaiting reply for more than 7 days">
     		<div class="home-accordion-panels" ng-repeat="alert in inactiveNotifications">
-    			{{alert.companyName}}
+    			<b>Company: </b> {{alert.companyName}} 
+    			<hr>
     		</div>
     	</div>
-    	<div uib-accordion-group class="panel-default panel-danger" heading="Click here to see your applications that may be expired">
-    		<div class="home-accordion-panels" ng-repeat="alert in ninetyDaysNotifications">
-    			{{alert.companyName}}
+    	<div uib-accordion-group class="panel-default panel-danger" heading="Click here to see your applications that may be expired (90 days)">
+    		<div class="home-accordion-panels row" ng-repeat="alert in ninetyDaysNotifications">
+    			<div class="col-sm-11">
+    			<b>Company: </b>{{alert.companyName}} 
+    			</div>
+    		<div class="col-sm-1">
+			<button ng-click="delete(alert)" class="btn btn-danger btn-xs">
+				Delete <i class="fa fa-trash" aria-hidden="true"></i>
+			</button>
+		</div>
     		</div>
     	</div>
   	</uib-accordion>

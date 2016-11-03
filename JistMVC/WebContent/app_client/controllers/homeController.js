@@ -9,11 +9,30 @@ app.controller("homeController", function($scope, $http, authenticationService, 
 	$scope.jobs = [];
 	$scope.inactiveJob = [];
 
+	$scope.jobs = [];
+	
+	$scope.loadJobs = function() {
+		jobService.getJobs()
+		.then(function(response) {
+			$scope.jobs = response.data;
+		})
+	}
 	
 	$scope.logOut = function(){
 		authenticationService.logout();
 		$location.url('/');
 	};
+	
+	// Delete Job
+	$scope.delete = function(job) {
+		jobService.deleteJob(job)
+		.then(function(response) {
+			$scope.loadJobs();
+		})
+		.then(function(){
+			$location.url('/jobs');
+		})
+	}
 	
 	$scope.addJobRedirect = function() {
 		$location.url('/addlisting');

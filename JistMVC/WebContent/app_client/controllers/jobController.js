@@ -9,7 +9,6 @@ app.controller("jobController", function($scope, jobService, authenticationServi
 	$scope.loadJobs = function() {
 		jobService.getJobs()
 		.then(function(response) {
-			console.log(response.data)
 			$scope.jobs = response.data;
 		})
 		.catch(function(error) {
