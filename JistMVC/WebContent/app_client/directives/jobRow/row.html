@@ -22,17 +22,18 @@
 									{{data.state}}</div>
 								<div class="col-sm-3"><span class="jobInfo">Application Date</span>: {{data.appDate}}</div>
 							</div>
+							<br>
 							<div class="row">
 								<div class="col-sm-3"><span class="jobInfo">Contact Name</span>: {{data.contactFname}}
 									{{data.contactLname}}</div>
-								<div class="col-sm-3"><span class="jobInfo">Contact Phone Number</span>: {{data.contactPhone}}</div>
-								<div class="col-sm-3"><span class="jobInfo">Contact Email</span>: {{data.contactEmail}}</div>
+								<div class="col-sm-3"><span class="jobInfo">Contact Phone</span>: {{data.contactPhone}}</div>
+								<div class="col-sm-6"><span class="jobInfo">Contact Email</span>: {{data.contactEmail}}</div>
 							</div>
+							<br>
 							<div class="row">
 								<div class="col-sm-3"><span class="jobInfo">Potential Start Date</span>: {{data.startDate}}</div>
-								<div class="col-sm-3"><span class="jobInfo">Desired Salary</span>: {{data.desiredSalary}}</div>
-								<div class="col-sm-3"><span class="jobInfo">Pay Type</span>: {{data.salType}}</div>
-								<div class="col-sm-3"><span class="jobInfo">Offered Salary</span>: {{data.offeredSalary}}</div>
+								<div class="col-sm-3"><span class="jobInfo">Desired Salary</span>: ${{data.desiredSalary}} / {{data.salType}}</div>
+								<div class="col-sm-6"><span class="jobInfo">Offered Salary</span>: ${{data.offeredSalary}}</div>
 							</div>
 							<br>
 							<div class="row">
@@ -42,7 +43,6 @@
 								<div class="col-sm-12"><textarea rows="4" class="form-control noteBox">{{data.notes}}</textarea></div>
 							</div>
 							<br>
-						</button>
 							<br>
 						</div>
 					</div>
@@ -67,4 +67,4 @@
 			</button>
 		</div>
     <br>
-    <br>
+		<hr class="style-two">
