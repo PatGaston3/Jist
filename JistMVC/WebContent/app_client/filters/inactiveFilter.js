@@ -6,7 +6,8 @@ app.filter('inactiveFilter' , function() {
 		var inactiveArr = [];
 		
 		jobs.forEach(function(job) {
-			var testDate = new Date(new Date(job.appDate).setTime(new Date(job.appDate).getTime() + (7*86400000)));
+			var testDate = new Date(new Date(job.appDate)
+			.setTime(new Date(job.appDate).getTime() + (7*86400000)));
 			var currentDate = new Date();
 			
 			if (job.offer === "Awaiting") {	
