@@ -3,42 +3,8 @@
 <div style="background-image: url('css/img/bg1.jpg')" class="main">
 <div class="layover"></div>
   <!-- Navigation -->
-    <nav class="navbar transparent-nav" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand sub-text" href="#/home">Jist</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#/home">Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="#/jobs">Jobs</a>
-                    </li>
-                </ul>
 
-                <ul class="nav navbar-nav navbar-right">
-                	<li>
-                		<a href="#/info">About</a>
-                	</li>
-                	<li ng-click="logOut()">
-                		<a href="">Logout</a>
-                	</li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+<header ng-include="'partials/nav.html'"></header>
 
 <div class="container">
 	<form name="addJob" ng-action="createJob(job)" class="form-signin" novalidate>
@@ -134,9 +100,19 @@
 			</div>
 		</div>
 
-				<label for="jobOfferedSalary" class="sr-only">Offered Salary</label>
-				<input ng-model="job.offeredSalary" name="jobOfferedSalary" type="number" id="inputOfferedSalary" class="form-control" placeholder="Posted Offer Salary" required autofocus>
-
+		<div class="row">
+			<div class="col-md-3">
+				<p id="dateLabel">Offer Status:</p>
+			</div>
+				<div class="col-md-9">
+				<select ng-model="job.offer" name="jobOffer" id="inputJob" class="form-control" required>
+				<option value="" disabled>Offer Status</option>
+				<option value="Awaiting">Awaiting Reply</option>
+				<option value="InProgress">Response Received</option>
+				<option value="NotOffered">No Offer</option>
+				</select>
+				</div>
+			</div>
 
 				<hr>
 				<div class="add-job-subject-header">
@@ -165,12 +141,12 @@
 				</textarea>
 				<br>
 
-				<div class="col-xs-4 col-centered">
+<!-- 				<div class="col-xs-4 col-centered">
 					<div class="row row-centered">
 						<button ng-click="createJob(job)" class="btn btn-lg btn-primary btn-block" type="submit">Add Job</button><br>
 						<button class="btn btn-lg btn-primary btn-block" type="reset">Reset</button>
 					</div>
-				</div>
+				</div> -->
 			</div>
 
 			<div class="col-md-6">
@@ -194,18 +170,23 @@
 				<input ng-model="job.contactEmail" name="jobContactEmail" type="email" id="inputJob" class="form-control" placeholder="Contact Email"
 					ng-maxlength="40">
 
-				<label for="inputOffer" class="sr-only">Job Offer</label>
-				<select ng-model="job.offer" name="jobOffer" id="inputJob" class="form-control" required>
-				<option value="" disabled selected>Offer Status</option>
-				<option value="InProgress">Response Received</option>
-				<option value="Awaiting">Awaiting Reply</option>
-				<option value="NotOffered">No Offer</option>
-				</select>
-
+				
 				<label for="inputJobUrl" class="sr-only">Input Job Posting Url</label>
 				<input ng-model="job.postingUrl" name="jobPostingUrl" type="url" id="inputJob" class="form-control" placeholder="Paste job posting link here"
 					ng-maxlength="40">
-
+				
+				
+				<label for="jobOfferedSalary" class="sr-only">Offered Salary</label>
+				<input ng-model="job.offeredSalary" name="jobOfferedSalary" type="number" id="inputOfferedSalary" class="form-control" placeholder="Salary Offered" required autofocus>
+				 
+				 <br>
+				 
+				<div class="col-xs-4 col-centered">
+					<div class="row row-centered">
+						<button ng-click="createJob(job)" class="btn btn-lg btn-primary btn-block" type="submit">Add Job</button><br>
+						<button class="btn btn-lg btn-primary btn-block" type="reset">Reset</button>
+					</div>
+				</div>
 
 			</div>
 		</div>

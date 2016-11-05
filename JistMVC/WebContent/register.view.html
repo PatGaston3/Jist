@@ -9,7 +9,12 @@
         <label for="inputUsername" class="sr-only">Username</label>
         <input ng-model="user.username" name="username" type="text" id="inputUsername" class="form-control" placeholder="Username" required autofocus
         ng-minlength="4" ng-maxlength="18">
+        
+         <label for="inputPassword" class="sr-only">Password</label>
+        <input ng-model="user.password" name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required
+        ng-minlength="6" ng-maxlength="12">
 
+		<h4 class="colorMe">Information: </h4>
         <label for="userfName" class="sr-only">First Name</label>
         <input ng-model="user.fname" name="userfName" type="text" id="inputUsername" class="form-control" placeholder="First Name" required autofocus
         ng-minlength="1" ng-maxlength="18">
@@ -22,9 +27,6 @@
         <input ng-model="user.location" name="userlocation" type="text" id="inputUsername" class="form-control" placeholder="Location" required autofocus
         ng-minlength="3" ng-maxlength="25">
 
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input ng-model="user.password" name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required
-        ng-minlength="6" ng-maxlength="12">
 		<br>
         <button ng-click="genUser(user)" class="btn btn-lg btn-primary btn-block" type="submit" ng-disabled={{"registration.$invalid"}}>Sign in</button>
   
